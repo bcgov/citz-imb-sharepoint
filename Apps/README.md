@@ -1,2 +1,2 @@
-# CITZ-IMB-SharePoint Solutions
+# CITZ-IMB-SharePoint Apps
 contains packages for use in the app store
