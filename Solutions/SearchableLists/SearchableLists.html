@@ -25,20 +25,23 @@
     }
 
     #csp_list_filter_buttons .csp_list_btn {
-        border: 2px solid #3cabff;
-        background-color: #ececec;
-        color: #3cabff;
+        border: 2px solid #bcbcbc;
+        background-color: #bcbcbc;
+        color: #333;
         cursor: pointer;
         border-radius: 5px;
-        float: left;
         min-width: auto;
         margin-left: 0;
-        margin-right:10px;
+        margin-right: 5px;
+        position: relative;
+        padding-left: 40px;
+        height: 45px;
+        width: 135px;
     }
 
     #csp_list_filter_buttons .csp_list_filter {
         border: 2px solid #3cabff;
-        background-color: #ececec;
+        background-color: #3cabff;
         color: #333;
         cursor: pointer;
     }
@@ -84,6 +87,75 @@
         font-weight: 600;
         height: 45px;
         line-height: 45px;
+        position: relative;
+    }
+
+    #csp_list_filter_buttons .csp_list_btn .csp_list_icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 15px;
+        height: 16px;
+        width: 16px;
+    }
+
+    .csp_list_icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 15px;
+        height: 16px;
+        width: 16px;
+    }
+
+    #test {
+        background-color: firebrick;
+    }
+
+    #test .csp_list_icon {
+        position: relative;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .csp_list_icon_100 {
+        background: url('/_layouts/15/images/ltgen.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_101 {
+        background: url('/_layouts/15/images/ltdl.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_102 {
+        background: url('/_layouts/15/images/ltsurvey.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_103 {
+        background: url('/_layouts/15/images/ltlink.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_104 {
+        background: url('/_layouts/15/images/ltann.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_105 {
+        background: url('/_layouts/15/images/ltcontct.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_106 {
+        background: url('/_layouts/15/images/ltevent.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_107 {
+        background: url('/_layouts/15/images/lttask.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_108 {
+        background: url('/_layouts/15/images/ltdisc.png?rev=40') no-repeat center /50px;
+    }
+
+    .csp_list_icon_109 {
+        background: url('/_layouts/15/images/ltil.png?rev=40') no-repeat center /50px;
     }
 
     .csp_list_cardDescription {
@@ -184,38 +256,53 @@
     <div id="csp_list_filter_buttons">
         <p>toggle a button to filter by type</p>
         <button type="button" class="csp_list_btn csp_list_btn-clear csp_list_filter" id="csp_list_button_filter_clear"
-            onclick="cspClearFilter(this)" data-template-type="clear"><I class="csp_list_template_icon_clear"></i>Show
-            All</button>
+            onclick="cspClearFilter(this)" data-template-type="clear">
+            <div class="csp_list_icon csp_list_icon_clear"></div>Show
+            All
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_100"
-            onclick="cspToggleFilter(this)" data-template-type="100"><I class="csp_list_template_icon_100"></i>Custom
-            list</button>
+            onclick="cspToggleFilter(this)" data-template-type="100">
+            <div class="csp_list_icon csp_list_icon_100"></div>Custom
+            list
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_101"
-            onclick="cspToggleFilter(this)" data-template-type="101"><I class="csp_list_template_icon_101"></i>Document
-            library</button>
+            onclick="cspToggleFilter(this)" data-template-type="101">
+            <div class="csp_list_icon csp_list_icon_101"></div>Document
+            library
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_102"
-            onclick="cspToggleFilter(this)" data-template-type="102"><I
-                class="csp_list_template_icon_102"></i>Survey</button>
+            onclick="cspToggleFilter(this)" data-template-type="102">
+            <div class="csp_list_icon csp_list_icon_102"></div>Survey
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_103"
-            onclick="cspToggleFilter(this)" data-template-type="103"><I
-                class="csp_list_template_icon_103"></i>Links</button>
+            onclick="cspToggleFilter(this)" data-template-type="103">
+            <div class="csp_list_icon csp_list_icon_103"></div>Links
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_104"
-            onclick="cspToggleFilter(this)" data-template-type="104"><I
-                class="csp_list_template_icon_104"></i>Announcements</button>
+            onclick="cspToggleFilter(this)" data-template-type="104">
+            <div class="csp_list_icon csp_list_icon_104"></div>Announcements
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_105"
-            onclick="cspToggleFilter(this)" data-template-type="105"><I
-                class="csp_list_template_icon_105"></i>Contacts</button>
+            onclick="cspToggleFilter(this)" data-template-type="105">
+            <div class="csp_list_icon csp_list_icon_105"></div>Contacts
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_106"
-            onclick="cspToggleFilter(this)" data-template-type="106"><I
-                class="csp_list_template_icon_106"></i>Calendar</button>
+            onclick="cspToggleFilter(this)" data-template-type="106">
+            <div class="csp_list_icon csp_list_icon_106"></div>Calendar
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_107"
-            onclick="cspToggleFilter(this)" data-template-type="107"><I
-                class="csp_list_template_icon_107"></i>Tasks</button>
+            onclick="cspToggleFilter(this)" data-template-type="107">
+            <div class="csp_list_icon csp_list_icon_107"></div>Tasks
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_108"
-            onclick="cspToggleFilter(this)" data-template-type="108"><I
-                class="csp_list_template_icon_108"></i>Discussion board</button>
+            onclick="cspToggleFilter(this)" data-template-type="108">
+            <div class="csp_list_icon csp_list_icon_108"></div>Discussion board
+        </button>
         <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_109"
-            onclick="cspToggleFilter(this)" data-template-type="109"><I class="csp_list_template_icon_110"></i>Picture
-            Library</button>
+            onclick="cspToggleFilter(this)" data-template-type="109">
+            <div class="csp_list_icon csp_list_icon_109"></div>Picture
+            Library
+        </button>
     </div>
 </div>
 
@@ -273,7 +360,9 @@
                             liHTML = "<div class='csp_list_card csp_list_template_" + lists[i].BaseTemplate +
                                 "' data-template-type='" + lists[i].BaseTemplate + "'>";
                             aHTML = "<a class='csp_list_url' href='" + lists[i].RootFolder.ServerRelativeUrl + "'>";
-                            titleHTML = "<div class='csp_list_cardTitle'>" + lists[i].Title + "</div>";
+                            titleHTML = "<div class='csp_list_cardTitle'>" + lists[i].Title +
+                                "<div class=\"csp_list_icon csp_list_icon_" + lists[i].BaseTemplate + "\"></div>" +
+                                "</div>";
                             descriptionHTML = "<div class='csp_list_cardDescription'>" + lists[i].Description + "</div>";
                             footerHTML = "<div class='csp_list_cardFooter'><div class='csp_list_itemCount'>" + lists[i].ItemCount +
                                 (lists[i].ItemCount > 1 ? " items" : " item") +

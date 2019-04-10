@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="A webpart that creates a card list of all lists and libraries in the site which will allow users to filter by type or by typing in part of the title or description." Id="3bd9ab88-807b-4de4-9a03-49eda603658f" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="Searchable Lists Webpart">
+	<ElementManifests>
+		<ElementManifest Location="SearchableListsCA\Elements.xml" />
+		<ElementManifest Location="_catalogs\Elements.xml" />
+		<ElementFile Location="_catalogs\wp\SearchableLists.webpart" />
+	</ElementManifests>
+</Feature>
