@@ -1,4 +1,4 @@
-# SharePoint-2016-Libraries
+# CITZ.IMB.SP.JSLibraries
 Common 3rd party Javascript Libraries to be used in SharePoint 2016
 
 Includes:
