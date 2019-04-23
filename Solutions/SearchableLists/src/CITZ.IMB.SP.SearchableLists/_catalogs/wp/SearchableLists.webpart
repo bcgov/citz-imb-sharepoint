@@ -342,7 +342,7 @@
 					
 					var request = $.ajax({
 					type: "GET",
-					url: _spPageContextInfo.siteAbsoluteUrl + "/_api/Web/Lists" +
+					url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists" +
 					"?$expand=RootFolder",
 					beforeSend: function (xhr) {
 					xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
