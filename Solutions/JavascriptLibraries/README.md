@@ -5,3 +5,5 @@ Includes:
 * jquery-3.3.1.min.js https://jquery.com/
 * jquery-ui.min.js https://jqueryui.com/
 * moment.min.js https://momentjs.com/
+* react.min.js https://reactjs.org
+* react-dom.min.js https://reactjs.org
