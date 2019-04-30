@@ -318,7 +318,7 @@
     function getListInfo() {
         var AllowedTemplates = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109];
         var defer = $.Deferred();
-
+        
         var request = $.ajax({
             type: "GET",
             url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists" +
@@ -383,7 +383,7 @@
             },
             error: function (result) {
                 defer.reject();
-                console.log("Error");
+                console.log("Error:", result);
             }
         });
 
