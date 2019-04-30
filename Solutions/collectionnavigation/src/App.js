@@ -1,26 +1,70 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import $ from 'jquery';
+import Popper from 'popper.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class DropDownItem extends React.Component {
+  render() {
+    console.log("dropdown", this.props);
+    return (
+      <a className="dropdown-item" href={this.props.Path}>{this.props.Title}</a>
+    )
+  }
+}
+
+class DropDownMenu extends React.Component {
+  render() {
+    console.log("dropdownitems", this.props);
+    return (
+      <div className="dropdown-menu">
+        {this.props.dropdownitems.map(navitem => <DropDownItem {...navitem} />)}
+      </div>
+    )
+  }
+}
+
+class NavItem extends React.Component {
+  render() {
+    console.log("NavItem", this.props.Title, this.props.Sites)
+    return (
+      <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{this.props.Title}</a>
+        <DropDownMenu dropdownitems={this.props.Sites} />
+      </li>
+    )
+  }
+}
+
+class Navbar extends React.Component {
+  render() {
+    console.log("navitems", this.props);
+    return (
+      <nav className="navbar navbar-expand-sm nav-custom">
+        <ul className="navbar-nav">
+          {this.props.navitems.map(navitem => <NavItem {...navitem} />)}
+        </ul>
+      </nav>
+    )
+  }
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [{ "Title": "CIRMO", "Sites": [{ "Title": "Executive", "Path": "https://citz.sp.gov.bc.ca/sites/CIRMO/Executive", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/CIRMO" }, { "Title": "GRS", "Path": "https://citz.sp.gov.bc.ca/sites/CIRMO/GRS", "Description": "Government Records Service", "ParentLink": "https://citz.sp.gov.bc.ca/sites/CIRMO" }, { "Title": "Information Access Operations", "Path": "https://citz.sp.gov.bc.ca/sites/CIRMO/IAO", "Description": "The Information Access Operations (IAO) branch is responsible for processing and responding to Freedom of Information (FOI) requests for records held by public bodies in accordance with the Freedom of Information and Protection of Privacy Act (FOIPPA).  IAO is responsible for the end-to-end processing of FOI requests, and works closely with public bodies to ensure that the BC Province’s responses to FOI requests are timely and accurate.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/CIRMO" }, { "Title": "IM Transformation Team Space", "Path": "https://citz.sp.gov.bc.ca/sites/CIRMO/IMT", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/CIRMO" }, { "Title": "Strategic Policy and Legislation", "Path": "https://citz.sp.gov.bc.ca/sites/CIRMO/SPL", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/CIRMO" }] }, { "Title": "CSD", "Sites": [{ "Title": "Senior Management Team", "Path": "https://citz.sp.gov.bc.ca/sites/CSD/ADMO", "Description": "CSD SMT meeting agendas, minutes, information, etc.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/CSD" }, { "Title": "Corporate Planning and Projects", "Path": "https://citz.sp.gov.bc.ca/sites/CSD/CPP", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/CSD" }, { "Title": "IMB", "Path": "https://citz.sp.gov.bc.ca/sites/CSD/IMB", "Description": "Information Management Branch\nExecutive Director: Chris Hauff", "ParentLink": "https://citz.sp.gov.bc.ca/sites/CSD" }, { "Title": "Planning, Performance & Communications", "Path": "https://citz.sp.gov.bc.ca/sites/CSD/PPC", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/CSD" }] }, { "Title": "DEV", "Sites": [{ "Title": "Customer Number Request", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/CNR", "Description": "The Customer Number form is used to create new customers or to update an existing customer. ", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "IMB_adam_test", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/IMB_adam_test", "Description": "Information Management Branch\r\nExecutive Director: Chris Hauff", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "A site with an absurdly long name because people think that a book should be written in a text field", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/long", "Description": "Spicy jalapeno bacon ipsum dolor amet pork belly consectetur beef, dolore short ribs culpa tempor burgdoggen ad. Flank pig ut fugiat cow short loin meatball tongue in consectetur culpa voluptate sausage. Spare ribs ham hock short ribs t-bone tongue ball tip pork belly jerky culpa et ut commodo ex aliqua hamburger. Beef ribs laboris proident doner consequat turkey ut picanha bacon chicken andouille qui in ut ball tip. Enim ham hock irure, pancetta aute shank laboris burgdoggen. Turducken cow et, salami magna andouille nostrud. Ea sausage proident, salami sint tenderloin brisket ullamco.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "NCSS Test SP 2016", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/NCSS_Test_SP_2016", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "NewDesignOslo2019", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/NDO19", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Breaking the Owners Group", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/noowner", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "One more site", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/onemore", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Oslo_Test", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/Oslo_Test", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Reporting", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/reporting", "Description": "to test various types of reporting solutions", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Scott's Development Playground", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/scott", "Description": "It's my fort, stay out! lol", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Single Inventory", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/sis", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Vanilla with sprinkles", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/sprinkles", "Description": "a more refined way to eat ice cream.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "SEAMONSTER", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/ten-tackles", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "test2", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/test2", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Vanilla", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/Vanilla", "Description": "A vanilla site without custom masterpages", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }, { "Title": "Virtual Information Control Office", "Path": "https://citz.sp.gov.bc.ca/sites/DEV/VICO", "Description": "Sometimes called a Virtual Document Room", "ParentLink": "https://citz.sp.gov.bc.ca/sites/DEV" }] }, { "Title": "DMO", "Sites": [{ "Title": "CITZ Exec Transition", "Path": "https://citz.sp.gov.bc.ca/sites/DMO/CITZExecTransition", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DMO" }, { "Title": "Citizens' Services Executive Committee SharePoint Site", "Path": "https://citz.sp.gov.bc.ca/sites/DMO/ExComm", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/DMO" }] }, { "Title": "ES", "Sites": [{ "Title": "Device Services", "Path": "https://citz.sp.gov.bc.ca/sites/ES/DS", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/ES" }, { "Title": "Financial Advisory & Decision Support Services", "Path": "https://citz.sp.gov.bc.ca/sites/ES/FADSS", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/ES" }, { "Title": "Hosting", "Path": "https://citz.sp.gov.bc.ca/sites/ES/Host", "Description": "Hosting Services enables B.C. government and broader public sector (BPS)  to access sustainable hosting infrastructure and services, through the Strategic Transformation and Mainframe Services (STMS) Agreement with ESIT Advanced Solutions, Inc. (ESIT), to support the evolving needs of government clients and citizens.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/ES" }, { "Title": "Information Security Branch", "Path": "https://citz.sp.gov.bc.ca/sites/ES/ISB", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/ES" }, { "Title": "NCCS Home", "Path": "https://citz.sp.gov.bc.ca/sites/ES/NCCS", "Description": "Network, Communications and Collaboration Services SharePoint Site", "ParentLink": "https://citz.sp.gov.bc.ca/sites/ES" }, { "Title": "TSD SMT SharePoint Site", "Path": "https://citz.sp.gov.bc.ca/sites/ES/TSDEC", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/ES" }] }, { "Title": "ICT", "Sites": [{ "Title": "Strategic Initiative", "Path": "https://citz.sp.gov.bc.ca/sites/ICT/SI", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/ICT" }, { "Title": "Contract Management Home", "Path": "https://citz.sp.gov.bc.ca/sites/ICT/TO", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/ICT" }] }, { "Title": "OCIO", "Sites": [{ "Title": "Integrated Data Office", "Path": "https://citz.sp.gov.bc.ca/sites/OCIO/IDD", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/OCIO" }, { "Title": "IM IT Policy and Legislation", "Path": "https://citz.sp.gov.bc.ca/sites/OCIO/IM-IT-PolicyAndLeg", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/OCIO" }, { "Title": "Strategic Planning & Policy Branch", "Path": "https://citz.sp.gov.bc.ca/sites/OCIO/SPP", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/OCIO" }] }, { "Title": "PS", "Sites": [{ "Title": "PSB", "Path": "https://citz.sp.gov.bc.ca/sites/PS/PSB", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/PS" }, { "Title": "Procurement Transformation Branch", "Path": "https://citz.sp.gov.bc.ca/sites/PS/PT", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/PS" }, { "Title": "Strategic Partnerships Office", "Path": "https://citz.sp.gov.bc.ca/sites/PS/SPO", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/PS" }] }, { "Title": "RPD", "Sites": [{ "Title": "RPD Executive Site", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/ADMO", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "Asset Management Branch", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/AMB", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "CoP", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/CoP", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "RPD Client Resources", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/CSB", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "FMS", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/FMS", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "Financial Planning and Reporting", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/FPR", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "Real Estate Business Services", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/REBS", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "Strategic Real Estate Services", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/SRES", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }, { "Title": "Workplace Development Services", "Path": "https://citz.sp.gov.bc.ca/sites/RPD/WDS", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/RPD" }] }, { "Title": "SBC", "Sites": [{ "Title": "Business Development", "Path": "https://citz.sp.gov.bc.ca/sites/SBC/BD", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/SBC" }, { "Title": "Divisional Resources", "Path": "https://citz.sp.gov.bc.ca/sites/SBC/DivRes", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/SBC" }, { "Title": "Provincial IDIM Program Site", "Path": "https://citz.sp.gov.bc.ca/sites/SBC/IDIM", "Description": "This site is for the IDIM Staff to share and collaborate on branch documents and activities.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/SBC" }, { "Title": "Inside Registries", "Path": "https://citz.sp.gov.bc.ca/sites/SBC/REG", "Description": "BC Registries Logo", "ParentLink": "https://citz.sp.gov.bc.ca/sites/SBC" }, { "Title": "Service Delivery", "Path": "https://citz.sp.gov.bc.ca/sites/SBC/SD", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/SBC" }] }, { "Title": "Shared", "Sites": [{ "Title": "Clubs", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/Club", "Description": "Ongoing division/business unit developed sites for non-government programs that are for collaboration with ministry, government, broader public sector, or authenticated public users.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "Committees", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/Committee", "Description": "Ongoing division/business unit developed sites that are for steering/managing corporate things within ministry, government, broader public sector, or authenticated public users.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "CITZ IMB Customer Communications", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/Communications", "Description": "Reference copies of email communications to CITZ customers. ", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "Communities of Practice", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/CoP", "Description": "Ongoing division/business unit developed sites that are for development of employee skills within ministry, government, broader public sector, or authenticated public users.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "Corporate Supply Arrangements", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/CSA", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "Knowledge Base", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/KB", "Description": "How, when, and why we do things within the ministry.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "Programs", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/Program", "Description": "Ongoing division/business unit developed sites that are for collaboration with ministry, government, broader public sector, or authenticated public users.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }, { "Title": "Projects", "Path": "https://citz.sp.gov.bc.ca/sites/Shared/Project", "Description": "TEMPORARY division/business unit sites that are accessed by ministry, government, broader public sector, or authenticated public users.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/Shared" }] }, { "Title": "UAT", "Sites": [{ "Title": "Customer Number Request", "Path": "https://citz.sp.gov.bc.ca/sites/UAT/CNR", "Description": "The Customer Number form is used to create new customers or to update an existing customer. ", "ParentLink": "https://citz.sp.gov.bc.ca/sites/UAT" }, { "Title": "Request for Service", "Path": "https://citz.sp.gov.bc.ca/sites/UAT/RFS", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/UAT" }, { "Title": "Sandbox", "Path": "https://citz.sp.gov.bc.ca/sites/UAT/SandBox", "Description": "This is a place to play and learn about SharePoint.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/UAT" }, { "Title": "Single Inventory", "Path": "https://citz.sp.gov.bc.ca/sites/UAT/sis", "Description": null, "ParentLink": "https://citz.sp.gov.bc.ca/sites/UAT" }, { "Title": "Vanilla Demo", "Path": "https://citz.sp.gov.bc.ca/sites/UAT/vanilla", "Description": "no changes made to this site.  It's just plain old vanilla.", "ParentLink": "https://citz.sp.gov.bc.ca/sites/UAT" }] }],
+    };
+  }
+
+  render() {
+    const menuData = this.state.data;
+    return (
+      <Navbar navitems={menuData} />
+    );
+  }
 }
 
 export default App;
