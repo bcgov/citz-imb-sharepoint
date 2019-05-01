@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <Module Name="StyleLibraryCSS"
-    Url="Style Library/FabricUICollectionNavigation/css"
-    RootWebOnly="FALSE"
-    Path="Style Library\FabricUICollectionNavigation\css">
-    <File Url="CSP_CollectionMenu.css"
-    Type="GhostableInLibrary"
-    Level="Published"
-    ReplaceContent="TRUE"  />
-  </Module>
-  <Module Name="StyleLibraryJS"
-    Url="Style Library/FabricUICollectionNavigation/js"
-    RootWebOnly="FALSE"
-    Path="Style Library\FabricUICollectionNavigation\js">
-    <File Url="CSP_CollectionMenu.js"
-      Type="GhostableInLibrary"
-      Level="Published"
-      ReplaceContent="TRUE"  />
-  </Module>
+	<Module Name="StyleLibraryCSS" Url="Style Library/CollectionNavigation/css" RootWebOnly="FALSE" Path="Style Library\UICollectionNavigation\css">
+		<File Url="CSP_CollectionMenu.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+	</Module>
+	<Module Name="StyleLibraryJS" Url="Style Library/UICollectionNavigation/js" RootWebOnly="FALSE" Path="Style Library\CollectionNavigation\js">
+		<File Url="CSP_CollectionMenu.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+	</Module>
 </Elements>
