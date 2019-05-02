@@ -3,6 +3,7 @@
     with dropdown menus to the sites below the root site.
     Vers i on 1.0
 */
+
 $().ready(function () {
     //build the rest api url
     var DomainURL = "https://" + window.location.hostname;
@@ -10,6 +11,14 @@ $().ready(function () {
     var SrchURL = '"' + pathArray[0] + "." + pathArray[1] + '*"';
     var sOpt = "&selectproperties='Title,Path,Description,ParentLink'&rowlimit=500";
     var apiUrl = DomainURL + "/_api/search/query?querytext='SPSiteUrl:" + SrchURL + " AND UrlDepth<4 (contentclass:sts_Web)'" + sOpt;
+
+    var cssUrl = DomainURL + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/CollectionNavigation/css/CSP_CollectionMenu.css";
+    var head = document.getElementsByTagName("head")[0];
+    var style = document.createElement("link");
+    style.type = "text/css";
+    style.rel = "stylesheet";
+    style.href = cssUrl;
+    head.appendChild(style);
 
     //ge t  all the first level sub-sites for all collections within the ministry domain
     $.ajax({
@@ -63,10 +72,8 @@ $().ready(function () {
                 }
             }
 
-            console.log(collections);
-
             //build out the html
-            varhtml = "<div id='csp_topnav' class='topnav'>";
+            var html = "<div id='csp_topnav' class='topnav'>";
             html += "<div class='hamburger' id='csp_hamburger'>";
             html += "<span class='line'></span>";
             html += "<span class='line'></span>";
