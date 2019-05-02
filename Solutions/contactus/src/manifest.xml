@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/"
+SolutionId="b563a004-e6d3-435a-a8eb-9ca381fe1237" SharePointProductVersion="15.0">
+	<FeatureManifests>
+		<FeatureManifest Location="SharePointContactUs_ContactUs feature\Feature.xml" />
+	</FeatureManifests>
+</Solution>
