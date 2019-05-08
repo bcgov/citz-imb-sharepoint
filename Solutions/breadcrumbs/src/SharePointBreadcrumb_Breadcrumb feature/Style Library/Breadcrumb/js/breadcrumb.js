@@ -2,11 +2,11 @@
     Creates a breadcrumb trail for all pages in the collection
     Version 1.0
 */
-var breadcrumbProperties = {
+var bc_Properties = {
     ExcludedLists: ["Site Pages", "Pages"]
 };
 
-function getSiteInfo(sitesArray) {
+function bc_getSiteInfo(sitesArray) {
     var defer = jQuery.Deferred();
 
     var current = sitesArray.shift();
@@ -24,7 +24,7 @@ function getSiteInfo(sitesArray) {
             ctx.executeQueryAsync(
                 function (result) {
                     //sucess
-                    defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + getSiteInfo(sitesArray));
+                    defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
                 },
                 function (err) {
                     //fail
@@ -37,13 +37,13 @@ function getSiteInfo(sitesArray) {
 
     return defer.promise();
 }
-function makeSiteBreadrumb() {
+function bc_makeSiteBreadrumb() {
     var defer = jQuery.Deferred();
 
     //get root site info
     //var rootSite = _spPageContextInfo.siteServerRelativeUrl.replace("/sites/", "");
     SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
-        var html;
+        var mbcHtml;
         var ctx = new SP.ClientContext(_spPageContextInfo.siteAbsoluteUrl);
         var oSite = ctx.get_web();
 
@@ -52,17 +52,17 @@ function makeSiteBreadrumb() {
         ctx.executeQueryAsync(
             function (result) {
                 //sucess
-                html = "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
+                mbcHtml = "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
 
                 if (_spPageContextInfo.siteServerRelativeUrl !== _spPageContextInfo.webServerRelativeUrl) {
                     var s = _spPageContextInfo.webServerRelativeUrl.replace(_spPageContextInfo.siteServerRelativeUrl, "");
                     var a = s.split("/");
                     a.shift();
-                    $.when(getSiteInfo(a)).then(function (data) {
-                        defer.resolve(html + data);
+                    $.when(bc_getSiteInfo(a)).then(function (data) {
+                        defer.resolve(mbcHtml + data);
                     });
                 } else {
-                    defer.resolve(html);
+                    defer.resolve(mbcHtml);
                 }
             },
             function (err) {
@@ -76,7 +76,7 @@ function makeSiteBreadrumb() {
 }
 
 
-function getListInfo() {
+function bc_getListInfo() {
     var defer = jQuery.Deferred();
     if (typeof _spPageContextInfo.pageListId === "undefined") {
         //not part of a list or library
@@ -85,7 +85,7 @@ function getListInfo() {
 
 
         SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
-            var html;
+            var lHtml;
             var ctx = new SP.ClientContext.get_current();
             var oList = ctx.get_web().get_lists().getById(_spPageContextInfo.pageListId);
             var oListRootFolder = oList.get_rootFolder();
@@ -96,13 +96,13 @@ function getListInfo() {
             ctx.executeQueryAsync(
                 function (result) {
                     //success
-                    if (breadcrumbProperties.ExcludedLists.includes(oList.get_title())) {
-                        html = "";
+                    if (bc_Properties.ExcludedLists.includes(oList.get_title())) {
+                        lHtml = "";
                     } else {
-                        html = "<span class='csp_breadcrumb'><a href='" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
+                        lHtml = "<span class='csp_breadcrumb'><a href='" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
                     }
-                    console.log(html);
-                    defer.resolve(html);
+                    console.log(lHtml);
+                    defer.resolve(lHtml);
                 },
                 function (err) {
                     //fail
@@ -115,7 +115,7 @@ function getListInfo() {
     return defer.promise();
 }
 function getFolderInfo() {
-    var html = "";
+    var fHtml = "";
     var u = decodeURIComponent(window.location.href);
     console.log(u);
     if (u.search("RootFolder") > -1) {
@@ -143,12 +143,12 @@ function getFolderInfo() {
 
             for (j = 0; j < folders.length; j++) {
                 listpath = listpath + "/" + folders[j];
-                html += "<span class='csp_breadcrumb'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
+                fHtml += "<span class='csp_breadcrumb'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
             }
         }
     }
 
-    return html;
+    return fHtml;
 }
 function getPageInfo() {
     return "<span class='csp_breadcrumb'>" + _spPageContextInfo.serverRequestPath.substr(_spPageContextInfo.serverRequestPath.lastIndexOf('/') + 1).split(".")[0] + "</span>";
@@ -167,15 +167,15 @@ $().ready(function () {
 
     //make the breadcrumb trail
     //get the site(s)
-    var bcSites = makeSiteBreadrumb();
-    var bcList = getListInfo();
+    var bcSites = bc_makeSiteBreadrumb();
+    var bcList = bc_getListInfo();
 
-    $.when(bcSites, bcList).then(function (siteData, listData) {
+    $.when(bcSites, bcList).then(function (bcSiteData, bcListData) {
         var bcFolders = getFolderInfo();
         var bcPage = getPageInfo(_spPageContextInfo.pageItemId);
 
-        var html = "<div id='csp_breadcrumbContainer'>" + siteData + listData + bcFolders + bcPage + "</div>";
+        var bcHtml = "<div id='csp_breadcrumbContainer'>" + bcSiteData + bcListData + bcFolders + bcPage + "</div>";
 
-        $("#titleAreaRow > .ms-breadcrumb-box").append(html);
+        $("#titleAreaRow > .ms-breadcrumb-box").append(bcHtml);
     });
 });
