@@ -96,12 +96,11 @@ function bc_getListInfo() {
             ctx.executeQueryAsync(
                 function (result) {
                     //success
-                    if (bc_Properties.ExcludedLists.includes(oList.get_title())) {
+                    if (bc_Properties.ExcludedLists.indexOf(oList.get_title()) > -1) {
                         lHtml = "";
                     } else {
                         lHtml = "<span class='csp_breadcrumb'><a href='" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
                     }
-                    console.log(lHtml);
                     defer.resolve(lHtml);
                 },
                 function (err) {
@@ -117,7 +116,6 @@ function bc_getListInfo() {
 function getFolderInfo() {
     var fHtml = "";
     var u = decodeURIComponent(window.location.href);
-    console.log(u);
     if (u.search("RootFolder") > -1) {
         if (u.search("_layouts") > -1) {
             //not a list or a library
