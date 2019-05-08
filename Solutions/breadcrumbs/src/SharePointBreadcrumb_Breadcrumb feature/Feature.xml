@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="cb20ec33-e134-4a4a-bcfc-ee3acc404dff" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="Collection Navigation Menu" Description="Creates a breadcrumb for all pages within the collection.">
+	<ElementManifests>
+		<ElementManifest Location="BreadcrumbCA\Elements.xml" />
+		<ElementManifest Location="Style Library\Elements.xml" />
+		<ElementFile Location="Style Library\Breadcrumb\js\breadcrumb.js" />
+		<ElementFile Location="Style Library\Breadcrumb\images\breadcrumb.png" />
+		<ElementFile Location="Style Library\Breadcrumb\css\breadcrumb.css" />
+	</ElementManifests>
+</Feature>
