@@ -104,8 +104,14 @@ $().ready(function () {
             $("#O365_NavHeader .o365cs-nav-centerAlign").append(html);
 
             $(".hamburger").click(function () {
-                $(".hamburger").toggleClass("is-active")
-                $("#csp_topnav").toggleClass("is-active")
+                $(".hamburger").toggleClass("is-active");
+                $("#csp_topnav").toggleClass("is-active");
+            });
+            $(window).resize(function () {
+                if ($(".hamburger").hasClass("is-active")) {
+                    $(".hamburger").toggleClass("is-active", false);
+                    $("#csp_topnav").toggleClass("is-active", false);
+                }
             });
         },
         error: function (error) {
