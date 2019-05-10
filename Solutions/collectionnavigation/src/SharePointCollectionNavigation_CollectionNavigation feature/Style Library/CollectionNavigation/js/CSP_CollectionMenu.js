@@ -115,7 +115,7 @@ $().ready(function () {
             });
         },
         error: function (error) {
-            windows.console && console.log("error", error);
+            window.console && console.log("error", error);
         }
     });
 });
