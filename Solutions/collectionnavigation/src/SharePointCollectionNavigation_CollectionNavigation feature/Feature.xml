@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Creates a navigation menu in the header linking to all collections within the domain, with dropdown menus to the sites below the root site." Id="8f1c1430-08d7-40fe-9f7b-7ddf5e0bbffd" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="Collection Navigation Menu">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="8f1c1430-08d7-40fe-9f7b-7ddf5e0bbffd" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="CITZ IMB Collection Navigation Menu" Description="Creates a navigation menu in the header linking to all collections within the domain, with dropdown menus to the sites below the root site.">
 	<ElementManifests>
 		<ElementManifest Location="CollectionNavigationCA\Elements.xml" />
 		<ElementManifest Location="Style Library\Elements.xml" />
