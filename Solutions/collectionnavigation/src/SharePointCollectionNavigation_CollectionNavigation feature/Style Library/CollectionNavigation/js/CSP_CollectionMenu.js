@@ -10,7 +10,7 @@ $().ready(function () {
     var pathArray = window.location.hostname.split('.');
     var SrchURL = '"' + pathArray[0] + "." + pathArray[1] + '*"';
     var sOpt = "&selectproperties='Title,Path,Description,ParentLink'&rowlimit=500";
-    var apiUrl = DomainURL + "/_api/search/query?querytext='SPSiteUrl:" + SrchURL + " AND UrlDepth<4 (contentclass:sts_Web)'" + sOpt;
+    var apiUrl = _spPageContextInfo.siteAbsoluteUrl + "/_api/search/query?querytext='SPSiteUrl:" + SrchURL + " AND UrlDepth<4 (contentclass:sts_Web)'" + sOpt;
 
     var cssUrl = DomainURL + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/CollectionNavigation/css/CSP_CollectionMenu.css";
     var head = document.getElementsByTagName("head")[0];
@@ -115,7 +115,7 @@ $().ready(function () {
             });
         },
         error: function (error) {
-            windows.console && console.log("error", error);
+            window.console && console.log("error", error);
         }
     });
 });
