@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="cb20ec33-e134-4a4a-bcfc-ee3acc404dff" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="Breadcrumb Navigation" Description="Creates a breadcrumb for all pages within the collection.">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="cb20ec33-e134-4a4a-bcfc-ee3acc404dff" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="CITZ IMB Breadcrumb Navigation" Description="Creates a breadcrumb for all pages within the collection.">
 	<ElementManifests>
 		<ElementManifest Location="BreadcrumbCA\Elements.xml" />
 		<ElementManifest Location="Style Library\Elements.xml" />
