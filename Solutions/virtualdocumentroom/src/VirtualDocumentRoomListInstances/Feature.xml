@@ -1,0 +1,14 @@
+﻿<Feature Id="{d3a12eed-f599-4eff-88b9-da3f6786b88f}" Title="List Instances feature of exported web template &quot;Virtual Document Room&quot;" Hidden="TRUE" Version="1.0.0.0" Scope="Web" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Elements.xml" />
+		<ElementManifest Location="ElementsFields.xml" />
+		<ElementManifest Location="ElementsContentType.xml" />
+		<ElementFile Location="resources\resources.en-US.resx" />
+		<ElementFile Location="Files\_catalogs\design\Schema.xml" />
+		<ElementFile Location="Files\_catalogs\masterpage\Schema.xml" />
+		<ElementFile Location="Files\Documents\Schema.xml" />
+		<ElementFile Location="Files\Lists\Questions\Schema.xml" />
+		<ElementFile Location="Files\SiteAssets\Schema.xml" />
+		<ElementFile Location="Files\SitePages\Schema.xml" />
+	</ElementManifests>
+</Feature>
