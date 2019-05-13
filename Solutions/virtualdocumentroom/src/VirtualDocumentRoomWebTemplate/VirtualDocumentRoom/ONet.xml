@@ -1,10 +1,6 @@
-﻿<Project Title="Virtual Document Room" Description="Virtual Document Room (VDR) aka Virtual Information Control Office (VICO) is a specialized site for use with procurement activities." Revision="0" EnableMinimalDownload="FALSE" UIVersion="15" SiteLogoUrl="/sites/UAT/SiteAssets/bc_citz_h_rgb_pos_230x99.png" SiteLogoDescription="" xmlns="http://schemas.microsoft.com/sharepoint/">
+﻿<Project Title="Virtual Document Room" Revision="0" EnableMinimalDownload="FALSE" UIVersion="15" SiteLogoUrl="/sites/UAT/SiteAssets/bc_citz_h_rgb_pos_230x99.png" SiteLogoDescription="" xmlns="http://schemas.microsoft.com/sharepoint/">
 	<NavBars>
 		<NavBar Name="SharePoint Top Navigation Bar" Url="" ID="1002" />
-		<NavBar Name="Recent" Url="" ID="1033">
-			<NavBarPage Name="Questions" Url="Lists/Questions/AllItems.aspx" />
-			<NavBarPage Name="Documents" Url="Documents/Forms/AllItems.aspx" />
-		</NavBar>
 	</NavBars>
 	<Configurations>
 		<Configuration ID="0" Name="Default" MasterUrl="_catalogs/masterpage/seattle.master" CustomMasterUrl="_catalogs/masterpage/seattle.master" ThemedCssFolderUrl="">
@@ -86,6 +82,8 @@
 				<Feature ID="{e8389ec7-70fd-4179-a1c4-6fcb4342d7a0}" Name="FeatureDefinition/14/e8389ec7-70fd-4179-a1c4-6fcb4342d7a0" />
 				<!--SearchTaxonomyRefinementWebPartsHtml Feature-->
 				<Feature ID="{8c34f59f-8dfb-4a39-9a08-7497237e3dc4}" Name="FeatureDefinition/15/8c34f59f-8dfb-4a39-9a08-7497237e3dc4" />
+				<!--ViewFormPagesLockDown Feature-->
+				<Feature ID="{7c637b23-06c4-472d-9a9a-7c175762c5c4}" Name="FeatureDefinition/15/7c637b23-06c4-472d-9a9a-7c175762c5c4" />
 				<!--EnterpriseWikiSecondPhase Feature-->
 				<Feature ID="{3f6680ba-94db-4c92-a5b6-7d5c66f467a7}" Name="FeatureDefinition/15/3f6680ba-94db-4c92-a5b6-7d5c66f467a7" />
 				<!--SharePointCollectionNavigation_CollectionNavigation feature Feature-->
@@ -231,25 +229,25 @@
 				<!--XmlFormLibrary Feature-->
 				<Feature ID="{00bfea71-1e1d-4562-b56a-f05371bb0115}" Name="FeatureDefinition/15/00bfea71-1e1d-4562-b56a-f05371bb0115" SourceVersion="0.0.0.0" />
 				<!--List Feature-->
-				<Feature ID="{d3a12eed-f599-4eff-88b9-da3f6786b88f}" Name="List Feature">
+				<Feature ID="{336624f2-6b51-47c3-be68-fa36a9a8b7a3}" Name="List Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Module Feature-->
-				<Feature ID="{901b4289-7a4e-40ad-ba22-9ebcf9b3293d}" Name="Module Feature">
+				<Feature ID="{7ac44c14-4ccc-40b3-ad6c-c84e06307b7d}" Name="Module Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Web EventReceivers Feature-->
-				<Feature ID="{fa57a83e-bde5-4504-87f8-0f9654fa4dca}" Name="Web EventReceivers Feature">
+				<Feature ID="{68ae20ec-84d3-4802-aab6-2a0f4067857e}" Name="Web EventReceivers Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Property Bag Feature-->
-				<Feature ID="{69faab78-b472-4cc6-92d2-31c2cfc40e55}" Name="Property Bag Feature">
+				<Feature ID="{65d70d9c-7821-47dd-b02c-bc218966d58a}" Name="Property Bag Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>

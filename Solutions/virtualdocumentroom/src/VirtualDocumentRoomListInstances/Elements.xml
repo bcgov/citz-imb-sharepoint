@@ -1,14 +1,301 @@
 ﻿<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}"
-	TemplateType="124" Title="Composed Looks" Description="Use this list to store composed looks. These looks can be applied to this site by navigating to Site Settings and choosing Change the look." Url="_catalogs/design" CustomSchema="Files\_catalogs\design\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
-	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}"
-	TemplateType="116" Title="Master Page Gallery" Description="Use the master page gallery to store master pages. The master pages in this gallery are available to this site and any sites underneath it." Url="_catalogs/masterpage" CustomSchema="Files\_catalogs\masterpage\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
-	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}"
-	TemplateType="101" Title="Documents" Description="" Url="Documents" CustomSchema="Files\Documents\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
-	<ListInstance FeatureId="{00bfea71-de22-43b2-a848-c05709900100}"
-	TemplateType="100" Title="Questions" Description="" Url="Lists/Questions" CustomSchema="Files\Lists\Questions\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
-	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}"
-	TemplateType="101" Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." Url="SiteAssets" CustomSchema="Files\SiteAssets\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
-	<ListInstance FeatureId="{00bfea71-c796-4402-9f2f-0eb9a6e71b18}"
-	TemplateType="119" Title="Site Pages" Description="" Url="SitePages" CustomSchema="Files\SitePages\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}" TemplateType="124" Title="Composed Looks" Description="Use this list to store composed looks. These looks can be applied to this site by navigating to Site Settings and choosing Change the look." Url="_catalogs/design" CustomSchema="Files\_catalogs\design\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="ID">1</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Current</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">100.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">1_.000</Field>
+					<Field Name="MetaInfo">1;#</Field>
+					<Field Name="Name">Current</Field>
+					<Field Name="DisplayOrder">0</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">2</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Orange</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">200.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">2_.000</Field>
+					<Field Name="MetaInfo">2;#</Field>
+					<Field Name="Name">Orange</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette015.spcolor, /sites/UAT/_catalogs/theme/15/palette015.spcolor</Field>
+					<Field Name="DisplayOrder">10.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">3</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Sea Monster</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">300.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">3_.000</Field>
+					<Field Name="MetaInfo">3;#</Field>
+					<Field Name="Name">Sea Monster</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/oslo.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/oslo.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette005.spcolor, /sites/UAT/_catalogs/theme/15/palette005.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg005.jpg, /_layouts/15/images/image_bg005.jpg</Field>
+					<Field Name="FontSchemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/fontscheme003.spfont, /sites/UAT/_catalogs/theme/15/fontscheme003.spfont</Field>
+					<Field Name="DisplayOrder">20.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">4</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Green</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">400.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">4_.000</Field>
+					<Field Name="MetaInfo">4;#</Field>
+					<Field Name="Name">Green</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette013.spcolor, /sites/UAT/_catalogs/theme/15/palette013.spcolor</Field>
+					<Field Name="DisplayOrder">30.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">5</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Lime</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">500.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">5_.000</Field>
+					<Field Name="MetaInfo">5;#</Field>
+					<Field Name="Name">Lime</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette026.spcolor, /sites/UAT/_catalogs/theme/15/palette026.spcolor</Field>
+					<Field Name="DisplayOrder">40.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">6</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Nature</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">600.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">6_.000</Field>
+					<Field Name="MetaInfo">6;#</Field>
+					<Field Name="Name">Nature</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette006.spcolor, /sites/UAT/_catalogs/theme/15/palette006.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg006.jpg, /_layouts/15/images/image_bg006.jpg</Field>
+					<Field Name="FontSchemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/fontscheme001.spfont, /sites/UAT/_catalogs/theme/15/fontscheme001.spfont</Field>
+					<Field Name="DisplayOrder">50.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">7</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Blossom</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">700.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">7_.000</Field>
+					<Field Name="MetaInfo">7;#</Field>
+					<Field Name="Name">Blossom</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette002.spcolor, /sites/UAT/_catalogs/theme/15/palette002.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg002.jpg, /_layouts/15/images/image_bg002.jpg</Field>
+					<Field Name="DisplayOrder">60.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">8</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Sketch</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">800.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">8_.000</Field>
+					<Field Name="MetaInfo">8;#</Field>
+					<Field Name="Name">Sketch</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/oslo.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/oslo.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette008.spcolor, /sites/UAT/_catalogs/theme/15/palette008.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg008.jpg, /_layouts/15/images/image_bg008.jpg</Field>
+					<Field Name="FontSchemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/fontscheme003.spfont, /sites/UAT/_catalogs/theme/15/fontscheme003.spfont</Field>
+					<Field Name="DisplayOrder">70.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">9</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">City</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">900.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">9_.000</Field>
+					<Field Name="MetaInfo">9;#</Field>
+					<Field Name="Name">City</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette004.spcolor, /sites/UAT/_catalogs/theme/15/palette004.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg004.jpg, /_layouts/15/images/image_bg004.jpg</Field>
+					<Field Name="DisplayOrder">80.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">10</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Orbit</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1000.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">10_.000</Field>
+					<Field Name="MetaInfo">10;#</Field>
+					<Field Name="Name">Orbit</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette009.spcolor, /sites/UAT/_catalogs/theme/15/palette009.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg009.jpg, /_layouts/15/images/image_bg009.jpg</Field>
+					<Field Name="DisplayOrder">90.0000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">11</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Grey</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1100.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">11_.000</Field>
+					<Field Name="MetaInfo">11;#</Field>
+					<Field Name="Name">Grey</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette032.spcolor, /sites/UAT/_catalogs/theme/15/palette032.spcolor</Field>
+					<Field Name="DisplayOrder">100.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">12</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Characters</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1200.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">12_.000</Field>
+					<Field Name="MetaInfo">12;#</Field>
+					<Field Name="Name">Characters</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette007.spcolor, /sites/UAT/_catalogs/theme/15/palette007.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg007.jpg, /_layouts/15/images/image_bg007.jpg</Field>
+					<Field Name="FontSchemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/fontscheme002.spfont, /sites/UAT/_catalogs/theme/15/fontscheme002.spfont</Field>
+					<Field Name="DisplayOrder">110.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">13</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Office</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1300.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">13_.000</Field>
+					<Field Name="MetaInfo">13;#</Field>
+					<Field Name="Name">Office</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette001.spcolor, /sites/UAT/_catalogs/theme/15/palette001.spcolor</Field>
+					<Field Name="DisplayOrder">120.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">14</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Breeze</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1400.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">14_.000</Field>
+					<Field Name="MetaInfo">14;#</Field>
+					<Field Name="Name">Breeze</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette003.spcolor, /sites/UAT/_catalogs/theme/15/palette003.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg003.jpg, /_layouts/15/images/image_bg003.jpg</Field>
+					<Field Name="DisplayOrder">130.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">15</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Immerse</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1500.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">15_.000</Field>
+					<Field Name="MetaInfo">15;#</Field>
+					<Field Name="Name">Immerse</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/oslo.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/oslo.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette010.spcolor, /sites/UAT/_catalogs/theme/15/palette010.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg010.jpg, /_layouts/15/images/image_bg010.jpg</Field>
+					<Field Name="DisplayOrder">140.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">16</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Red</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1600.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">16_.000</Field>
+					<Field Name="MetaInfo">16;#</Field>
+					<Field Name="Name">Red</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette022.spcolor, /sites/UAT/_catalogs/theme/15/palette022.spcolor</Field>
+					<Field Name="DisplayOrder">150.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">17</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Purple</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1700.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">17_.000</Field>
+					<Field Name="MetaInfo">17;#</Field>
+					<Field Name="Name">Purple</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/seattle.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/seattle.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette031.spcolor, /sites/UAT/_catalogs/theme/15/palette031.spcolor</Field>
+					<Field Name="DisplayOrder">160.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">18</Field>
+					<Field Name="ContentTypeId">0x008545E7792DC7414689A7134ECBBE51CA</Field>
+					<Field Name="Title">Wood</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">1800.00000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">18_.000</Field>
+					<Field Name="MetaInfo">18;#</Field>
+					<Field Name="Name">Wood</Field>
+					<Field Name="MasterPageUrl">https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage/oslo.master, /sites/UAT/vanilla/chocolate/test/_catalogs/masterpage/oslo.master</Field>
+					<Field Name="ThemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/palette011.spcolor, /sites/UAT/_catalogs/theme/15/palette011.spcolor</Field>
+					<Field Name="ImageUrl">https://citz.sp.gov.bc.ca/_layouts/15/images/image_bg011.jpg, /_layouts/15/images/image_bg011.jpg</Field>
+					<Field Name="FontSchemeUrl">https://citz.sp.gov.bc.ca/sites/UAT/_catalogs/theme/15/fontscheme002.spfont, /sites/UAT/_catalogs/theme/15/fontscheme002.spfont</Field>
+					<Field Name="DisplayOrder">170.000000000000</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}" TemplateType="116" Title="Master Page Gallery" Description="Use the master page gallery to store master pages. The master pages in this gallery are available to this site and any sites underneath it." Url="_catalogs/masterpage" CustomSchema="Files\_catalogs\masterpage\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}" TemplateType="101" Title="Documents" Description="" Url="Documents" CustomSchema="Files\Documents\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-de22-43b2-a848-c05709900100}" TemplateType="100" Title="Questions" Description="" Url="Lists/Questions" CustomSchema="Files\Lists\Questions\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}" TemplateType="101" Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." Url="SiteAssets" CustomSchema="Files\SiteAssets\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="ContentTypeId">0x0120009DB6D92AF4279E47B47A7E2812F14E5F</Field>
+					<Field Name="FileLeafRef">js</Field>
+					<Field Name="ID">2</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="FSObjType">1</Field>
+					<Field Name="MetaInfo">2;#</Field>
+					<Field Name="Order">200.000000000000</Field>
+				</Row>
+				<Row>
+					<Field Name="ContentTypeId">0x0120009DB6D92AF4279E47B47A7E2812F14E5F</Field>
+					<Field Name="FileLeafRef">css</Field>
+					<Field Name="ID">3</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="FSObjType">1</Field>
+					<Field Name="MetaInfo">3;#</Field>
+					<Field Name="Order">300.000000000000</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+	<ListInstance FeatureId="{00bfea71-c796-4402-9f2f-0eb9a6e71b18}" TemplateType="119" Title="Site Pages" Description="" Url="SitePages" CustomSchema="Files\SitePages\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
 </Elements>

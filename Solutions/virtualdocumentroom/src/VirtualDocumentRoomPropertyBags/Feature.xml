@@ -1,4 +1,4 @@
-﻿<Feature Id="{69faab78-b472-4cc6-92d2-31c2cfc40e55}" Title="PropertyBag feature of exported web template &quot;Virtual Document Room&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+﻿<Feature Id="{65d70d9c-7821-47dd-b02c-bc218966d58a}" Title="PropertyBag feature of exported web template &quot;Virtual Document Room&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
 	<ElementManifests>
 		<ElementManifest Location="Elements.xml" />
 		<ElementFile Location="resources\resources.en-US.resx" />

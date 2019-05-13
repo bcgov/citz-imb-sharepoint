@@ -588,6 +588,19 @@
 	<Module Name="_SiteTemplates\STS" Url="" SetupPath="SiteTemplates\STS" RootWebOnly="FALSE" Path="Files">
 		<File Url="default.aspx" Type="Ghostable" Level="Published" Path="default.aspx" />
 	</Module>
+	<Module Name="SiteAssetscss_" Url="SiteAssets/css" RootWebOnly="FALSE" Path="Files\SiteAssets\css">
+		<File Url="vdr.css" Type="GhostableInLibrary" Level="Published" Path="vdr.css">
+			<Property Name="ContentTypeId" Value="0x01010008DBD9963F2730429DDA4BF3A3FD8474" />
+			<Property Name="FileLeafRef" Value="vdr.css" />
+			<Property Name="ID" Value="5" />
+			<Property Name="ContentType" Value="Document" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/SiteAssets/css" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="5;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;ContentTypeId:SW|0x01010008DBD9963F2730429DDA4BF3A3FD8474&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;" />
+			<Property Name="Order" Value="500.000000000000" />
+		</File>
+	</Module>
 	<Module Name="SiteAssetsForms_1033\STS\doctemp\word" Url="SiteAssets/Forms" SetupPath="1033\STS\doctemp\word" RootWebOnly="FALSE" Path="Files\SiteAssets\Forms">
 		<File Url="template.doc" DocumentTemplateForList="SiteAssets/Forms" Type="Ghostable" Level="Published" Path="wdtmpl.doc" />
 	</Module>
@@ -707,6 +720,19 @@
   <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
   <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
 </WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="SiteAssetsjs_" Url="SiteAssets/js" RootWebOnly="FALSE" Path="Files\SiteAssets\js">
+		<File Url="vdr.js" Type="GhostableInLibrary" Level="Published" Path="vdr.js">
+			<Property Name="ContentTypeId" Value="0x01010008DBD9963F2730429DDA4BF3A3FD8474" />
+			<Property Name="FileLeafRef" Value="vdr.js" />
+			<Property Name="ID" Value="4" />
+			<Property Name="ContentType" Value="Document" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/SiteAssets/js" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="4;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;ContentTypeId:SW|0x01010008DBD9963F2730429DDA4BF3A3FD8474&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;" />
+			<Property Name="Order" Value="400.000000000000" />
 		</File>
 	</Module>
 	<Module Name="SitePagesForms_Features\WebPageLibrary\webpagelib" Url="SitePages/Forms" SetupPath="Features\WebPageLibrary\webpagelib" RootWebOnly="FALSE" Path="Files\SitePages\Forms">
