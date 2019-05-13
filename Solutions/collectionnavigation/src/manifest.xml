@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Solution xmlns="http://schemas.microsoft.com/sharepoint/"
-  SolutionId="1ce0aa6e-0911-43ea-9099-e14c10e3adbc"
-  SharePointProductVersion="15.0">
-  <FeatureManifests>
-    <FeatureManifest Location="SharePointCollectionNavigation_CollectionNavigation feature\Feature.xml" />
-  </FeatureManifests>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="1ce0aa6e-0911-43ea-9099-e14c10e3adbc" SharePointProductVersion="15.0">
+	<FeatureManifests>
+		<FeatureManifest Location="SharePointCollectionNavigation_CollectionNavigation feature\Feature.xml" />
+	</FeatureManifests>
+	<ActivationDependencies>
+		<ActivationDependency SolutionId="f6911f52-1015-4008-8d29-dfbbb11f0e10" SolutionName="CITZ.IMB.SP.JSLibraries.wsp" />
+	</ActivationDependencies>
 </Solution>
