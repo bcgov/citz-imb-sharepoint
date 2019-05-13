@@ -2,10 +2,8 @@
 	<ContentType ID="0x010802" Name="Administrative Task" Group="_Hidden" Description="An administrative work item that an administrator needs to complete." Hidden="TRUE" Overwrite="TRUE" FeatureId="{695b6570-a48b-4a8e-8ea5-26ea7fc1d162}">
 		<Folder TargetName="_cts/Administrative Task" />
 		<FieldRefs>
-			<FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}"
-			Name="ContentType" />
-			<FieldRef ID="{c3a92d97-2b77-4a25-9698-3ab54874bc6f}"
-			Name="Predecessors" />
+			<FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+			<FieldRef ID="{c3a92d97-2b77-4a25-9698-3ab54874bc6f}" Name="Predecessors" />
 			<FieldRef ID="{d2a04afc-9a05-48c8-a7fa-fa98f9496141}" Name="RelatedItems" />
 			<FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
 			<FieldRef ID="{7b016ee5-70aa-4abb-8aa3-01795b4efe6f}" Name="Action" />
