@@ -1,0 +1,14 @@
+﻿<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}"
+	TemplateType="124" Title="Composed Looks" Description="Use this list to store composed looks. These looks can be applied to this site by navigating to Site Settings and choosing Change the look." Url="_catalogs/design" CustomSchema="Files\_catalogs\design\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}"
+	TemplateType="116" Title="Master Page Gallery" Description="Use the master page gallery to store master pages. The master pages in this gallery are available to this site and any sites underneath it." Url="_catalogs/masterpage" CustomSchema="Files\_catalogs\masterpage\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}"
+	TemplateType="101" Title="Documents" Description="" Url="Documents" CustomSchema="Files\Documents\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-de22-43b2-a848-c05709900100}"
+	TemplateType="100" Title="Questions" Description="" Url="Lists/Questions" CustomSchema="Files\Lists\Questions\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}"
+	TemplateType="101" Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." Url="SiteAssets" CustomSchema="Files\SiteAssets\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-c796-4402-9f2f-0eb9a6e71b18}"
+	TemplateType="119" Title="Site Pages" Description="" Url="SitePages" CustomSchema="Files\SitePages\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" RootWebOnly="FALSE" />
+</Elements>

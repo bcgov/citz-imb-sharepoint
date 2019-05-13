@@ -1,0 +1,856 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="_catalogsdesign_pages" Url="_catalogs/design" SetupPath="pages" RootWebOnly="FALSE" Path="Files\_catalogs\design">
+		<File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_7f28c94f_ed16_4fd3_b4d9_2ab0add00aa3"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:_catalogs/design;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:_catalogs/design;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_37512bf4_c34c_4f8a_bdee_07d42dbfb6f3"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:_catalogs/design;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:_catalogs/design;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="Upload.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_081856e1_c922_4953_8515_92d026ed2bd7"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:_catalogs/design;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:_catalogs/design;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="_catalogsmasterpageForms_pages" Url="_catalogs/masterpage/Forms" SetupPath="pages" RootWebOnly="FALSE" Path="Files\_catalogs\masterpage\Forms">
+		<File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_33b588b0_0ac0_4ad3_ac6b_aa7a2587eed9"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:_catalogs/masterpage;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:_catalogs/masterpage;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_1e5b11a1_c2e2_4329_aaf5_e437c0300be9"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:_catalogs/masterpage;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:_catalogs/masterpage;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="Upload.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_167e047a_a4e1_4972_987c_1eecc71af020"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:_catalogs/masterpage;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:_catalogs/masterpage;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="_catalogsmasterpage_global" Url="_catalogs/masterpage" SetupPath="global" RootWebOnly="FALSE" Path="Files\_catalogs\masterpage">
+		<File Url="minimal.master" Type="GhostableInLibrary" Level="Published" Path="minimal.master">
+			<Property Name="ContentTypeId" Value="0x01010500FA67AE0EC88DE7468A8FAC09CE362780" />
+			<Property Name="FileLeafRef" Value="minimal.master" />
+			<Property Name="UIVersion" Value="4" />
+			<Property Name="ID" Value="2" />
+			<Property Name="ContentType" Value="Master Page" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="2;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_charset:SR|utf-8&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_setuppath:SR|global\\minimal.master&#xD;&#xA;UIVersion:SR|4&#xD;&#xA;vti_generator:SR|Microsoft SharePoint&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_cachedcustomprops:VX|vti_title&#xD;&#xA;ContentTypeId:SW|0x01010500FA67AE0EC88DE7468A8FAC09CE362780&#xD;&#xA;vti_cachedtitle:SR|&lt;asp:ContentPlaceHolder id=&quot;PlaceHolderPageTitle&quot; runat=&quot;server&quot;/&gt;&#xD;&#xA;vti_metatags:VR|GENERATOR Microsoft\\ SharePoint progid SharePoint.WebPartPage.Document HTTP-EQUIV=Content-Type text/html;\\ charset=utf-8 HTTP-EQUIV=Expires 0&#xD;&#xA;vti_title:SR|&lt;asp:ContentPlaceHolder id=&quot;PlaceHolderPageTitle&quot; runat=&quot;server&quot;/&gt;&#xD;&#xA;vti_cachedbodystyle:SR|&lt;body onload=&quot;javascript:if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();&quot;&gt;&#xD;&#xA;" />
+			<Property Name="Order" Value="200.000000000000" />
+		</File>
+		<File Url="oslo.master" Type="GhostableInLibrary" Level="Published" Path="oslo.master">
+			<Property Name="ContentTypeId" Value="0x01010500FA67AE0EC88DE7468A8FAC09CE362780" />
+			<Property Name="FileLeafRef" Value="oslo.master" />
+			<Property Name="UIVersion" Value="15" />
+			<Property Name="DefaultCssFile" Value="osloapp.css" />
+			<Property Name="ID" Value="4" />
+			<Property Name="ContentType" Value="Master Page" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="4;#DefaultCssFile:SR|osloapp.css&#xD;&#xA;vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_charset:SR|utf-8&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_setuppath:SR|global\\oslo.master&#xD;&#xA;UIVersion:SR|15&#xD;&#xA;vti_generator:SR|Microsoft SharePoint&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;ContentTypeId:SW|0x01010500FA67AE0EC88DE7468A8FAC09CE362780&#xD;&#xA;vti_metatags:VR|GENERATOR Microsoft\\ SharePoint HTTP-EQUIV=Content-type text/html;\\ charset=utf-8 HTTP-EQUIV=Expires 0&#xD;&#xA;vti_cachedbodystyle:SR|&lt;body&gt;&#xD;&#xA;" />
+			<Property Name="Order" Value="400.000000000000" />
+		</File>
+		<File Url="oslo.preview" Type="GhostableInLibrary" Level="Published" Path="oslo.preview">
+			<Property Name="ContentTypeId" Value="0x010106002E3CDD3F46ADA043BC3D196D05935065" />
+			<Property Name="FileLeafRef" Value="oslo.preview" />
+			<Property Name="UIVersion" Value="15" />
+			<Property Name="ID" Value="6" />
+			<Property Name="ContentType" Value="Master Page Preview" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="6;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_setuppath:SR|global\\oslo.preview&#xD;&#xA;UIVersion:SR|15&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;ContentTypeId:SW|0x010106002E3CDD3F46ADA043BC3D196D05935065&#xD;&#xA;" />
+			<Property Name="Order" Value="600.000000000000" />
+		</File>
+		<File Url="seattle.master" Type="GhostableInLibrary" Level="Published" Path="seattle.master">
+			<Property Name="ContentTypeId" Value="0x01010500FA67AE0EC88DE7468A8FAC09CE362780" />
+			<Property Name="FileLeafRef" Value="seattle.master" />
+			<Property Name="UIVersion" Value="15" />
+			<Property Name="DefaultCssFile" Value="corev15app.css" />
+			<Property Name="ID" Value="3" />
+			<Property Name="ContentType" Value="Master Page" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="3;#DefaultCssFile:SR|corev15app.css&#xD;&#xA;vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_charset:SR|utf-8&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_setuppath:SR|global\\seattle.master&#xD;&#xA;UIVersion:SR|15&#xD;&#xA;vti_generator:SR|Microsoft SharePoint&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;ContentTypeId:SW|0x01010500FA67AE0EC88DE7468A8FAC09CE362780&#xD;&#xA;vti_metatags:VR|GENERATOR Microsoft\\ SharePoint HTTP-EQUIV=Content-type text/html;\\ charset=utf-8 HTTP-EQUIV=Expires 0&#xD;&#xA;vti_cachedbodystyle:SR|&lt;body&gt;&#xD;&#xA;" />
+			<Property Name="Order" Value="300.000000000000" />
+		</File>
+		<File Url="seattle.preview" Type="GhostableInLibrary" Level="Published" Path="seattle.preview">
+			<Property Name="ContentTypeId" Value="0x010106002E3CDD3F46ADA043BC3D196D05935065" />
+			<Property Name="FileLeafRef" Value="seattle.preview" />
+			<Property Name="UIVersion" Value="15" />
+			<Property Name="ID" Value="5" />
+			<Property Name="ContentType" Value="Master Page Preview" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="5;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_setuppath:SR|global\\seattle.preview&#xD;&#xA;UIVersion:SR|15&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;ContentTypeId:SW|0x010106002E3CDD3F46ADA043BC3D196D05935065&#xD;&#xA;" />
+			<Property Name="Order" Value="500.000000000000" />
+		</File>
+		<File Url="v4.master" Type="GhostableInLibrary" Level="Published" Path="v4.master">
+			<Property Name="ContentTypeId" Value="0x01010500FA67AE0EC88DE7468A8FAC09CE362780" />
+			<Property Name="FileLeafRef" Value="v4.master" />
+			<Property Name="UIVersion" Value="4" />
+			<Property Name="ID" Value="1" />
+			<Property Name="ContentType" Value="Master Page" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/_catalogs/masterpage" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="1;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_charset:SR|utf-8&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_setuppath:SR|global\\v4.master&#xD;&#xA;UIVersion:SR|4&#xD;&#xA;vti_generator:SR|Microsoft SharePoint&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_cachedcustomprops:VX|vti_title&#xD;&#xA;ContentTypeId:SW|0x01010500FA67AE0EC88DE7468A8FAC09CE362780&#xD;&#xA;vti_cachedtitle:SR|&lt;asp:ContentPlaceHolder id=&quot;PlaceHolderPageTitle&quot; runat=&quot;server&quot;/&gt;&#xD;&#xA;vti_metatags:VR|HTTP-EQUIV=X-UA-Compatible IE=8 GENERATOR Microsoft\\ SharePoint progid SharePoint.WebPartPage.Document HTTP-EQUIV=Content-Type text/html;\\ charset=utf-8 HTTP-EQUIV=Expires 0&#xD;&#xA;vti_title:SR|&lt;asp:ContentPlaceHolder id=&quot;PlaceHolderPageTitle&quot; runat=&quot;server&quot;/&gt;&#xD;&#xA;vti_cachedbodystyle:SR|&lt;body scroll=&quot;no&quot; onload=&quot;if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();&quot; class=&quot;v4master&quot;&gt;&#xD;&#xA;" />
+			<Property Name="Order" Value="100.000000000000" />
+		</File>
+	</Module>
+	<Module Name="DocumentsForms_1033\STS\doctemp\word" Url="Documents/Forms" SetupPath="1033\STS\doctemp\word" RootWebOnly="FALSE" Path="Files\Documents\Forms">
+		<File Url="template.dotx" DocumentTemplateForList="Documents/Forms" Type="Ghostable" Level="Published" Path="wdtmpl.dotx" />
+	</Module>
+	<Module Name="DocumentsForms_Features\DocumentLibrary\doclib" Url="Documents/Forms" SetupPath="Features\DocumentLibrary\doclib" RootWebOnly="FALSE" Path="Files\Documents\Forms">
+		<File Url="Upload.aspx" Type="Ghostable" Level="Published" Path="Upload.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_f9ee78ce_995a_415c_aa4e_7994ade15ea9"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Documents;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Documents;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="DocumentsForms_pages" Url="Documents/Forms" SetupPath="pages" RootWebOnly="FALSE" Path="Files\Documents\Forms">
+		<File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_088e494b_dd8e_4134_a6ba_c0ae7be4bd94"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Documents;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Documents;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_60f9261b_8269_45e8_b6d8_540a8d0e5067"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Documents;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Documents;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="ListsQuestions_pages" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" Url="Lists/Questions" SetupPath="pages" RootWebOnly="FALSE" Path="Files\Lists\Questions">
+		<File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_1fd876ee_72e3_4ddf_a501_db1e17b95333"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Lists/Questions;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Lists/Questions;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_2d8c6059_f113_4f2f_a981_c983db98ace3"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Lists/Questions;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Lists/Questions;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="NewForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_31b2c480_6c3f_405a_bccf_df9083e3458a"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Lists/Questions;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Lists/Questions;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="m_Features\MobilityRedirect" Url="m" SetupPath="Features\MobilityRedirect" RootWebOnly="FALSE" Path="Files\m">
+		<File Url="default.aspx" Type="Ghostable" Level="Published" Path="default.aspx" />
+	</Module>
+	<Module Name="_Features\GettingStarted" Url="" SetupPath="Features\GettingStarted" RootWebOnly="FALSE" Path="Files">
+		<File Url="GettingStarted.aspx" Type="Ghostable" Level="Published" Path="GettingStarted.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_5d0cd2dd_15c5_4031_b7b2_96640c680a52"><![CDATA[<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.GettingStartedWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="HelpUrl" type="string" />
+        <property name="Hidden" type="bool">False</property>
+        <property name="MissingAssembly" type="string">Cannot import this Web Part.</property>
+        <property name="Description" type="string" />
+        <property name="BaseViewID" type="string">1</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="Title" type="string">Get started with your site</property>
+        <property name="TitleUrl" type="string" />
+        <property name="ExportMode" type="exportmode">All</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="Width" type="string" />
+        <property name="Height" type="string" />
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="HelpMode" type="helpmode">Modeless</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="_SiteTemplates\STS" Url="" SetupPath="SiteTemplates\STS" RootWebOnly="FALSE" Path="Files">
+		<File Url="default.aspx" Type="Ghostable" Level="Published" Path="default.aspx" />
+	</Module>
+	<Module Name="SiteAssetsForms_1033\STS\doctemp\word" Url="SiteAssets/Forms" SetupPath="1033\STS\doctemp\word" RootWebOnly="FALSE" Path="Files\SiteAssets\Forms">
+		<File Url="template.doc" DocumentTemplateForList="SiteAssets/Forms" Type="Ghostable" Level="Published" Path="wdtmpl.doc" />
+	</Module>
+	<Module Name="SiteAssetsForms_Features\DocumentLibrary\doclib" Url="SiteAssets/Forms" SetupPath="Features\DocumentLibrary\doclib" RootWebOnly="FALSE" Path="Files\SiteAssets\Forms">
+		<File Url="Upload.aspx" Type="Ghostable" Level="Published" Path="Upload.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_89d8f94d_d246_466f_91fa_48c614d37807"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:SiteAssets;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:SiteAssets;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="SiteAssetsForms_pages" Url="SiteAssets/Forms" SetupPath="pages" RootWebOnly="FALSE" Path="Files\SiteAssets\Forms">
+		<File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_4e58c630_31ae_4260_90ce_54cf9741f8e9"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:SiteAssets;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:SiteAssets;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_1670a95e_9d5c_43a1_b91f_af9df9d01f7e"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:SiteAssets;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:SiteAssets;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="SitePagesForms_Features\WebPageLibrary\webpagelib" Url="SitePages/Forms" SetupPath="Features\WebPageLibrary\webpagelib" RootWebOnly="FALSE" Path="Files\SitePages\Forms">
+		<File Url="Upload.aspx" Type="Ghostable" Level="Published" Path="Upload.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_a915e267_7303_4cfd_bf3e_b23afa0cfb0a"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:SitePages;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:SitePages;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="SitePagesForms_pages" Url="SitePages/Forms" SetupPath="pages" RootWebOnly="FALSE" Path="Files\SitePages\Forms">
+		<File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_6e9f4ab7_77b2_4368_9a46_261abe1feefd"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:SitePages;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:SitePages;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+		<File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+			<AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_cf22bb09_2109_4c44_bb4f_e7024ab830e2"><![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:SitePages;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:SitePages;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1048576</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Default</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]></AllUsersWebPart>
+		</File>
+	</Module>
+	<Module Name="SitePages_DocumentTemplates" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/UAT/vanilla/chocolate/VDR" Url="SitePages" SetupPath="DocumentTemplates" RootWebOnly="FALSE" Path="Files\SitePages">
+		<File Url="Home.aspx" Type="GhostableInLibrary" Level="Published" Path="wkpstd.aspx">
+			<Property Name="ContentTypeId" Value="0x010108008D9579B2D7DC054ABA68BFB0C9BA642B" />
+			<Property Name="FileLeafRef" Value="Home.aspx" />
+			<Property Name="WikiField" Value="&lt;div class=&quot;ExternalClass4E6F74738B874816B7547304D06DCF4B&quot;&gt;&#xD;&#xA;            &lt;table id=&quot;layoutsTable&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;vertical-align&amp;#58;top;&quot;&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;​​​​&#xD;&#xA;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;vertical-align&amp;#58;top;&quot;&gt;&lt;td style=&quot;width&amp;#58;49.95%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;&#xD;&#xA;&lt;p&gt;​&lt;/p&gt;&lt;div class=&quot;ms-rtestate-read ms-rte-wpbox&quot;&gt;&lt;div class=&quot;ms-rtestate-notify  ms-rtestate-read 5754da17-be32-4e6f-bc02-7d09586b45b3&quot; id=&quot;div_5754da17-be32-4e6f-bc02-7d09586b45b3&quot; unselectable=&quot;on&quot;&gt;&lt;/div&gt;&lt;div id=&quot;vid_5754da17-be32-4e6f-bc02-7d09586b45b3&quot; unselectable=&quot;on&quot; style=&quot;display&amp;#58;none;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;​&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;ms-wiki-columnSpacing&quot; style=&quot;width&amp;#58;49.95%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;&lt;div class=&quot;ms-rtestate-read ms-rte-wpbox&quot;&gt;&lt;div class=&quot;ms-rtestate-notify  ms-rtestate-read 16c05d33-3303-4d9b-8f3e-18ae8a758980&quot; id=&quot;div_16c05d33-3303-4d9b-8f3e-18ae8a758980&quot; unselectable=&quot;on&quot;&gt;&lt;/div&gt;&lt;div id=&quot;vid_16c05d33-3303-4d9b-8f3e-18ae8a758980&quot; unselectable=&quot;on&quot; style=&quot;display&amp;#58;none;&quot;&gt;&lt;/div&gt;&lt;/div&gt;​&#xD;&#xA;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&#xD;&#xA;            &lt;span id=&quot;layoutsData&quot; style=&quot;display&amp;#58;none;&quot;&gt;true,false,2&lt;/span&gt;&lt;/div&gt;" />
+			<Property Name="ID" Value="1" />
+			<Property Name="ContentType" Value="Wiki Page" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/SitePages" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="1;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_charset:SR|utf-8&#xD;&#xA;vti_setuppath:SR|DocumentTemplates\\wkpstd.aspx&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_cachedzones:VR|Bottom&#xD;&#xA;WikiField:SW|&lt;div class=&quot;ExternalClass4E6F74738B874816B7547304D06DCF4B&quot;&gt;\r\n            &lt;table id=&quot;layoutsTable&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;vertical-align&amp;#58;top;&quot;&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;​​​​\r\n&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;vertical-align&amp;#58;top;&quot;&gt;&lt;td style=&quot;width&amp;#58;49.95%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;\r\n&lt;p&gt;​&lt;/p&gt;&lt;div class=&quot;ms-rtestate-read ms-rte-wpbox&quot;&gt;&lt;div class=&quot;ms-rtestate-notify  ms-rtestate-read 5754da17-be32-4e6f-bc02-7d09586b45b3&quot; id=&quot;div_5754da17-be32-4e6f-bc02-7d09586b45b3&quot; unselectable=&quot;on&quot;&gt;&lt;/div&gt;&lt;div id=&quot;vid_5754da17-be32-4e6f-bc02-7d09586b45b3&quot; unselectable=&quot;on&quot; style=&quot;display&amp;#58;none;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;​&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;ms-wiki-columnSpacing&quot; style=&quot;width&amp;#58;49.95%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;&lt;div class=&quot;ms-rtestate-read ms-rte-wpbox&quot;&gt;&lt;div class=&quot;ms-rtestate-notify  ms-rtestate-read 16c05d33-3303-4d9b-8f3e-18ae8a758980&quot; id=&quot;div_16c05d33-3303-4d9b-8f3e-18ae8a758980&quot; unselectable=&quot;on&quot;&gt;&lt;/div&gt;&lt;div id=&quot;vid_16c05d33-3303-4d9b-8f3e-18ae8a758980&quot; unselectable=&quot;on&quot; style=&quot;display&amp;#58;none;&quot;&gt;&lt;/div&gt;&lt;/div&gt;​\r\n&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;\r\n            &lt;span id=&quot;layoutsData&quot; style=&quot;display&amp;#58;none;&quot;&gt;true,false,2&lt;/span&gt;&lt;/div&gt;&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;ContentTypeId:SW|0x010108008D9579B2D7DC054ABA68BFB0C9BA642B&#xD;&#xA;vti_metatags:VR|CollaborationServer SharePoint\\ Team\\ Web\\ Site&#xD;&#xA;" />
+			<Property Name="Order" Value="100.000000000000" />
+		</File>
+		<File Url="How To Use This Library.aspx" Type="GhostableInLibrary" Level="Published" Path="wkpstd.aspx">
+			<Property Name="ContentTypeId" Value="0x010108008D9579B2D7DC054ABA68BFB0C9BA642B" />
+			<Property Name="FileLeafRef" Value="How To Use This Library.aspx" />
+			<Property Name="WikiField" Value="&lt;div class=&quot;ExternalClass2DFF39EB75A848439403E5A12EF143D7&quot;&gt;&lt;table id=&quot;layoutsTable&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;99.9%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot; style=&quot;min-height&amp;#58;60px;word-wrap&amp;#58;break-word;&quot;&gt;&lt;strong&gt;How to use this wiki library&lt;/strong&gt;&lt;br&gt;You can use this wiki library to share knowledge, brainstorm ideas, collaborate with your team on a design, create an instruction guide, build an encyclopedia of knowledge, or just write down daily information in an easily accessible and modifiable format.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Editing pages&lt;/strong&gt;&lt;br&gt;To edit this page, click on the &lt;strong&gt;Edit Page&lt;/strong&gt; icon at the top of the page. To see all available commands, click on the &lt;strong&gt;Page&lt;/strong&gt; tab. When you are editing, you can type text onto the page or insert tables and pictures. To stop editing, click the &lt;strong&gt;Save&lt;/strong&gt; button at the top of the page. If you leave the page while editing, you will be prompted to save your changes.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creating wiki links&lt;/strong&gt;&lt;br&gt;You can link to another page in this wiki library by enclosing the name of the page in double brackets. When you type [[, the wiki will suggest page names that start with what you've typed. You can select one of these pages using the arrow keys or the mouse, or you can type in a new name. If you type in a new name, it will make a link to a page which has not yet been created. Links are finished by typing ]]. If you are linking to a page in a subfolder or an item in another list, you can press tab to add the selected suggested item to your link without closing the link.&lt;br&gt;&lt;br&gt;You can link to many objects in SharePoint, not just pages. Here are some examples of links&amp;#58;&lt;br&gt;[[Dogs]] &amp;#58; A link to a page named Dogs in the same folder.&lt;br&gt;[[Animals/Dogs]] &amp;#58; A link to a page named Dogs in a subfolder called Animals.&lt;br&gt;[[List&amp;#58;Announcements/Welcome]] &amp;#58; A link to the item called Welcome in the Announcements list on this site.&lt;br&gt;&lt;br&gt;To create a link to a page and have the link display different text than the page name, type a pipe character (|) after the page name, and then type the display text. For example, type [[Home|Home Page]] to create the link labeled Home Page that points to the page named Home.&lt;br&gt;&lt;br&gt;To display double opening or closing brackets without making a link, type a backslash before the two brackets. For example, \[[ or \]].&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creating pages&lt;/strong&gt;&lt;br&gt;There are two main ways to create a new page in your wiki library&amp;#58;&lt;br&gt;&lt;ol&gt;&lt;li&gt;&lt;u&gt;Create a link to a page which does not exist and then click on it to create the page&lt;/u&gt;&amp;#58;&lt;br&gt;This is the recommended way to create a page because it is easier for people to find the page when another page links to it. Links to pages that do not yet exist have a dashed underline.&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;u&gt;Create a page that is not linked to any other&lt;/u&gt;&amp;#58;&lt;br&gt;In the &lt;strong&gt;Settings&lt;/strong&gt; menu, click &lt;strong&gt;Add a page&lt;/strong&gt;. This will ask you for a name and then create that page in the current wiki library.&lt;/li&gt;&lt;/ol&gt;&lt;br&gt;&lt;strong&gt;Managing your wiki library&lt;/strong&gt;&lt;br&gt;You can manage the pages in your wiki library by clicking &lt;strong&gt;View All Pages&lt;/strong&gt; on the &lt;strong&gt;Page&lt;/strong&gt; tab of any page in the library.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Restoring a page&lt;/strong&gt;&lt;br&gt;If you need to restore a previous version of a page, click &lt;strong&gt;Previous Versions&lt;/strong&gt; in the &lt;strong&gt;Page&lt;/strong&gt; tab at the top of the page. You can then click on any of the versions in the quick launch to view the page as it existed at that time. If you want to restore to a version, select it and click &lt;strong&gt;Restore this version&lt;/strong&gt; in the toolbar.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Viewing incoming links&lt;/strong&gt;&lt;br&gt;You can see which pages link to the current page by clicking &lt;strong&gt;Incoming Links&lt;/strong&gt; at the top of the page. This will show you any pages which link to this page.&lt;br&gt;&lt;br&gt;&lt;br&gt;For more information about using Microsoft SharePoint Foundation-based wiki libraries, click Help on any Microsoft SharePoint Foundation page.&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;span id=&quot;layoutsData&quot; style=&quot;display&amp;#58;none;&quot;&gt;false,false,1&lt;/span&gt;&lt;/div&gt;" />
+			<Property Name="ID" Value="2" />
+			<Property Name="ContentType" Value="Wiki Page" />
+			<Property Name="_ModerationStatus" Value="0" />
+			<Property Name="FileDirRef" Value="sites/UAT/vanilla/chocolate/VDR/SitePages" />
+			<Property Name="FSObjType" Value="0" />
+			<Property Name="MetaInfo" Value="2;#vti_parserversion:SR|16.0.0.4822&#xD;&#xA;vti_folderitemcount:IR|0&#xD;&#xA;vti_charset:SR|utf-8&#xD;&#xA;vti_setuppath:SR|DocumentTemplates\\wkpstd.aspx&#xD;&#xA;vti_author:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_cachedzones:VR|Bottom&#xD;&#xA;WikiField:SW|&lt;div class=&quot;ExternalClass2DFF39EB75A848439403E5A12EF143D7&quot;&gt;&lt;table id=&quot;layoutsTable&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;99.9%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot; style=&quot;min-height&amp;#58;60px;word-wrap&amp;#58;break-word;&quot;&gt;&lt;strong&gt;How to use this wiki library&lt;/strong&gt;&lt;br&gt;You can use this wiki library to share knowledge, brainstorm ideas, collaborate with your team on a design, create an instruction guide, build an encyclopedia of knowledge, or just write down daily information in an easily accessible and modifiable format.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Editing pages&lt;/strong&gt;&lt;br&gt;To edit this page, click on the &lt;strong&gt;Edit Page&lt;/strong&gt; icon at the top of the page. To see all available commands, click on the &lt;strong&gt;Page&lt;/strong&gt; tab. When you are editing, you can type text onto the page or insert tables and pictures. To stop editing, click the &lt;strong&gt;Save&lt;/strong&gt; button at the top of the page. If you leave the page while editing, you will be prompted to save your changes.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creating wiki links&lt;/strong&gt;&lt;br&gt;You can link to another page in this wiki library by enclosing the name of the page in double brackets. When you type [[, the wiki will suggest page names that start with what you've typed. You can select one of these pages using the arrow keys or the mouse, or you can type in a new name. If you type in a new name, it will make a link to a page which has not yet been created. Links are finished by typing ]]. If you are linking to a page in a subfolder or an item in another list, you can press tab to add the selected suggested item to your link without closing the link.&lt;br&gt;&lt;br&gt;You can link to many objects in SharePoint, not just pages. Here are some examples of links&amp;#58;&lt;br&gt;[[Dogs]] &amp;#58; A link to a page named Dogs in the same folder.&lt;br&gt;[[Animals/Dogs]] &amp;#58; A link to a page named Dogs in a subfolder called Animals.&lt;br&gt;[[List&amp;#58;Announcements/Welcome]] &amp;#58; A link to the item called Welcome in the Announcements list on this site.&lt;br&gt;&lt;br&gt;To create a link to a page and have the link display different text than the page name, type a pipe character (|) after the page name, and then type the display text. For example, type [[Home|Home Page]] to create the link labeled Home Page that points to the page named Home.&lt;br&gt;&lt;br&gt;To display double opening or closing brackets without making a link, type a backslash before the two brackets. For example, \\[[ or \\]].&lt;br&gt;&lt;br&gt;&lt;strong&gt;Creating pages&lt;/strong&gt;&lt;br&gt;There are two main ways to create a new page in your wiki library&amp;#58;&lt;br&gt;&lt;ol&gt;&lt;li&gt;&lt;u&gt;Create a link to a page which does not exist and then click on it to create the page&lt;/u&gt;&amp;#58;&lt;br&gt;This is the recommended way to create a page because it is easier for people to find the page when another page links to it. Links to pages that do not yet exist have a dashed underline.&lt;br&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;u&gt;Create a page that is not linked to any other&lt;/u&gt;&amp;#58;&lt;br&gt;In the &lt;strong&gt;Settings&lt;/strong&gt; menu, click &lt;strong&gt;Add a page&lt;/strong&gt;. This will ask you for a name and then create that page in the current wiki library.&lt;/li&gt;&lt;/ol&gt;&lt;br&gt;&lt;strong&gt;Managing your wiki library&lt;/strong&gt;&lt;br&gt;You can manage the pages in your wiki library by clicking &lt;strong&gt;View All Pages&lt;/strong&gt; on the &lt;strong&gt;Page&lt;/strong&gt; tab of any page in the library.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Restoring a page&lt;/strong&gt;&lt;br&gt;If you need to restore a previous version of a page, click &lt;strong&gt;Previous Versions&lt;/strong&gt; in the &lt;strong&gt;Page&lt;/strong&gt; tab at the top of the page. You can then click on any of the versions in the quick launch to view the page as it existed at that time. If you want to restore to a version, select it and click &lt;strong&gt;Restore this version&lt;/strong&gt; in the toolbar.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Viewing incoming links&lt;/strong&gt;&lt;br&gt;You can see which pages link to the current page by clicking &lt;strong&gt;Incoming Links&lt;/strong&gt; at the top of the page. This will show you any pages which link to this page.&lt;br&gt;&lt;br&gt;&lt;br&gt;For more information about using Microsoft SharePoint Foundation-based wiki libraries, click Help on any Microsoft SharePoint Foundation page.&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;span id=&quot;layoutsData&quot; style=&quot;display&amp;#58;none;&quot;&gt;false,false,1&lt;/span&gt;&lt;/div&gt;&#xD;&#xA;vti_modifiedby:SR|i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844&#xD;&#xA;vti_foldersubfolderitemcount:IR|0&#xD;&#xA;vti_metatags:VR|CollaborationServer SharePoint\\ Team\\ Web\\ Site&#xD;&#xA;ContentTypeId:SW|0x010108008D9579B2D7DC054ABA68BFB0C9BA642B&#xD;&#xA;" />
+			<Property Name="Order" Value="200.000000000000" />
+		</File>
+	</Module>
+</Elements>
