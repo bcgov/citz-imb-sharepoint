@@ -24,7 +24,7 @@ function bc_getSiteInfo(sitesArray) {
             ctx.executeQueryAsync(
                 function (result) {
                     //sucess
-                    defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
+                    defer.resolve("<span class='csp_breadcrumb bc_getSiteInfo'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
                 },
                 function (err) {
                     //fail
@@ -52,7 +52,7 @@ function bc_makeSiteBreadrumb() {
         ctx.executeQueryAsync(
             function (result) {
                 //sucess
-                mbcHtml = "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
+                mbcHtml = "<span class='csp_breadcrumb bc_makeSiteBreadrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
 
                 if (_spPageContextInfo.siteServerRelativeUrl !== _spPageContextInfo.webServerRelativeUrl) {
                     var s = _spPageContextInfo.webServerRelativeUrl.replace(_spPageContextInfo.siteServerRelativeUrl, "");
@@ -99,7 +99,7 @@ function bc_getListInfo() {
                     if (bc_Properties.ExcludedLists.indexOf(oList.get_title()) > -1) {
                         lHtml = "";
                     } else {
-                        lHtml = "<span class='csp_breadcrumb'><a href='" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
+                        lHtml = "<span class='csp_breadcrumb bc_getListInfo'><a href='" + window.location.protocol + "//" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
                     }
                     defer.resolve(lHtml);
                 },
@@ -113,7 +113,7 @@ function bc_getListInfo() {
 
     return defer.promise();
 }
-function getFolderInfo() {
+function bc_getFolderInfo() {
     var fHtml = "";
     var u = decodeURIComponent(window.location.href);
     if (u.search("RootFolder") > -1) {
@@ -141,15 +141,15 @@ function getFolderInfo() {
 
             for (j = 0; j < folders.length; j++) {
                 listpath = listpath + "/" + folders[j];
-                fHtml += "<span class='csp_breadcrumb'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
+                fHtml += "<span class='csp_breadcrumb bc_getFolderInfo'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
             }
         }
     }
 
     return fHtml;
 }
-function getPageInfo() {
-    return "<span class='csp_breadcrumb'>" + _spPageContextInfo.serverRequestPath.substr(_spPageContextInfo.serverRequestPath.lastIndexOf('/') + 1).split(".")[0] + "</span>";
+function bc_getPageInfo() {
+    return "<span class='csp_breadcrumb bc_getPageInfo'>" + _spPageContextInfo.serverRequestPath.substr(_spPageContextInfo.serverRequestPath.lastIndexOf('/') + 1).split(".")[0] + "</span>";
 }
 
 $().ready(function () {
@@ -169,8 +169,8 @@ $().ready(function () {
     var bcList = bc_getListInfo();
 
     $.when(bcSites, bcList).then(function (bcSiteData, bcListData) {
-        var bcFolders = getFolderInfo();
-        var bcPage = getPageInfo(_spPageContextInfo.pageItemId);
+        var bcFolders = bc_getFolderInfo();
+        var bcPage = bc_getPageInfo(_spPageContextInfo.pageItemId);
 
         var bcHtml = "<div id='csp_breadcrumbContainer'>" + bcSiteData + bcListData + bcFolders + bcPage + "</div>";
 
