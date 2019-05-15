@@ -10,6 +10,8 @@
 			<Class>Microsoft.SharePoint.Applications.HierarchyTasksList.SPHierarchyTaskListEventReceiver</Class>
 			<Data />
 			<Filter />
+			<SourceId>0xEC20AE68D3840248AAB62A0F4067857E</SourceId>
+			<SourceType>2</SourceType>
 		</Receiver>
 	</Receivers>
 </Elements>

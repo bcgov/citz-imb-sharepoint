@@ -21,9 +21,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>TaskForm</Display>
+					<Edit>TaskForm</Edit>
+					<New>TaskForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -81,50 +81,6 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v4/workflow/forms">
 				<WorkflowForm xmlns="http://schemas.microsoft.com/sharepoint/v4/workflow/forms">~sitecollection/_catalogs/wfpub/Approval - SharePoint 2010/ReviewApproval_Task_1033.xsn</WorkflowForm>
-			</XmlDocument>
-			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v4/workflow/formdata">
-				<WorkflowFormData xmlns="http://schemas.microsoft.com/sharepoint/v4/workflow/formdata">
-					<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-						<dfs:queryFields />
-						<dfs:dataFields>
-							<d:SharePointListItem_RW>
-								<d:Status />
-								<d:Author />
-								<d:FieldName_ConsolidatedComments />
-								<d:DueDate xsi:nil="true" />
-								<d:FieldName_Comments />
-								<d:FieldName_DelegateTo />
-								<d:FieldName_NewDescription />
-								<d:FieldName_NewSerialTaskDuration xsi:nil="true" />
-								<d:FieldName_NewDurationUnits>Day</d:FieldName_NewDurationUnits>
-								<d:FieldName_RequestTo />
-								<d:Body />
-								<d:Title />
-								<d:Priority>(2) Normal</d:Priority>
-								<d:PercentComplete xsi:nil="true" />
-								<d:AssignedTo />
-								<d:StartDate />
-								<d:WorkflowLink Description="" />
-								<d:OffsiteParticipant />
-								<d:OffsiteParticipantReason />
-								<d:WorkflowOutcome />
-								<d:WorkflowName />
-								<d:FormURN />
-								<d:FormData />
-								<d:EmailBody />
-								<d:HasCustomEmailBody xsi:nil="true" />
-								<d:SendEmailNotification xsi:nil="true" />
-								<d:PendingModTime xsi:nil="true" />
-								<d:Completed>false</d:Completed>
-								<d:ExtendedProperties />
-								<d:ID xsi:nil="true" />
-								<d:Modified xsi:nil="true" />
-								<d:Created xsi:nil="true" />
-								<d:Editor />
-							</d:SharePointListItem_RW>
-						</dfs:dataFields>
-					</dfs:myFields>
-				</WorkflowFormData>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -360,7 +316,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/UploadEx.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -526,7 +527,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/bpcf.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -613,9 +659,7 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Edit>GroupBoardCirculationEditForm</Edit>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -1307,7 +1351,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -1339,7 +1428,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -1396,7 +1530,7 @@
 				<WelcomePageView xmlns="http://schemas.microsoft.com/office/documentsets/welcomepageview" LastModified="1/1/1 0:00:01 AM" />
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes">
-				<act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="09/05/2018 16:25:26">
+				<act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="05/13/2019 22:15:33">
 					<AllowedContentType id="0x0101" />
 				</act:AllowedContentTypes>
 			</XmlDocument>
@@ -1446,13 +1580,57 @@
 						<Data />
 						<Filter />
 					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
 				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 					<Display>ListForm</Display>
 					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<New>DocSetDisplayForm</New>
 				</FormTemplates>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
@@ -1479,7 +1657,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -1546,7 +1769,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -1906,7 +2174,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -1970,8 +2283,6 @@
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -1994,8 +2305,6 @@
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -2135,7 +2444,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/Upload.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2173,7 +2527,52 @@
 		<DocumentTemplate TargetName="" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2286,7 +2685,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2315,7 +2759,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/NewLink.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2370,7 +2859,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2400,7 +2934,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/upload.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2432,7 +3011,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/upload.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -2557,9 +3181,7 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Edit>GroupBoardCirculationEditForm</Edit>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -3016,7 +3638,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/upload.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -3039,9 +3706,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>BlogForm</Display>
+					<Edit>BlogForm</Edit>
+					<New>BlogForm</New>
 				</FormTemplates>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
@@ -3159,7 +3826,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/ReportServer/rs.rsapplication" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -3188,7 +3900,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/ReportServer/NewSharedDataSource.rsds" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -3222,13 +3979,58 @@
 		<DocumentTemplate TargetName="/_layouts/CreateWorkbook.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>DocumentLibraryForm</Display>
-					<Edit>DocumentLibraryForm</Edit>
-					<New>DocumentLibraryForm</New>
+					<Display>RptLibraryForm</Display>
+					<Edit>RptLibraryForm</Edit>
+					<New>RptLibraryForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -3281,9 +4083,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>FacilitiesForm</Display>
+					<Edit>FacilitiesForm</Edit>
+					<New>FacilitiesForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -3298,9 +4100,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>FacilitiesForm</Display>
+					<Edit>FacilitiesForm</Edit>
+					<New>FacilitiesForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -3380,7 +4182,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/Upload.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -3589,9 +4436,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>TaskForm</Display>
+					<Edit>TaskForm</Edit>
+					<New>TaskForm</New>
 				</FormTemplates>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
@@ -4183,9 +5030,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>TaskForm</Display>
+					<Edit>TaskForm</Edit>
+					<New>TaskForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -4372,7 +5219,52 @@
 		</FieldRefs>
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -4400,9 +5292,8 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Edit>GroupBoardWhereaboutsEditForm</Edit>
+					<New>GroupBoardWhereaboutsNewForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -4447,7 +5338,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/UploadEx.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -4534,10 +5470,54 @@
 						<Data />
 						<Filter />
 					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
 				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes">
-				<act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="09/05/2018 16:25:30">
+				<act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="05/13/2019 22:15:38">
 					<AllowedContentType id="0x0101" />
 					<AllowedContentType id="0x0101009148F5A04DDD49CBA7127AADA5FB792B00291D173ECE694D56B19D111489C4369D" />
 					<AllowedContentType id="0x0101009148F5A04DDD49CBA7127AADA5FB792B006973ACD696DC4858A76371B2FB2F439A" />
@@ -4559,7 +5539,7 @@
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
+					<Edit>VideoSetEditForm</Edit>
 					<New>ListForm</New>
 				</FormTemplates>
 			</XmlDocument>
@@ -4587,13 +5567,58 @@
 		<DocumentTemplate TargetName="/_layouts/spnewdashboard.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>DocumentLibraryForm</Display>
-					<Edit>DocumentLibraryForm</Edit>
-					<New>DocumentLibraryForm</New>
+					<Display>RptLibraryForm</Display>
+					<Edit>RptLibraryForm</Edit>
+					<New>RptLibraryForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -4616,7 +5641,52 @@
 		<DocumentTemplate TargetName="/_layouts/15/spcf.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
@@ -4715,13 +5785,58 @@
 		<DocumentTemplate TargetName="/_layouts/15/CreateWebPage.aspx" />
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
-				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" />
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
 			</XmlDocument>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>DocumentLibraryForm</Display>
-					<Edit>DocumentLibraryForm</Edit>
-					<New>DocumentLibraryForm</New>
+					<Display>WikiEditForm</Display>
+					<Edit>WikiEditForm</Edit>
+					<New>WikiEditForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -4775,9 +5890,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>TaskForm</Display>
+					<Edit>TaskForm</Edit>
+					<New>TaskForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
@@ -4817,9 +5932,9 @@
 		<XmlDocuments>
 			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
 				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
-					<Display>ListForm</Display>
-					<Edit>ListForm</Edit>
-					<New>ListForm</New>
+					<Display>TaskForm</Display>
+					<Edit>TaskForm</Edit>
+					<New>TaskForm</New>
 				</FormTemplates>
 			</XmlDocument>
 		</XmlDocuments>
