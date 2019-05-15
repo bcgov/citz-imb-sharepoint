@@ -154,6 +154,7 @@ function bc_getPageInfo() {
 
 $().ready(function () {
     $("#pageTitle").addClass("ms-hidden");
+    $("#pageContentTitle").addClass("ms-hidden");
     //put the css reference on the page
     var cssUrl = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/Breadcrumb/css/breadcrumb.css";
     var head = document.getElementsByTagName("head")[0];
