@@ -3,7 +3,7 @@
 		<NavBar Name="SharePoint Top Navigation Bar" Url="" ID="1002" />
 	</NavBars>
 	<Configurations>
-		<Configuration ID="0" Name="Default" MasterUrl="_catalogs/masterpage/seattle.master" CustomMasterUrl="_catalogs/masterpage/seattle.master" ThemedCssFolderUrl="">
+		<Configuration ID="0" Name="Default" MasterUrl="_catalogs/masterpage/oslo.master" CustomMasterUrl="_catalogs/masterpage/oslo.master" ThemedCssFolderUrl="">
 			<SiteFeatures>
 				<!--EnhancedTheming Feature-->
 				<Feature ID="{068bc832-4951-11dc-8314-0800200c9a66}" Name="FeatureDefinition/15/068bc832-4951-11dc-8314-0800200c9a66" />
@@ -72,20 +72,14 @@
 				</Feature>
 				<!--ShareWithEveryone Feature-->
 				<Feature ID="{10f73b29-5779-46b3-85a8-4817a6e9a6c2}" Name="FeatureDefinition/15/10f73b29-5779-46b3-85a8-4817a6e9a6c2" />
-				<!--CITZ.IMB.SP.SearchableLists Feature-->
-				<Feature ID="{3bd9ab88-807b-4de4-9a03-49eda603658f}" Name="FeatureDefinition/15/3bd9ab88-807b-4de4-9a03-49eda603658f" />
 				<!--PowerView Feature-->
 				<Feature ID="{bf8b58f5-ebae-4a70-9848-622beaaf2043}" Name="FeatureDefinition/15/bf8b58f5-ebae-4a70-9848-622beaaf2043" />
 				<!--SearchDrivenContent Feature-->
 				<Feature ID="{592ccb4a-9304-49ab-aab1-66638198bb58}" Name="FeatureDefinition/15/592ccb4a-9304-49ab-aab1-66638198bb58" />
 				<!--ReportServer Feature-->
-				<Feature ID="{e8389ec7-70fd-4179-a1c4-6fcb4342d7a0}" Name="FeatureDefinition/14/e8389ec7-70fd-4179-a1c4-6fcb4342d7a0" />
-				<!--SearchTaxonomyRefinementWebPartsHtml Feature-->
-				<Feature ID="{8c34f59f-8dfb-4a39-9a08-7497237e3dc4}" Name="FeatureDefinition/15/8c34f59f-8dfb-4a39-9a08-7497237e3dc4" />
-				<!--ViewFormPagesLockDown Feature-->
-				<Feature ID="{7c637b23-06c4-472d-9a9a-7c175762c5c4}" Name="FeatureDefinition/15/7c637b23-06c4-472d-9a9a-7c175762c5c4" />
-				<!--EnterpriseWikiSecondPhase Feature-->
-				<Feature ID="{3f6680ba-94db-4c92-a5b6-7d5c66f467a7}" Name="FeatureDefinition/15/3f6680ba-94db-4c92-a5b6-7d5c66f467a7" />
+				<Feature ID="{e8389ec7-70fd-4179-a1c4-6fcb4342d7a0}" Name="FeatureDefinition/15/e8389ec7-70fd-4179-a1c4-6fcb4342d7a0" />
+				<!--MediaWebPart Feature-->
+				<Feature ID="{5b79b49a-2da6-4161-95bd-7375c1995ef9}" Name="FeatureDefinition/15/5b79b49a-2da6-4161-95bd-7375c1995ef9" />
 				<!--SharePointCollectionNavigation_CollectionNavigation feature Feature-->
 				<Feature ID="{8f1c1430-08d7-40fe-9f7b-7ddf5e0bbffd}" Name="FeatureDefinition/15/8f1c1430-08d7-40fe-9f7b-7ddf5e0bbffd" />
 				<!--BaseSite Feature-->
@@ -115,30 +109,18 @@
 				<Feature ID="{fde5d850-671e-4143-950a-87b473922dc7}" Name="FeatureDefinition/15/fde5d850-671e-4143-950a-87b473922dc7" />
 				<!--ProjectBasedPolicy Feature-->
 				<Feature ID="{2fcd5f8a-26b7-4a6a-9755-918566dba90a}" Name="FeatureDefinition/15/2fcd5f8a-26b7-4a6a-9755-918566dba90a" />
-				<!--PPSWorkspaceCtype Feature-->
-				<Feature ID="{f45834c7-54f6-48db-b7e4-a35fa470fc9b}" Name="FeatureDefinition/15/f45834c7-54f6-48db-b7e4-a35fa470fc9b" />
-				<!--Translation Feature-->
-				<Feature ID="{4e7276bc-e7ab-4951-9c4b-a74d44205c32}" Name="FeatureDefinition/15/4e7276bc-e7ab-4951-9c4b-a74d44205c32" />
 				<!--LocationBasedPolicy Feature-->
 				<Feature ID="{063c26fa-3ccc-4180-8a84-b6f98e991df3}" Name="FeatureDefinition/15/063c26fa-3ccc-4180-8a84-b6f98e991df3" />
-				<!--SearchTaxonomyRefinementWebParts Feature-->
-				<Feature ID="{67ae7d04-6731-42dd-abe1-ba2a5eaa3b48}" Name="FeatureDefinition/15/67ae7d04-6731-42dd-abe1-ba2a5eaa3b48" />
 				<!--BasicWebParts Feature-->
 				<Feature ID="{00bfea71-1c5e-4a24-b310-ba51c3eb7a57}" Name="FeatureDefinition/15/00bfea71-1c5e-4a24-b310-ba51c3eb7a57" />
-				<!--PPSMonDatasourceCtype Feature-->
-				<Feature ID="{05891451-f0c4-4d4e-81b1-0dabd840bad4}" Name="FeatureDefinition/15/05891451-f0c4-4d4e-81b1-0dabd840bad4" />
-				<!--PPSWebParts Feature-->
-				<Feature ID="{ee9dbf20-1758-401e-a169-7db0a6bbccb2}" Name="FeatureDefinition/15/ee9dbf20-1758-401e-a169-7db0a6bbccb2" />
-				<!--PPSRibbon Feature-->
-				<Feature ID="{ae31cd14-a866-4834-891a-97c9d37662a2}" Name="FeatureDefinition/15/ae31cd14-a866-4834-891a-97c9d37662a2" />
-				<!--PPSSiteCollectionMaster Feature-->
-				<Feature ID="{a1cb5b7f-e5e9-421b-915f-bf519b0760ef}" Name="FeatureDefinition/15/a1cb5b7f-e5e9-421b-915f-bf519b0760ef" />
 				<!--AssetLibrary Feature-->
 				<Feature ID="{4bcccd62-dcaf-46dc-a7d4-e38277ef33f4}" Name="FeatureDefinition/15/4bcccd62-dcaf-46dc-a7d4-e38277ef33f4" />
 				<!--VideoAndRichMedia Feature-->
 				<Feature ID="{6e1e5426-2ebd-4871-8027-c5ca86371ead}" Name="FeatureDefinition/15/6e1e5426-2ebd-4871-8027-c5ca86371ead" />
 				<!--SharePointContactUs_ContactUs feature Feature-->
 				<Feature ID="{79eb32d2-94dc-41a1-b649-c9ff5cce17dc}" Name="FeatureDefinition/15/79eb32d2-94dc-41a1-b649-c9ff5cce17dc" />
+				<!--MobileExcelWebAccess Feature-->
+				<Feature ID="{e995e28b-9ba8-4668-9933-cf5c146d7a9f}" Name="FeatureDefinition/14/e995e28b-9ba8-4668-9933-cf5c146d7a9f" />
 				<!--TaxonomyFieldAdded Feature-->
 				<Feature ID="{73ef14b1-13a9-416b-a9b5-ececa2b0604c}" Name="FeatureDefinition/15/73ef14b1-13a9-416b-a9b5-ececa2b0604c" />
 				<!--CITZ.IMB.SP.JSLibraries Feature-->
@@ -229,25 +211,25 @@
 				<!--XmlFormLibrary Feature-->
 				<Feature ID="{00bfea71-1e1d-4562-b56a-f05371bb0115}" Name="FeatureDefinition/15/00bfea71-1e1d-4562-b56a-f05371bb0115" SourceVersion="0.0.0.0" />
 				<!--List Feature-->
-				<Feature ID="{336624f2-6b51-47c3-be68-fa36a9a8b7a3}" Name="List Feature">
+				<Feature ID="{9ded14d8-ba56-4c1f-bb63-0c2b1fc3b525}" Name="List Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Module Feature-->
-				<Feature ID="{7ac44c14-4ccc-40b3-ad6c-c84e06307b7d}" Name="Module Feature">
+				<Feature ID="{1646f0ce-b5f4-426a-b20c-32614acdd86a}" Name="Module Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Web EventReceivers Feature-->
-				<Feature ID="{68ae20ec-84d3-4802-aab6-2a0f4067857e}" Name="Web EventReceivers Feature">
+				<Feature ID="{e97cf6a4-4747-4de9-bb2b-853a7e6ce133}" Name="Web EventReceivers Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Property Bag Feature-->
-				<Feature ID="{65d70d9c-7821-47dd-b02c-bc218966d58a}" Name="Property Bag Feature">
+				<Feature ID="{9f5a5c64-5ae7-47a6-8c4d-aed81eccb21d}" Name="Property Bag Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
