@@ -3,7 +3,7 @@
 ### Apps
 - no apps yet, waiting for an app store
 ### Solutions
-- [Breadcrumb Navigation](../Solutions/breadcrumbs)
+- [Breadcrumb Navigation](./Solutions/breadcrumbs)
 - [Collection Navigation](../Solutions/collectionnavigation])
 - [Contact Us](../Solutions/contactus])
 - [Javascript Libraries](../Solutions/jslibraries])
