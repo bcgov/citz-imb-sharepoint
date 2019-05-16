@@ -1,6 +1,8 @@
 # Contact Us
 
 Creates a _Contact Site Owners_ button near the top right corner that opens an email to the site owners
+## Pre-requisites:
+- Requires [CITZ.IMB.SP.JSLibraries](../jslibraries) solution.
 
 ## Logic:
 1. Looks for an Owners Group associated with the site and populates the _To:_ field with its members
