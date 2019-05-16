@@ -18,11 +18,6 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 ## License
 
-Detailed guidance around licenses is available 
-[here](/BC-Open-Source-Development-Employee-Guide/Licenses.md)
-
-Here is the boiler-plate you should put into the comments header of every source code file as well as the bottom of your README.md:
-
     Copyright 2019 Province of British Columbia
 
     Licensed under the Apache License, Version 2.0 (the "License");
