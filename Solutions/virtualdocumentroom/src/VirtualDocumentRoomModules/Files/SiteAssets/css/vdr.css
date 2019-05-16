@@ -1,3 +1,4 @@
-body {
-background-color: blue;
+.ui-dialog .ui-dialog-titlebar-close {
+    /* reset as oslo masterpage sets buttons to min-width of 78 */
+    min-width: auto;
 }

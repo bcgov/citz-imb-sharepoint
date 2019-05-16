@@ -29,6 +29,9 @@ $().ready(function () {
 				buttons: {
 					Accept: function () {
 						$(this).dialog("close");
+					},
+					Decline: function () {
+						window.location = "/_layouts/signout.aspx";
 					}
 				}
 			});
