@@ -1,11 +1,8 @@
-# Collection Navigation
-Creates a Navigation Menu in SharePoint for all Collections in the domain, with dropdowns for sites under the root site.
+# Contact Us
 
-example:
+Creates a _Contact Site Owners_ button near the top right corner that opens an email to the site owners
 
-for the domain citz.sp.gov.bc.ca, it will get all collections (ie the root sites under /sites/) and the first level subsites under the root.
-
-
-Usage:
-1. download CollectionNavigation.wsp
-2. upload CollectionNavigation.wsp to the Solution Gallery of your Site Collection
+## Logic:
+1. Looks for an Owners Group associated with the site and populates the _To:_ field with its members
+2. If not 1, then looks up the site on the site inventory in the _Shared_ collection
+3. If not 1 or 2, then uses the CITZ SharePoint support email address
