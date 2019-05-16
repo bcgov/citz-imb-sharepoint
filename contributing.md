@@ -1,9 +1,3 @@
----
-title: Sample Contributing File
-description: A sample CONTRIBUTING.md you can use as a starting point for your new github project.
----
-## Sample Contributing File
----
 ## How to contribute
 Government employees, public and members of the private sector are encouraged to contribute to the repository by **forking and submitting a pull request**. 
 
