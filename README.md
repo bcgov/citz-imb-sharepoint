@@ -29,11 +29,11 @@
 3. Activate the solution
 
 ## Getting Help or Reporting an Issue
-- please use the [issues](/issues) page to report an issue
+- please use the [issues](issues) page to report an issue
 
 ## How to Contribute
 
-Please note that this project is released with a [Contributor Code of Conduct](/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ## License
 
