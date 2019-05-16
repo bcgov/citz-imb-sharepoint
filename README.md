@@ -11,11 +11,11 @@
 ## Usage
 ### Collection features
 - Collection features are automatically enabled when the solution is activated
-- Collection features can be disabled from the _Manage site collection features_ page (found in the site settings of the root site)
+- Collection features can be disabled from the _Manage site collection features_ page (found in the _site settings_ of the root site)
 ### Site features
 - Site features are not enabled when the solution is activated
-- You will need to enable the feature in the _Manage site features_ page (found in the site settings of the site)
-- You can disable the feature in the _Manage site features_ page (found in the site settings of the site)
+- You will need to enable the feature in the _Manage site features_ page (found in the _site settings_ of the site)
+- You can disable the feature in the _Manage site features_ page (found in the _site settings_ of the site)
 
 ## Requirements
 - Most of the solutions posted here require the [Javascript Libraries](./Solutions/jslibraries]) be activated first.
