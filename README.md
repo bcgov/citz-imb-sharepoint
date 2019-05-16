@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+## Features
 
-You can use the [editor on GitHub](https://github.com/bcgov/CITZ-IMB-SharePoint/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Usage
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Requirements
 
-### Markdown
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Project Status
 
-```markdown
-Syntax highlighted code block
+## Goals/Roadmap
 
-# Header 1
-## Header 2
-### Header 3
+## Getting Help or Reporting an Issue
 
-- Bulleted
-- List
+## How to Contribute
 
-1. Numbered
-2. List
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-**Bold** and _Italic_ and `Code` text
+## License
 
-[Link](url) and ![Image](src)
-```
+Detailed guidance around licenses is available 
+[here](/BC-Open-Source-Development-Employee-Guide/Licenses.md)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Here is the boiler-plate you should put into the comments header of every source code file as well as the bottom of your README.md:
 
-### Jekyll Themes
+    Copyright 2019 Province of British Columbia
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bcgov/CITZ-IMB-SharePoint/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at 
 
-### Support or Contact
+       http://www.apache.org/licenses/LICENSE-2.0
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
