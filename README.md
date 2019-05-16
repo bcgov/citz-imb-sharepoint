@@ -25,7 +25,7 @@
 - no apps yet, waiting for an app store
 ### Solutions
 1. Download the *.wsp file for the specific solution
-2. Upload to the _Solutions Gallery_ in your Site Collection (found in the site settings of the root site)
+2. Upload to the _Solutions Gallery_ in your Site Collection (found in the _site settings_ of the root site)
 3. Activate the solution
 
 ## Getting Help or Reporting an Issue
