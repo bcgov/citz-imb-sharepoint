@@ -3,16 +3,25 @@
 ### Apps
 - no apps yet, waiting for an app store
 ### Solutions
-- [Breadcrumb Navigation](./Solutions/breadcrumbs)
-- [Collection Navigation](../Solutions/collectionnavigation])
-- [Contact Us](../Solutions/contactus])
-- [Javascript Libraries](../Solutions/jslibraries])
+- [Breadcrumb Navigation](./Solutions/breadcrumbs) - Collection Feature
+- [Collection Navigation](./Solutions/collectionnavigation]) - Collection Feature
+- [Contact Us](./Solutions/contactus]) - Collection Feature
+- [Javascript Libraries](./Solutions/jslibraries]) - Collection Feature
 
 ## Usage
+- Site Collection features are automatically enabled when the solution is activated
+- Site Collection features can be disabled from the _Manage site collection features_ page (found in the site settings of the root site)
 
 ## Requirements
+- Most of the solutions posted here require the [Javascript Libraries](./Solutions/jslibraries]) be activated first.
 
 ## Installation
+### Apps
+- no apps yet, waiting for an app store
+### Solutions
+1. Download the *.wsp file for the specific solution
+2. Upload to the _Solutions Gallery_ in your Site Collection (found in the site settings of the root site)
+3. Activate the solution
 
 ## Project Status
 
