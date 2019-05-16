@@ -18,7 +18,7 @@
 - You can disable the feature in the _Manage site features_ page (found in the _site settings_ of the site)
 
 ## Requirements
-- Most of the solutions posted here require the [Javascript Libraries](./Solutions/jslibraries]) feature be activated first.
+- Most of the solutions posted here require the [Javascript Libraries](./Solutions/jslibraries) feature be activated first.
 
 ## Installation
 ### Apps
