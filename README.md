@@ -29,7 +29,7 @@
 3. Activate the solution
 
 ## Getting Help or Reporting an Issue
-- please use the [issues](/issues) page to report an issue
+- please use the [issues](issues) page to report an issue
 
 ## How to Contribute
 
