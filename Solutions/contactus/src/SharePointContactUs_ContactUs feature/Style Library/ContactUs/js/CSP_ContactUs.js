@@ -54,7 +54,7 @@ function cu_getbrowser() {
 function cu_getSiteInfo() {
     var defer = $.Deferred();
     var emails = [];
-    var request = $.ajax({
+    $.ajax({
         type: "GET",
         url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/AssociatedOwnerGroup?$expand=Users",
 
@@ -64,7 +64,7 @@ function cu_getSiteInfo() {
         success: function (result) {
             if (result.d.AssociatedOwnerGroup === null) {
                 //there is not an owners group
-                var listRequest = $.ajax({
+                $.ajax({
                     method: "GET",
                     async: false,
                     url: "https://citz.sp.gov.bc.ca/sites/Shared/Program/SP/_api/web/lists(guid'FA641698-A6A8-49E3-BC17-08F51975C1C0')?$expand=Items",
@@ -77,7 +77,7 @@ function cu_getSiteInfo() {
                                 //site found in site inventory list
                                 if (items[i].ContactEmail == null) {
                                     //there is not a contact email
-                                    var primaryUserRequest = $.ajax({
+                                    $.ajax({
                                         method: "GET",
                                         async: false,
                                         url: "https://citz.sp.gov.bc.ca/sites/Shared/Program/SP/_api/Web/GetUserById(" +
@@ -90,7 +90,7 @@ function cu_getSiteInfo() {
                                             window.console && console.log("usererror", errortext, errordescription);
                                         }
                                     });
-                                    var secondaryUserRequest = $.ajax({
+                                    $.ajax({
                                         method: "GET",
                                         async: false,
                                         url: "https://citz.sp.gov.bc.ca/sites/Shared/Program/SP/_api/Web/GetUserById(" +
@@ -150,7 +150,7 @@ function cu_getSiteInfo() {
 
             defer.resolve(contactHTML);
         },
-        error: function (result) {
+        error: function () {
             defer.reject();
             windows.console && console.log("Error");
         }
