@@ -6,15 +6,14 @@
 		<ElementFile Location="Style Library\JSLibraries\js\jquery-3.3.1.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\jquery-ui.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\moment.min.js" />
-		<ElementFile Location="Style Library\JSLibraries\js\loadcss.js" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.structure.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.theme.min.css" />
-		<ElementFile Location="Style Library\JSLibraries\css\images\ui-icons_444444_256x240.png" />
-		<ElementFile Location="Style Library\JSLibraries\css\images\ui-icons_555555_256x240.png" />
-		<ElementFile Location="Style Library\JSLibraries\css\images\ui-icons_777620_256x240.png" />
-		<ElementFile Location="Style Library\JSLibraries\css\images\ui-icons_777777_256x240.png" />
-		<ElementFile Location="Style Library\JSLibraries\css\images\ui-icons_cc0000_256x240.png" />
-		<ElementFile Location="Style Library\JSLibraries\css\images\ui-icons_ffffff_256x240.png" />
+		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_444444_256x240.png" />
+		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_555555_256x240.png" />
+		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_777620_256x240.png" />
+		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_777777_256x240.png" />
+		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_cc0000_256x240.png" />
+		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_ffffff_256x240.png" />
 	</ElementManifests>
 </Feature>

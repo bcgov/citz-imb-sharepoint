@@ -1,14 +1,7 @@
-#csp_breadcrumbContainer::before {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 #csp_breadcrumbContainer {
     padding: 15px 16px;
     font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.025);
-    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.025)
 }
 
 .csp_breadcrumb+.csp_breadcrumb:before {
