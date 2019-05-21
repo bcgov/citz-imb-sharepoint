@@ -37,8 +37,8 @@ function bc_getSiteInfo(sitesArray) {
             ctx.load(oSite, "Title", "Description");
 
             ctx.executeQueryAsync(
-                function (result) {
-                    //sucess
+                function () {
+                    //success
                     defer.resolve("<span class='csp_breadcrumb bc_getSiteInfo'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
                 },
                 function (err) {
@@ -65,8 +65,8 @@ function bc_makeSiteBreadrumb() {
         ctx.load(oSite, "Title", "Description");
 
         ctx.executeQueryAsync(
-            function (result) {
-                //sucess
+            function () {
+                //success
                 mbcHtml = "<span class='csp_breadcrumb bc_makeSiteBreadrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
 
                 if (_spPageContextInfo.siteServerRelativeUrl !== _spPageContextInfo.webServerRelativeUrl) {
@@ -109,7 +109,7 @@ function bc_getListInfo() {
             ctx.load(oListRootFolder);
 
             ctx.executeQueryAsync(
-                function (result) {
+                function () {
                     //success
                     if (bc_Properties.ExcludedLists.indexOf(oList.get_title()) > -1) {
                         lHtml = "";
