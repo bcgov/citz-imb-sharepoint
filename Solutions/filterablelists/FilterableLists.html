@@ -59,6 +59,7 @@
         width: 300px;
         height: 185px;
         float: left;
+        background-color: red;
     }
 
     .csp_list_card:hover {
@@ -88,6 +89,7 @@
         height: 45px;
         line-height: 45px;
         position: relative;
+        background-color: blue;
     }
 
     #csp_list_filter_buttons .csp_list_btn .csp_list_icon {
@@ -162,6 +164,7 @@
         height: calc(185px - 45px - 10px - 28px);
         padding: 5px;
         overflow: auto;
+        background-color: yellow;
     }
 
     .csp_list_cardFooter {
@@ -169,6 +172,7 @@
         height: 18px;
         padding: 5px;
         background: #bcbcbc;
+        background-color: lime;
     }
 
     .csp_list_itemCount {
@@ -247,12 +251,43 @@
         background-color: #f3d250;
         color: #333;
     }
+
+    /*****************************/
+    #fl_list_container {
+        background-color: orange;
+    }
+
+    .fl_list_card {
+        background-color: red;
+        min-height: 20em;
+        width: 10em;
+        display: inline-block;
+        margin: 1em;
+    }
+
+    .fl_list_card_header {
+        background-color: yellow;
+        min-height: 10em;
+        min-width: 10em;
+    }
+
+    .fl_list_card_body {
+        background-color: lightcoral;
+        min-height: 20em;
+        min-width: 10em;
+    }
+
+    .fl_list_card_footer {
+        background-color: maroon;
+        min-height: 20em;
+        min-width: 10em;
+    }
 </style>
 
 <div id="csp_list_header">
     <input id="csp_list_SearchBox" type="search" placeholder="start typing here to filter by title or description"
         onkeyup="csp_list_hilite()">
-
+    <button id="testbutton"></button>
     <div id="csp_list_filter_buttons">
         <p>toggle a button to filter by type</p>
         <button type="button" class="csp_list_btn csp_list_btn-clear csp_list_filter" id="csp_list_button_filter_clear"
@@ -306,169 +341,227 @@
     </div>
 </div>
 
-<div id="csp_list_Container"></div>
+<div id="fl_list_container">Loading...</div>
 
 <script>
-    var sourceData;
-    //Reset filter on clear(x) click
+    let sourceData = [];
+
+    function displayLists(sort = "Title") {
+        let html = "";
+
+        sourceData.sort(function (a, b) {
+            console.log(sort);
+            var x = a[sort].toLowerCase();
+            var y = b[sort].toLowerCase();
+
+            if (x < y) { return -1; }
+            if (x > y) { return 1; }
+            return 0;
+        });
+
+        for (i = 0; i < sourceData.length; i++) {
+            html += `<div class="fl_list_card">`;
+            html += `<div class="fl_list_card_header">${sourceData[i].Title}</div>`;
+            html += `<div class="fl_list_card_body">${sourceData[i].Description}</div>`;
+            html += `<div class="fl_list_card_footer"></div>`;
+            html += `</div>`;
+        }
+
+        $("#fl_list_container").innerHTML = html;
+    }
+
     $("#csp_list_SearchBox").on("input", function () {
         document.getElementById("csp_list_Container").innerHTML = sourceData;
     });
 
-    function getListInfo() {
-        var AllowedTemplates = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109];
-        var defer = $.Deferred();
-        
-        var request = $.ajax({
-            type: "GET",
-            url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists" +
-                "?$expand=RootFolder",
-            beforeSend: function (xhr) {
-                xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
-            },
-            success: function (result) {
-                var lists = result.d.results;
+    $.ajax({
+        type: "GET",
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists?$expand=RootFolder",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
+        }
+    }).done(function (data) {
+        console.log("data", data.d.results);
+        data.d.results.forEach(function (item, index) {
+            if (item.Hidden != true) {
+                let obj = {};
+                obj.BaseTemplate = item.BaseTemplate;
+                obj.Created = item.Created;
+                obj.Description = item.Description;
+                obj.Id = item.Id;
+                obj.ItemCount = item.ItemCount;
+                obj.LastItemModifiedDate = item.LastItemModifiedDate;
+                obj.Title = item.Title;
 
-                lists.sort(function (a, b) {
-                    var x = a.Title.toLowerCase();
-                    var y = b.Title.toLowerCase();
-
-                    if (x < y) { return -1; }
-                    if (x > y) { return 1; }
-                    return 0;
-                });
-
-                var listHTML = "<div id='csp_list_cardlist'>";
-                var liHTML;
-                var aHTML;
-                var urlHTML;
-                var titleHTML;
-                var descriptionHTML;
-                var footerHTML;
-                var listAge;
-
-                for (i = 0; i < lists.length; i++) {
-                    if (lists[i].Hidden == false) {
-                        var oldContent = "";
-
-                        if (moment().diff(moment(lists[i].LastItemModifiedDate), 'days') > 365) {
-                            oldContent = " csp_list_365days"
-                        } else if (moment().diff(moment(lists[i].LastItemModifiedDate), 'days') > 180) {
-                            oldContent = " csp_list_180days"
-                        }
-                        if (AllowedTemplates.indexOf(lists[i].BaseTemplate) > -1) {
-                            liHTML = "<div class='csp_list_card csp_list_template_" + lists[i].BaseTemplate +
-                                "' data-template-type='" + lists[i].BaseTemplate + "'>";
-                            aHTML = "<a class='csp_list_url' href='" + lists[i].RootFolder.ServerRelativeUrl + "'>";
-                            titleHTML = "<div class='csp_list_cardTitle'>" + lists[i].Title +
-                                "<div class=\"csp_list_icon csp_list_icon_" + lists[i].BaseTemplate + "\"></div>" +
-                                "</div>";
-                            descriptionHTML = "<div class='csp_list_cardDescription'>" + lists[i].Description + "</div>";
-                            footerHTML = "<div class='csp_list_cardFooter'><div class='csp_list_itemCount'>" + lists[i].ItemCount +
-                                (lists[i].ItemCount > 1 ? " items" : " item") +
-                                "</div>" +
-                                "<div class='csp_list_lastModified" + oldContent + "'>Last Modified " +
-                                moment(moment(lists[i].LastItemModifiedDate)).fromNow() +
-                                "<span class='tooltiptext'>This content has not been changed in a long time.  Consider archiving it.</span>" +
-                                "</div></div>";
-
-                            listHTML += liHTML + aHTML + titleHTML + descriptionHTML + footerHTML + "</a></div>";
-                        }
-                    }
-                }
-
-                listHTML += "</div>";
-
-                defer.resolve(listHTML);
-            },
-            error: function (result) {
-                defer.reject();
-                console.log("Error:", result);
+                sourceData.push(obj);
             }
         });
+        console.log("sourceData", sourceData);
+        displayLists();
+    }).fail(function (xhr) {
+        window.console && console.log(`Error ${xhr.status} in obtaining sourceData - ${xhr.statusText}`);
+    }).always(
+        console.log("always")
+    );
 
-        return defer.promise();
-    }
+    /*
 
-    var sites = getListInfo();
+     //Reset filter on clear(x) click
 
-    $.when(sites).then(function (data) {
-        sourceData = data;
-        document.getElementById("csp_list_Container").innerHTML = sourceData;
-    });
+     function getListInfo() {
+         var AllowedTemplates = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109];
+         var defer = $.Deferred();
 
-    function csp_list_hilite() {
-        var searchterm = document.getElementById("csp_list_SearchBox").value;
-        var searchexp = new RegExp(searchterm, "ig");
+         var request = $.ajax({
+             type: "GET",
+             url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists" +
+                 "?$expand=RootFolder",
+             beforeSend: function (xhr) {
+                 xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
+             },
+             success: function (result) {
+                 var lists = result.d.results;
 
-        if (searchterm.length > 0) {
-            $(".csp_list_cardDescription").each(function (index, value) {
+                 lists.sort(function (a, b) {
+                     var x = a.Title.toLowerCase();
+                     var y = b.Title.toLowerCase();
 
-                var txt = $(this).text();
-                var html = txt.replace(searchexp, "<span class='csp_list_hilite'>" + searchterm + "</span>")
-                $(this).html(html);
-            });
-            $(".csp_list_cardTitle").each(function (index, value) {
+                     if (x < y) { return -1; }
+                     if (x > y) { return 1; }
+                     return 0;
+                 });
 
-                var txt = $(this).text();
-                var html = txt.replace(searchexp, "<span class='csp_list_hilite'>" + searchterm + "</span>")
-                $(this).html(html);
-            });
-        }
-        else {
-            document.getElementById("csp_list_Container").innerHTML = sourceData;
-            document.getElementById("csp_list_SearchBox").blur();
-            document.getElementById("csp_list_SearchBox").focus();
-        }
+                 var listHTML = "<div id='csp_list_cardlist'>";
+                 var liHTML;
+                 var aHTML;
+                 var urlHTML;
+                 var titleHTML;
+                 var descriptionHTML;
+                 var footerHTML;
+                 var listAge;
 
-        $(".csp_list_card").each(function (index, value) {
-            var str = $(this).find(".csp_list_hilite").text();
-            if (str.length == 0) {
-                $(this).addClass("ms-hidden");
-            }
-        });
-    }
+                 for (i = 0; i < lists.length; i++) {
+                     if (lists[i].Hidden == false) {
+                         var oldContent = "";
 
-    function cspToggleFilter(obj) {
-        obj.classList.toggle("csp_list_filter");
-        setFilter();
-    }
+                         if (moment().diff(moment(lists[i].LastItemModifiedDate), 'days') > 365) {
+                             oldContent = " csp_list_365days"
+                         } else if (moment().diff(moment(lists[i].LastItemModifiedDate), 'days') > 180) {
+                             oldContent = " csp_list_180days"
+                         }
+                         if (AllowedTemplates.indexOf(lists[i].BaseTemplate) > -1) {
+                             liHTML = "<div class='csp_list_card csp_list_template_" + lists[i].BaseTemplate +
+                                 "' data-template-type='" + lists[i].BaseTemplate + "'>";
+                             aHTML = "<a class='csp_list_url' href='" + lists[i].RootFolder.ServerRelativeUrl + "'>";
+                             titleHTML = "<div class='csp_list_cardTitle'>" + lists[i].Title +
+                                 "<div class=\"csp_list_icon csp_list_icon_" + lists[i].BaseTemplate + "\"></div>" +
+                                 "</div>";
+                             descriptionHTML = "<div class='csp_list_cardDescription'>" + lists[i].Description + "</div>";
+                             footerHTML = "<div class='csp_list_cardFooter'><div class='csp_list_itemCount'>" + lists[i].ItemCount +
+                                 (lists[i].ItemCount > 1 ? " items" : " item") +
+                                 "</div>" +
+                                 "<div class='csp_list_lastModified" + oldContent + "'>Last Modified " +
+                                 moment(moment(lists[i].LastItemModifiedDate)).fromNow() +
+                                 "<span class='tooltiptext'>This content has not been changed in a long time.  Consider archiving it.</span>" +
+                                 "</div></div>";
 
-    function cspClearFilter(obj) {
-        var buttons = document.getElementsByClassName("csp_list_btn-filter");
+                             listHTML += liHTML + aHTML + titleHTML + descriptionHTML + footerHTML + "</a></div>";
+                         }
+                     }
+                 }
 
-        for (i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove("csp_list_filter");
-        }
+                 listHTML += "</div>";
 
-        setFilter();
-    }
+                 defer.resolve(listHTML);
+             },
+             error: function (result) {
+                 defer.reject();
+                 console.log("Error:", result);
+             }
+         });
 
-    function setFilter() {
-        var buttons = document.getElementsByClassName("csp_list_btn-filter csp_list_filter");
-        var items = document.getElementsByClassName("csp_list_card");
+         return defer.promise();
+     }
 
-        if (buttons.length === 0) {
-            document.getElementById("csp_list_button_filter_clear").classList.add("csp_list_filter");
+     var sites = getListInfo();
 
-            for (i = 0; i < items.length; i++) {
-                items[i].classList.remove("csp_list_filter");
-            }
-        } else {
-            document.getElementById("csp_list_button_filter_clear").classList.remove("csp_list_filter");
+     $.when(sites).then(function (data) {
+         sourceData = data;
+         document.getElementById("csp_list_Container").innerHTML = sourceData;
+     });
 
-            for (i = 0; i < items.length; i++) {
-                items[i].classList.add("csp_list_filter");
-            }
+     function csp_list_hilite() {
+         var searchterm = document.getElementById("csp_list_SearchBox").value;
+         var searchexp = new RegExp(searchterm, "ig");
 
-            for (i = 0; i < buttons.length; i++) {
-                for (j = 0; j < items.length; j++) {
-                    if (buttons[i].getAttribute("data-template-type") === items[j].getAttribute("data-template-type")) {
-                        items[j].classList.remove("csp_list_filter");
-                    }
-                }
-            }
+         if (searchterm.length > 0) {
+             $(".csp_list_cardDescription").each(function (index, value) {
 
-        }
-    }
+                 var txt = $(this).text();
+                 var html = txt.replace(searchexp, "<span class='csp_list_hilite'>" + searchterm + "</span>")
+                 $(this).html(html);
+             });
+             $(".csp_list_cardTitle").each(function (index, value) {
+
+                 var txt = $(this).text();
+                 var html = txt.replace(searchexp, "<span class='csp_list_hilite'>" + searchterm + "</span>")
+                 $(this).html(html);
+             });
+         }
+         else {
+             document.getElementById("csp_list_Container").innerHTML = sourceData;
+             document.getElementById("csp_list_SearchBox").blur();
+             document.getElementById("csp_list_SearchBox").focus();
+         }
+
+         $(".csp_list_card").each(function (index, value) {
+             var str = $(this).find(".csp_list_hilite").text();
+             if (str.length == 0) {
+                 $(this).addClass("ms-hidden");
+             }
+         });
+     }
+
+     function cspToggleFilter(obj) {
+         obj.classList.toggle("csp_list_filter");
+         setFilter();
+     }
+
+     function cspClearFilter(obj) {
+         var buttons = document.getElementsByClassName("csp_list_btn-filter");
+
+         for (i = 0; i < buttons.length; i++) {
+             buttons[i].classList.remove("csp_list_filter");
+         }
+
+         setFilter();
+     }
+
+     function setFilter() {
+         var buttons = document.getElementsByClassName("csp_list_btn-filter csp_list_filter");
+         var items = document.getElementsByClassName("csp_list_card");
+
+         if (buttons.length === 0) {
+             document.getElementById("csp_list_button_filter_clear").classList.add("csp_list_filter");
+
+             for (i = 0; i < items.length; i++) {
+                 items[i].classList.remove("csp_list_filter");
+             }
+         } else {
+             document.getElementById("csp_list_button_filter_clear").classList.remove("csp_list_filter");
+
+             for (i = 0; i < items.length; i++) {
+                 items[i].classList.add("csp_list_filter");
+             }
+
+             for (i = 0; i < buttons.length; i++) {
+                 for (j = 0; j < items.length; j++) {
+                     if (buttons[i].getAttribute("data-template-type") === items[j].getAttribute("data-template-type")) {
+                         items[j].classList.remove("csp_list_filter");
+                     }
+                 }
+             }
+
+         }
+     }*/
 </script>
