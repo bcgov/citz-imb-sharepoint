@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="StyleLibraryCSS" Url="Style Library/CollectionNavigation/css"
+	RootWebOnly="FALSE" Path="Style Library\CollectionNavigation\css">
+		<File Url="CSP_CollectionMenu.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+	</Module>
+	<Module Name="StyleLibraryJS" Url="Style Library/CollectionNavigation/js" RootWebOnly="FALSE" Path="Style Library\CollectionNavigation\js">
+		<File Url="CSP_CollectionMenu.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+	</Module>
+</Elements>
