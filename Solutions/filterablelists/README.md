@@ -1,10 +1,10 @@
-# CITZ.IMB.SP.SearchableLists
+# CITZ.IMB.SP.FilterableLists
 
 ## Site Collection Administrator Instructions
-1. download CITZ.IMB.SP.SearchableLists.wsp file
+1. download CITZ.IMB.SP.FilterableLists.wsp file
 2. navigate to collection solutions gallery
-3. upload CITZ.IMB.SP.SearchableLists.wsp file
-4. activate CITZ.IMB.SP.SearchableLists.wsp solution
+3. upload CITZ.IMB.SP.FilterableLists.wsp file
+4. activate CITZ.IMB.SP.FilterableLists.wsp solution
 
 You may turn off the feature in site collection features.
 

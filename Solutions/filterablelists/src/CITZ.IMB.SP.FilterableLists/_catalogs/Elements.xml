@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="FilterableListsWebpart" Url="_catalogs/wp" RootWebOnly="FALSE" Path="_catalogs\wp">
+		<File Url="FilterableLists.webpart" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+	</Module>
+</Elements>
