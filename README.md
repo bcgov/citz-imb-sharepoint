@@ -1,37 +1,52 @@
-## Welcome to GitHub Pages
+## Features
 
-You can use the [editor on GitHub](https://github.com/bcgov/CITZ-IMB-SharePoint/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Apps
+- no apps yet, waiting for an app store
+### Solutions
+- [Breadcrumb Navigation](./Solutions/breadcrumbs) - Collection Feature
+- [Collection Navigation](./Solutions/collectionnavigation) - Collection Feature
+- [Contact Us](./Solutions/contactus) - Collection Feature
+- [Javascript Libraries](./Solutions/jslibraries) - Collection Feature
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Usage
+### Collection features
+- Collection features are automatically enabled when the solution is activated
+- Collection features can be disabled from the _Manage site collection features_ page (found in the _site settings_ of the root site)
+### Site features
+- Site features are not enabled when the solution is activated
+- You will need to enable the feature in the _Manage site features_ page (found in the _site settings_ of the site)
+- You can disable the feature in the _Manage site features_ page (found in the _site settings_ of the site)
 
-### Markdown
+## Requirements
+- Most of the solutions posted here require the [Javascript Libraries](./Solutions/jslibraries) feature be activated first.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Installation
+### Apps
+- no apps yet, waiting for an app store
+### Solutions
+1. Download the *.wsp file for the specific solution
+2. Upload to the _Solutions Gallery_ in your Site Collection (found in the _site settings_ of the root site)
+3. Activate the solution
 
-```markdown
-Syntax highlighted code block
+## Getting Help or Reporting an Issue
+- please use the [issues](../../issues) page to report an issue
 
-# Header 1
-## Header 2
-### Header 3
+## How to Contribute
 
-- Bulleted
-- List
+Please note that this project is released with a [Contributor Code of Conduct](Code_of_Conduct.md). By participating in this project you agree to abide by its terms.
 
-1. Numbered
-2. List
+## License
 
-**Bold** and _Italic_ and `Code` text
+    Copyright 2019 Province of British Columbia
 
-[Link](url) and ![Image](src)
-```
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+       http://www.apache.org/licenses/LICENSE-2.0
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bcgov/CITZ-IMB-SharePoint/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
