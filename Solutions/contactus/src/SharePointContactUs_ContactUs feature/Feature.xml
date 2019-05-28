@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="79eb32d2-94dc-41a1-b649-c9ff5cce17dc" ImageUrl="GenericFeature.gif?breadcrumb.png" Scope="Site" Title="CITZ IMB Contact Us" Description="Creates a contact us button in the header which opens an email to the site owners.">
-	<ElementManifests>
-		<ElementManifest Location="ContactUsCA\Elements.xml" />
-		<ElementManifest Location="Style Library\Elements.xml" />
-		<ElementFile Location="Style Library\ContactUs\js\CSP_ContactUs.js" />
-		<ElementFile Location="Style Library\ContactUs\css\CSP_ContactUs.css" />
-	</ElementManifests>
-</Feature>

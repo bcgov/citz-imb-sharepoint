@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<CustomAction ScriptSrc="~SiteCollection/Style Library/ContactUs/js/CSP_ContactUs.js" Location="ScriptLink" Sequence="110">
-	</CustomAction>
-</Elements>
