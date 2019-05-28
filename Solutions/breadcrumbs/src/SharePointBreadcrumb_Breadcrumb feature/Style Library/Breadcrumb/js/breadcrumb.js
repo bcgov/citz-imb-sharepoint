@@ -2,18 +2,26 @@
     Creates a breadcrumb trail for all pages in the collection
     Version 1.0
 */
+
+
 var bc_Properties = {
+    //some libraries are not shown in the breadcrumb trail
     ExcludedLists: ["Site Pages", "Pages"]
 };
 
 function bc_getSiteInfo(sitesArray) {
+    //using promises so that the function will wait until it has the information needed
     var defer = jQuery.Deferred();
 
+    //get the first site from the array
     var current = sitesArray.shift();
 
     if (sitesArray.length === 0) {
-        return "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>";
+        //no more sites after this one
+        //we can use page context to get the information
+        defer.resolve("<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>");
     } else {
+        //we need to request the information about the site we are working on
         SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
             var currentSite = _spPageContextInfo.webAbsoluteUrl.substring(0, _spPageContextInfo.webAbsoluteUrl.search(current) + current.length)
             var ctx = new SP.ClientContext(currentSite);
@@ -23,13 +31,17 @@ function bc_getSiteInfo(sitesArray) {
 
             ctx.executeQueryAsync(
                 function (result) {
-                    //sucess
-                    defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
+                    //success
+                    //request the next site recursively asynchronously
+                    var nextSite = bc_getSiteInfo(sitesArray);
+
+                    $.when(nextSite).then(function (data) {
+                        defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + data);
+                    });
                 },
                 function (err) {
                     //fail
-                    defer.reject("Request Failed: ", err);
-
+                    window.console && console.log("Request Failed: ", err);
                 }
             );
         });
@@ -41,7 +53,6 @@ function bc_makeSiteBreadrumb() {
     var defer = jQuery.Deferred();
 
     //get root site info
-    //var rootSite = _spPageContextInfo.siteServerRelativeUrl.replace("/sites/", "");
     SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
         var mbcHtml;
         var ctx = new SP.ClientContext(_spPageContextInfo.siteAbsoluteUrl);
