@@ -1,6 +1,0 @@
-﻿<Feature Id="{9f5a5c64-5ae7-47a6-8c4d-aed81eccb21d}" Title="PropertyBag feature of exported web template &quot;VICO&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ElementManifests>
-		<ElementManifest Location="Elements.xml" />
-		<ElementFile Location="resources\resources.en-US.resx" />
-	</ElementManifests>
-</Feature>

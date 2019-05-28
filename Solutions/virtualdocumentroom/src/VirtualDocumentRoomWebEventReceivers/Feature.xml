@@ -1,5 +1,0 @@
-﻿<Feature Id="{e97cf6a4-4747-4de9-bb2b-853a7e6ce133}" Title="Web Events feature of exported web template &quot;VICO&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
-	<ElementManifests>
-		<ElementManifest Location="Elements.xml" />
-	</ElementManifests>
-</Feature>
