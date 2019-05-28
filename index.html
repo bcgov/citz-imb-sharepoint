@@ -29,7 +29,7 @@
         var html="";
         $.ajax( {
             // REST call to retreive Release Note documents from Github 
-            url: "https://api.github.com/repos/bcgov/CITZ-IMB-SharePoint/blob/gh-pages", dataType: "jsonp", success: function(returndata) {
+            url: "https://api.github.com/repos/bcgov/CITZ-IMB-SharePoint/contents/?ref=gh-pages", dataType: "jsonp", success: function(returndata) {
                 $.each(returndata.data, function(i, item) {
                     console.log(this);
                     console.log(this.html_url.replace(".md", ".html"));
