@@ -1,115 +1,57 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <style>
+/*test*/
 
- <style> /*test*/
+#result {
+    list-style: none;
+    font-family: segoe ui;
+}
 
- #result { 
+#rcntPatNts {
+    font-weight: bold;
+    font-family: segoe ui;
+    padding: 1%;
+    width: 100%;
+    text-align: left;
+    margin-left: 1pc;
+    font-size: 22px;
+    color: rgba(0, 105, 224, 1);
+}
 
- list-style: none; 
+</style>
 
- font-family: segoe ui; 
-
- } 
-
+<script> 
  
+ $(document).ready(function() {
+    get_watched_repos(); // Call function 
+    function get_watched_repos() {
+        // Make Function 
+        $('#result').html(""); // Destination for results 
+        var html="";
+        $.ajax( {
+            // REST call to retreive Release Note documents from Github 
+            url: "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents", dataType: "jsonp", success: function(returndata) {
+                $.each(returndata.data, function(i, item) {
+                    console.log(this);
+                    console.log(this.html_url.replace(".md", ".html"));
+                    if (this.name !="_config.yml") {
+                        html +='<li>' + // Construct lists and links from REST results 
+                        '<a class="ntLnk" href="https://aspiteri-bcgov.github.io/SharePoint-Release-Notes/' + this.name.replace(".md", ".html") + '">' + this.name + '</a>' + '<ul>' + '<li>' + 'name: ' + this.name + '</li>' + '</ul>' + '</li>';
+                    } // If End 
+                }
+                ); // For End 
+                $('#result').append(html); // Append constructed HTML results to div 
+            } // Success End 
+        }
+        ); // Ajax End 
+    } // get_watched_repos End 
+}
 
- #rcntPatNts { 
-
- font-weight: bold; 
-
- font-family: segoe ui; 
-
- padding: 1%; 
-
- width: 100%; 
-
- text-align: left; 
-
- margin-left: 1pc; 
-
- font-size: 22px; 
-
- color: rgba(0, 105, 224, 1); 
-
- } 
-
- </style> 
-
+); // Document Ready End 
  
+</script> 
 
- <script> 
+<div id="rcntPatNts">Recent Patch Notes</div> 
 
- $(document).ready(function() { 
+<span style="padding: 0% 24%; margin-left: 22px; background: #999;"></span>
 
- 
-
- get_watched_repos(); // Call function 
-
- 
-
- function get_watched_repos() { // Make Function 
-
- 
-
- $('#result').html(""); // Destination for results 
-
- var html = ""; 
-
- 
-
- $.ajax({ // REST call to retreive Release Note documents from Github 
-
- url: "https://api.github.com/repos/ASpiteri-BCGov/SharePoint-Release-Notes/contents", 
-
- dataType: "jsonp", 
-
- success: function(returndata) { 
-
- $.each(returndata.data, function(i, item) { 
-
- console.log(this);
-
- console.log(this.html_url.replace(".md",".html")); 
-
- if (this.name != "_config.yml") { 
-
- html += '<li>' + // Construct lists and links from REST results 
-
- '<a class="ntLnk" href="https://aspiteri-bcgov.github.io/SharePoint-Release-Notes/' + this.name.replace(".md",".html") + '">' + this.name + '</a>' + 
-
- '<ul>' + 
-
- '<li>' + 'name: ' + this.name + '</li>' + 
-
- '</ul>' + 
-
- '</li>'; 
-
- 
-
- } // If End 
-
- }); // For End 
-
- $('#result').append(html); // Append constructed HTML results to div 
-
- } // Success End 
-
- 
-
- }); // Ajax End 
-
- } // get_watched_repos End 
-
- }); // Document Ready End 
-
- </script> 
-
- 
-
- <div id="rcntPatNts">Recent Patch Notes</div> 
-
- <span style="padding: 0% 24%; margin-left: 22px; background: #999;"></span> 
-
- <div style="padding: 20px; margin: 0 20px 0 20px;" id="result"> 
-
- </div> 
+<div style="padding: 20px; margin: 0 20px 0 20px;" id="result"> </div>
