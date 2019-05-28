@@ -9,9 +9,8 @@
 		<File Url="jquery-3.3.1.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="moment.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
-		<File Url="loadcss.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 	</Module>
-	<Module Name="StyleLibraryIMG" Url="Style Library/JSLibraries/css/images" RootWebOnly="FALSE" Path="Style Library\JSLibraries\css\images">
+	<Module Name="StyleLibraryIMG" Url="Style Library/JSLibraries/images" RootWebOnly="FALSE" Path="Style Library\JSLibraries\images">
 		<File Url="ui-icons_444444_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="ui-icons_555555_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="ui-icons_777620_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
