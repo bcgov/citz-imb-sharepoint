@@ -12,7 +12,7 @@ function bc_getSiteInfo(sitesArray) {
     var current = sitesArray.shift();
 
     if (sitesArray.length === 0) {
-        return "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>";
+        defer.resolve("<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>");
     } else {
         SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
             var currentSite = _spPageContextInfo.webAbsoluteUrl.substring(0, _spPageContextInfo.webAbsoluteUrl.search(current) + current.length)
@@ -23,13 +23,15 @@ function bc_getSiteInfo(sitesArray) {
 
             ctx.executeQueryAsync(
                 function (result) {
-                    //sucess
-                    defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
+                    var nextSite = bc_getSiteInfo(sitesArray);
+
+                    $.when(nextSite).then(function (data) {
+                        defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + data);
+                    });
                 },
                 function (err) {
                     //fail
-                    defer.reject("Request Failed: ", err);
-
+                    window.console && console.log("Request Failed: ", err);
                 }
             );
         });
