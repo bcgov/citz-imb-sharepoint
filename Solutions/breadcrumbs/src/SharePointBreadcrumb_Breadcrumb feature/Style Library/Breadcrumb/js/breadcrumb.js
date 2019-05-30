@@ -110,7 +110,7 @@ function bc_getListInfo() {
                     if (bc_Properties.ExcludedLists.indexOf(oList.get_title()) > -1) {
                         lHtml = "";
                     } else {
-                        lHtml = "<span class='csp_breadcrumb'><a href='" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
+                        lHtml = "<span class='csp_breadcrumb'><a href='https://" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
                     }
                     defer.resolve(lHtml);
                 },
