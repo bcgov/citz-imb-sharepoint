@@ -1,0 +1,5 @@
+﻿<Feature Id="{04990b2d-c9fd-4dfc-86b3-4b664120d00f}" Title="Exported User Custom Actions of web template&quot;VICO Template&quot;" Description="Exported User Custom Actions &quot;&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Elements.xml" />
+	</ElementManifests>
+</Feature>
