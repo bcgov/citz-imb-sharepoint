@@ -1,0 +1,8 @@
+﻿<Feature Id="{335c57a3-3f92-4bf6-bffa-73f1b67f0c7c}" Title="Modules feature of exported web template &quot;VICO Template&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Elements.xml" />
+		<ElementFile Location="resources\resources.en-US.resx" />
+		<ElementFile Location="Files\SiteAssets\css\vdr.css" />
+		<ElementFile Location="Files\SiteAssets\js\vdr.js" />
+	</ElementManifests>
+</Feature>
