@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="9872259d-fcad-4945-b724-701c1f47a10f" SharePointProductVersion="15.0">
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/"
+SolutionId="9872259d-fcad-4945-b724-701c1f47a10f"
+SharePointProductVersion="15.0">
 	<FeatureManifests>
 		<FeatureManifest Location="SharePointBreadcrumb_Breadcrumb feature\Feature.xml" />
 	</FeatureManifests>
-	<ActivationDependencies>
-		<ActivationDependency SolutionId="f6911f52-1015-4008-8d29-dfbbb11f0e10" SolutionName="CITZ.IMB.SP.JSLibraries.wsp" />
-	</ActivationDependencies>
 </Solution>

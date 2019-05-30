@@ -1,34 +1,27 @@
 /*
-    Copyright 2019 Province of British Columbia
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-*/
-/*
     Creates a breadcrumb trail for all pages in the collection
     Version 1.0
 */
+
+
 var bc_Properties = {
+    //some libraries are not shown in the breadcrumb trail
     ExcludedLists: ["Site Pages", "Pages"]
 };
 
 function bc_getSiteInfo(sitesArray) {
+    //using promises so that the function will wait until it has the information needed
     var defer = jQuery.Deferred();
 
+    //get the first site from the array
     var current = sitesArray.shift();
 
     if (sitesArray.length === 0) {
-        return "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>";
+        //no more sites after this one
+        //we can use page context to get the information
+        defer.resolve("<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>");
     } else {
+        //we need to request the information about the site we are working on
         SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
             var currentSite = _spPageContextInfo.webAbsoluteUrl.substring(0, _spPageContextInfo.webAbsoluteUrl.search(current) + current.length)
             var ctx = new SP.ClientContext(currentSite);
@@ -37,14 +30,18 @@ function bc_getSiteInfo(sitesArray) {
             ctx.load(oSite, "Title", "Description");
 
             ctx.executeQueryAsync(
-                function () {
+                function (result) {
                     //success
-                    defer.resolve("<span class='csp_breadcrumb bc_getSiteInfo'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + bc_getSiteInfo(sitesArray));
+                    //request the next site recursively asynchronously
+                    var nextSite = bc_getSiteInfo(sitesArray);
+
+                    $.when(nextSite).then(function (data) {
+                        defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + data);
+                    });
                 },
                 function (err) {
                     //fail
-                    defer.reject("Request Failed: ", err);
-
+                    window.console && console.log("Request Failed: ", err);
                 }
             );
         });
@@ -56,7 +53,6 @@ function bc_makeSiteBreadrumb() {
     var defer = jQuery.Deferred();
 
     //get root site info
-    //var rootSite = _spPageContextInfo.siteServerRelativeUrl.replace("/sites/", "");
     SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
         var mbcHtml;
         var ctx = new SP.ClientContext(_spPageContextInfo.siteAbsoluteUrl);
@@ -65,9 +61,9 @@ function bc_makeSiteBreadrumb() {
         ctx.load(oSite, "Title", "Description");
 
         ctx.executeQueryAsync(
-            function () {
-                //success
-                mbcHtml = "<span class='csp_breadcrumb bc_makeSiteBreadrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
+            function (result) {
+                //sucess
+                mbcHtml = "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
 
                 if (_spPageContextInfo.siteServerRelativeUrl !== _spPageContextInfo.webServerRelativeUrl) {
                     var s = _spPageContextInfo.webServerRelativeUrl.replace(_spPageContextInfo.siteServerRelativeUrl, "");
@@ -109,12 +105,12 @@ function bc_getListInfo() {
             ctx.load(oListRootFolder);
 
             ctx.executeQueryAsync(
-                function () {
+                function (result) {
                     //success
                     if (bc_Properties.ExcludedLists.indexOf(oList.get_title()) > -1) {
                         lHtml = "";
                     } else {
-                        lHtml = "<span class='csp_breadcrumb bc_getListInfo'><a href='" + window.location.protocol + "//" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
+                        lHtml = "<span class='csp_breadcrumb'><a href='" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
                     }
                     defer.resolve(lHtml);
                 },
@@ -128,7 +124,7 @@ function bc_getListInfo() {
 
     return defer.promise();
 }
-function bc_getFolderInfo() {
+function getFolderInfo() {
     var fHtml = "";
     var u = decodeURIComponent(window.location.href);
     if (u.search("RootFolder") > -1) {
@@ -156,20 +152,19 @@ function bc_getFolderInfo() {
 
             for (j = 0; j < folders.length; j++) {
                 listpath = listpath + "/" + folders[j];
-                fHtml += "<span class='csp_breadcrumb bc_getFolderInfo'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
+                fHtml += "<span class='csp_breadcrumb'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
             }
         }
     }
 
     return fHtml;
 }
-function bc_getPageInfo() {
-    return "<span class='csp_breadcrumb bc_getPageInfo'>" + _spPageContextInfo.serverRequestPath.substr(_spPageContextInfo.serverRequestPath.lastIndexOf('/') + 1).split(".")[0] + "</span>";
+function getPageInfo() {
+    return "<span class='csp_breadcrumb'>" + _spPageContextInfo.serverRequestPath.substr(_spPageContextInfo.serverRequestPath.lastIndexOf('/') + 1).split(".")[0] + "</span>";
 }
 
 $().ready(function () {
     $("#pageTitle").addClass("ms-hidden");
-    $("#pageContentTitle").addClass("ms-hidden");
     //put the css reference on the page
     var cssUrl = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/Breadcrumb/css/breadcrumb.css";
     var head = document.getElementsByTagName("head")[0];
@@ -185,8 +180,8 @@ $().ready(function () {
     var bcList = bc_getListInfo();
 
     $.when(bcSites, bcList).then(function (bcSiteData, bcListData) {
-        var bcFolders = bc_getFolderInfo();
-        var bcPage = bc_getPageInfo(_spPageContextInfo.pageItemId);
+        var bcFolders = getFolderInfo();
+        var bcPage = getPageInfo(_spPageContextInfo.pageItemId);
 
         var bcHtml = "<div id='csp_breadcrumbContainer'>" + bcSiteData + bcListData + bcFolders + bcPage + "</div>";
 
