@@ -86,25 +86,33 @@ $().ready(function () {
 
     getTOS();
 
-    var html = "<div id=\"tabs\"><ul>";
-    html += "<li><a href=\"#tabs-1\">Home</a></li>";
-    html += "<li><a href=\"#tabs-2\">Questions</a></li>";
-    html += "<li><a href=\"#tabs-3\">Site Management</a></li>";
-    html += "</ul></div>";
+    var html = "<div id=\"tabs\">";
 
-    html += "<div id=\"tabs-1\" class=\"tabcontent home_tab active\">";
+    //tab links
+    html += "<ul>";
+    html += "<li><a href=\"#tab-1\">Home</a></li>";
+    html += "<li><a href=\"#tab-2\">Questions</a></li>";
+    html += "<li><a href=\"#tab-3\">Site Management</a></li>";
+    html += "</ul>";
+
+    //home tab content
+    html += "<div id=\"tab-1\" class=\"tabcontent home_tab active\">";
     html += "<h3>Home</h3>";
-    html += "<p>Home is where the heart is..</p>";
+    html += "<p>introduction to the site, instructions, links to procurement documents and resources.</p>";
     html += "</div>";
 
-    html += "<div id=\"tabs-2\" class=\"tabcontent question_tab\">";
-    html += "<h3>News</h3>";
-    html += "<p>Some news this fine day!</p>";
+    //question tab content
+    html += "<div id=\"tab-2\" class=\"tabcontent question_tab\">";
+    html += "<h3>Questions</h3>";
+    html += "<p>list of public questions and answers.  link to ask a question.</p>";
     html += "</div>";
 
-    html += "<div id=\"tabs-3\" class=\"tabcontent management_tab\">";
-    html += "<h3>Contact</h3>";
-    html += "<p>Get in touch, or swing by for a cup of coffee.</p>";
+    //management tab content
+    html += "<div id=\"tab-3\" class=\"tabcontent management_tab\">";
+    html += "<h3>Site Management</h3>";
+    html += "<p>Tab to be visible only to VICO Site Managers.  Contains links and instructions on how to add proponents and users</p>";
+    html += "</div>";
+
     html += "</div>";
 
     $("#vdr_container").append(html);
@@ -114,8 +122,9 @@ $().ready(function () {
     });
 
     $(".tablink").click(function () {
-        $(".tablink").removeClass("active");
-        $(".tabcontent").removeClass("active");
+        console.log($(this));
+        $(this).removeClass("active");
+        $(this).removeClass("active");
         $("." + $(this).data("tab")).addClass("active");
     });
 
