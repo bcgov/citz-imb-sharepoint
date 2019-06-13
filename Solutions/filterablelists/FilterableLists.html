@@ -1,30 +1,19 @@
 <style>
-    /*
-        dark background = #005a9e
-        light background = #ececec
-        light border = #3cabff
-        light text = #ececec
-        dark text = #333
-        --csp-list-medium:;
-        --csp-list-light:;
-        --csp-list-urgent:;
-        --csp-list-x: maroon;
-    */
-    #csp_list_header {
+    #fl_list_header {
         padding: 10px;
     }
 
-    #csp_list_SearchBox {
+    #fl_list_SearchBox {
         width: 70%;
     }
 
     /* Style buttons */
-    #csp_list_filter_buttons {
+    #fl_list_filter_buttons {
         padding: 10px;
         color: #333;
     }
 
-    #csp_list_filter_buttons .csp_list_btn {
+    #fl_list_filter_buttons .fl_list_btn {
         border: 2px solid #bcbcbc;
         background-color: #bcbcbc;
         color: #333;
@@ -39,143 +28,84 @@
         width: 135px;
     }
 
-    #csp_list_filter_buttons .csp_list_filter {
+    #fl_list_filter_buttons .fl_list_filter {
         border: 2px solid #3cabff;
         background-color: #3cabff;
         color: #333;
         cursor: pointer;
     }
 
-    #csp_list_filter_buttons::after {
+    #fl_list_filter_buttons::after {
         content: " ";
         clear: both;
         display: table;
     }
 
-    .csp_list_card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin: 5px;
-        background: #ececec;
-        width: 300px;
-        height: 185px;
-        float: left;
-        background-color: red;
-    }
 
-    .csp_list_card:hover {
-        box-shadow: 11px 12px 14px -8px #333;
-        transition: .5s;
-    }
-
-    .csp_list_url,
-    .csp_list_url:visited {
+    .fl_list_url,
+    .fl_list_url:visited {
         color: #333;
         transition: .5s;
         display: block;
         height: calc(100% - 10px);
     }
 
-    .csp_list_url:hover {
+    .fl_list_url:hover {
         text-decoration: none;
         transition: .5s;
     }
 
-    .csp_list_cardTitle {
-        background: #005a9e;
-        color: #fff;
-        font-size: 14px;
-        text-align: center;
-        font-weight: 600;
-        height: 45px;
-        line-height: 45px;
-        position: relative;
-        background-color: blue;
-    }
 
-    #csp_list_filter_buttons .csp_list_btn .csp_list_icon {
+    .fl_list_icon {
         position: absolute;
         left: 0px;
         top: 0px;
-        padding: 15px;
+        padding: 13px;
         height: 16px;
         width: 16px;
     }
 
-    .csp_list_icon {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        padding: 15px;
-        height: 16px;
-        width: 16px;
-    }
-
-    #test {
-        background-color: firebrick;
-    }
-
-    #test .csp_list_icon {
-        position: relative;
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .csp_list_icon_100 {
+    .fl_list_icon_100 {
         background: url('/_layouts/15/images/ltgen.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_101 {
+    .fl_list_icon_101 {
         background: url('/_layouts/15/images/ltdl.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_102 {
+    .fl_list_icon_102 {
         background: url('/_layouts/15/images/ltsurvey.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_103 {
+    .fl_list_icon_103 {
         background: url('/_layouts/15/images/ltlink.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_104 {
+    .fl_list_icon_104 {
         background: url('/_layouts/15/images/ltann.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_105 {
+    .fl_list_icon_105 {
         background: url('/_layouts/15/images/ltcontct.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_106 {
+    .fl_list_icon_106 {
         background: url('/_layouts/15/images/ltevent.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_107 {
+    .fl_list_icon_107 {
         background: url('/_layouts/15/images/lttask.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_108 {
+    .fl_list_icon_108 {
         background: url('/_layouts/15/images/ltdisc.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_icon_109 {
+    .fl_list_icon_109 {
         background: url('/_layouts/15/images/ltil.png?rev=40') no-repeat center /50px;
     }
 
-    .csp_list_cardDescription {
-        height: calc(185px - 45px - 10px - 28px);
-        padding: 5px;
-        overflow: auto;
-        background-color: yellow;
-    }
-
-    .csp_list_cardFooter {
-        font-size: 10px;
-        height: 18px;
-        padding: 5px;
-        background: #bcbcbc;
-        background-color: lime;
-    }
-
-    .csp_list_itemCount {
+    .fl_list_itemCount {
         display: block;
         text-align: left;
         padding: 1px 5px;
@@ -183,7 +113,17 @@
         float: left;
     }
 
-    .csp_list_lastModified {
+    .fl_list_itemCount.item_count_warning {
+        background: orange;
+        color: black;
+    }
+
+    .fl_list_itemCount.item_count_danger {
+        background: orangered;
+        color: black;
+    }
+
+    .fl_list_lastModified {
         display: block;
         text-align: right;
         padding: 1px 5px;
@@ -191,12 +131,24 @@
         float: right;
     }
 
-    #csp_list_Container .csp_list_filter {
+    .fl_list_lastModified.old_180days {
+        background: rgb(245, 147, 55);
+        color: black;
+
+    }
+
+    .fl_list_lastModified.old_365days {
+        background: rgb(243, 65, 10);
+        color: black;
+
+    }
+
+    .fl_list_card.fl_list_filter {
         display: none;
     }
 
-    .csp_list_180days,
-    .csp_list_365days {
+    .fl_list_180days,
+    .fl_list_365days {
         background: #ececec;
         color: #333;
         position: relative;
@@ -205,22 +157,22 @@
 
     }
 
-    .csp_list_180days:hover .tooltiptext,
-    .csp_list_365days:hover .tooltiptext {
+    .fl_list_180days:hover .tooltiptext,
+    .fl_list_365days:hover .tooltiptext {
         visibility: visible;
     }
 
-    .csp_list_180days {
+    .fl_list_180days {
         background: #ececec;
         color: #333;
     }
 
-    .csp_list_365days {
+    .fl_list_365days {
         background: #f78888;
         color: #333;
     }
 
-    .csp_list_cardFooter .tooltiptext {
+    .fl_list_cardFooter .tooltiptext {
         visibility: hidden;
         width: 120px;
         background-color: #333;
@@ -235,7 +187,7 @@
         margin-left: -60px;
     }
 
-    .csp_list_cardFooter .tooltiptext::after {
+    .fl_list_cardFooter .tooltiptext::after {
         content: " ";
         position: absolute;
         top: 100%;
@@ -247,7 +199,7 @@
         border-color: black transparent transparent transparent;
     }
 
-    .csp_list_hilite {
+    .fl_list_hilite {
         background-color: #f3d250;
         color: #333;
     }
@@ -258,84 +210,101 @@
     }
 
     .fl_list_card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        background: #ececec;
+        width: 300px;
+        height: 185px;
+        float: left;
         background-color: red;
-        min-height: 20em;
-        width: 10em;
-        display: inline-block;
-        margin: 1em;
+    }
+
+    .fl_list_card:hover {
+        box-shadow: 11px 12px 14px -8px #333;
+        transition: .5s;
     }
 
     .fl_list_card_header {
-        background-color: yellow;
-        min-height: 10em;
-        min-width: 10em;
+        background: #005a9e;
+        min-height: 45px;
+        position: relative;
+    }
+
+    .fl_list_card_header h2 {
+        margin-left: 50px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        position: relative;
     }
 
     .fl_list_card_body {
-        background-color: lightcoral;
-        min-height: 20em;
-        min-width: 10em;
+        height: calc(185px - 45px - 10px - 28px);
+        padding: 5px;
+        overflow: auto;
+        background-color: #efefef;
     }
 
     .fl_list_card_footer {
-        background-color: maroon;
-        min-height: 20em;
-        min-width: 10em;
+        font-size: 10px;
+        height: 18px;
+        padding: 5px;
+        background: #bcbcbc;
     }
 </style>
 
-<div id="csp_list_header">
-    <input id="csp_list_SearchBox" type="search" placeholder="start typing here to filter by title or description"
-        onkeyup="csp_list_hilite()">
+<div id="fl_list_header">
+    <input id="fl_list_SearchBox" type="search" placeholder="start typing here to filter by title or description"
+        onkeyup="fl_list_hilite()">
     <button id="testbutton"></button>
-    <div id="csp_list_filter_buttons">
+    <div id="fl_list_filter_buttons">
         <p>toggle a button to filter by type</p>
-        <button type="button" class="csp_list_btn csp_list_btn-clear csp_list_filter" id="csp_list_button_filter_clear"
-            onclick="cspClearFilter(this)" data-template-type="clear">
-            <div class="csp_list_icon csp_list_icon_clear"></div>Show
+        <button type="button" class="fl_list_btn fl_list_btn-clear fl_list_filter" id="fl_list_button_filter_clear"
+            onclick="fl_ClearFilter(this)" data-template-type="clear">
+            <div class="fl_list_icon fl_list_icon_clear"></div>Show
             All
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_100"
-            onclick="cspToggleFilter(this)" data-template-type="100">
-            <div class="csp_list_icon csp_list_icon_100"></div>Custom
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_100"
+            onclick="fl_ToggleFilter(this)" data-template-type="100">
+            <div class="fl_list_icon fl_list_icon_100"></div>Custom
             list
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_101"
-            onclick="cspToggleFilter(this)" data-template-type="101">
-            <div class="csp_list_icon csp_list_icon_101"></div>Document
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_101"
+            onclick="fl_ToggleFilter(this)" data-template-type="101">
+            <div class="fl_list_icon fl_list_icon_101"></div>Document
             library
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_102"
-            onclick="cspToggleFilter(this)" data-template-type="102">
-            <div class="csp_list_icon csp_list_icon_102"></div>Survey
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_102"
+            onclick="fl_ToggleFilter(this)" data-template-type="102">
+            <div class="fl_list_icon fl_list_icon_102"></div>Survey
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_103"
-            onclick="cspToggleFilter(this)" data-template-type="103">
-            <div class="csp_list_icon csp_list_icon_103"></div>Links
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_103"
+            onclick="fl_ToggleFilter(this)" data-template-type="103">
+            <div class="fl_list_icon fl_list_icon_103"></div>Links
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_104"
-            onclick="cspToggleFilter(this)" data-template-type="104">
-            <div class="csp_list_icon csp_list_icon_104"></div>Announcements
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_104"
+            onclick="fl_ToggleFilter(this)" data-template-type="104">
+            <div class="fl_list_icon fl_list_icon_104"></div>Announcements
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_105"
-            onclick="cspToggleFilter(this)" data-template-type="105">
-            <div class="csp_list_icon csp_list_icon_105"></div>Contacts
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_105"
+            onclick="fl_ToggleFilter(this)" data-template-type="105">
+            <div class="fl_list_icon fl_list_icon_105"></div>Contacts
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_106"
-            onclick="cspToggleFilter(this)" data-template-type="106">
-            <div class="csp_list_icon csp_list_icon_106"></div>Calendar
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_106"
+            onclick="fl_ToggleFilter(this)" data-template-type="106">
+            <div class="fl_list_icon fl_list_icon_106"></div>Calendar
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_107"
-            onclick="cspToggleFilter(this)" data-template-type="107">
-            <div class="csp_list_icon csp_list_icon_107"></div>Tasks
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_107"
+            onclick="fl_ToggleFilter(this)" data-template-type="107">
+            <div class="fl_list_icon fl_list_icon_107"></div>Tasks
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_108"
-            onclick="cspToggleFilter(this)" data-template-type="108">
-            <div class="csp_list_icon csp_list_icon_108"></div>Discussion board
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_108"
+            onclick="fl_ToggleFilter(this)" data-template-type="108">
+            <div class="fl_list_icon fl_list_icon_108"></div>Discussion board
         </button>
-        <button type="button" class="csp_list_btn csp_list_btn-filter" id="csp_list_button_filter_109"
-            onclick="cspToggleFilter(this)" data-template-type="109">
-            <div class="csp_list_icon csp_list_icon_109"></div>Picture
+        <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_109"
+            onclick="fl_ToggleFilter(this)" data-template-type="109">
+            <div class="fl_list_icon fl_list_icon_109"></div>Picture
             Library
         </button>
     </div>
@@ -345,12 +314,18 @@
 
 <script>
     let sourceData = [];
-
-    function displayLists(sort = "Title") {
+    function itemCountToText(iCount) {
+        console.log(iCount, typeof iCount);
+        if (iCount == 1) {
+            return iCount + " item";
+        } else {
+            return iCount + " items";
+        }
+    }
+    function displayList(sort = "Title") {
         let html = "";
 
         sourceData.sort(function (a, b) {
-            console.log(sort);
             var x = a[sort].toLowerCase();
             var y = b[sort].toLowerCase();
 
@@ -360,18 +335,45 @@
         });
 
         for (i = 0; i < sourceData.length; i++) {
-            html += `<div class="fl_list_card">`;
-            html += `<div class="fl_list_card_header">${sourceData[i].Title}</div>`;
-            html += `<div class="fl_list_card_body">${sourceData[i].Description}</div>`;
-            html += `<div class="fl_list_card_footer"></div>`;
-            html += `</div>`;
-        }
+            //card
+            html += '<div class="fl_list_card" data-template-type="' + sourceData[i].BaseTemplate + '">';
 
-        $("#fl_list_container").innerHTML = html;
+            //header
+            html += '<div class="fl_list_card_header">';
+            html += '<div class="fl_list_icon fl_list_icon_' + sourceData[i].BaseTemplate + '"></div>'
+            html += '<h2>' + sourceData[i].Title + '</h2>';
+            html += '</div>';
+
+            //body
+            html += '<div class="fl_list_card_body">' + sourceData[i].Description + '</div>';
+
+            //footer
+            html += '<div class="fl_list_card_footer">';
+            if (sourceData[i].ItemCount > 5000) {
+                html += '<div class="fl_list_itemCount item_count_danger">';
+            } else if (sourceData[i].ItemCount > 4000) {
+                html += '<div class="fl_list_itemCount item_count_warning">';
+            } else {
+                html += '<div class="fl_list_itemCount">';
+            }
+            html += itemCountToText(sourceData[i].ItemCount) + '</div>';
+            if (moment().diff(moment(sourceData[i].LastItemModifiedDate), 'days') > 365) {
+                html += '<div class="fl_list_lastModified old_365days">'
+            } else if (moment().diff(moment(sourceData[i].LastItemModifiedDate), 'days') > 180) {
+                html += '<div class="fl_list_lastModified old_180days">'
+            } else {
+                html += '<div class="fl_list_lastModified">'
+            }
+            html += moment(sourceData[i].LastItemModifiedDate).fromNow() + '</div>';
+            html += '</div>';
+
+            html += '</div>';
+        }
+        $("#fl_list_container").html(html);
     }
 
-    $("#csp_list_SearchBox").on("input", function () {
-        document.getElementById("csp_list_Container").innerHTML = sourceData;
+    $("#fl_list_SearchBox").on("input", function () {
+        //document.getElementById("fl_list_Container").innerHTML = sourceData;
     });
 
     $.ajax({
@@ -381,10 +383,9 @@
             xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
         }
     }).done(function (data) {
-        console.log("data", data.d.results);
         data.d.results.forEach(function (item, index) {
             if (item.Hidden != true) {
-                let obj = {};
+                var obj = {};
                 obj.BaseTemplate = item.BaseTemplate;
                 obj.Created = item.Created;
                 obj.Description = item.Description;
@@ -396,172 +397,85 @@
                 sourceData.push(obj);
             }
         });
-        console.log("sourceData", sourceData);
-        displayLists();
+        displayList();
     }).fail(function (xhr) {
-        window.console && console.log(`Error ${xhr.status} in obtaining sourceData - ${xhr.statusText}`);
-    }).always(
-        console.log("always")
-    );
+        window.console && console.log('Error ' + xhr.status + ' in obtaining sourceData - ' + xhr.statusText);
+    });
 
-    /*
+    //Reset filter on clear(x) click
+    function fl_list_hilite() {
+        var searchterm = document.getElementById("fl_list_SearchBox").value;
+        var searchexp = new RegExp(searchterm, "ig");
 
-     //Reset filter on clear(x) click
+        if (searchterm.length > 0) {
+            $(".fl_list_cardDescription").each(function (index, value) {
 
-     function getListInfo() {
-         var AllowedTemplates = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109];
-         var defer = $.Deferred();
+                var txt = $(this).text();
+                var html = txt.replace(searchexp, "<span class='fl_list_hilite'>" + searchterm + "</span>")
+                $(this).html(html);
+            });
+            $(".fl_list_cardTitle").each(function (index, value) {
 
-         var request = $.ajax({
-             type: "GET",
-             url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists" +
-                 "?$expand=RootFolder",
-             beforeSend: function (xhr) {
-                 xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
-             },
-             success: function (result) {
-                 var lists = result.d.results;
+                var txt = $(this).text();
+                var html = txt.replace(searchexp, "<span class='fl_list_hilite'>" + searchterm + "</span>")
+                $(this).html(html);
+            });
+        }
+        else {
+            document.getElementById("fl_list_Container").innerHTML = sourceData;
+            document.getElementById("fl_list_SearchBox").blur();
+            document.getElementById("fl_list_SearchBox").focus();
+        }
 
-                 lists.sort(function (a, b) {
-                     var x = a.Title.toLowerCase();
-                     var y = b.Title.toLowerCase();
+        $(".fl_list_card").each(function (index, value) {
+            var str = $(this).find(".fl_list_hilite").text();
+            if (str.length == 0) {
+                $(this).addClass("ms-hidden");
+            }
+        });
+    }
 
-                     if (x < y) { return -1; }
-                     if (x > y) { return 1; }
-                     return 0;
-                 });
+    function fl_ToggleFilter(obj) {
+        console.log(obj);
+        obj.classList.toggle("fl_list_filter");
+        setFilter();
+    }
 
-                 var listHTML = "<div id='csp_list_cardlist'>";
-                 var liHTML;
-                 var aHTML;
-                 var urlHTML;
-                 var titleHTML;
-                 var descriptionHTML;
-                 var footerHTML;
-                 var listAge;
+    function fl_ClearFilter(obj) {
+        var buttons = document.getElementsByClassName("fl_list_btn-filter");
 
-                 for (i = 0; i < lists.length; i++) {
-                     if (lists[i].Hidden == false) {
-                         var oldContent = "";
+        for (i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("fl_list_filter");
+        }
 
-                         if (moment().diff(moment(lists[i].LastItemModifiedDate), 'days') > 365) {
-                             oldContent = " csp_list_365days"
-                         } else if (moment().diff(moment(lists[i].LastItemModifiedDate), 'days') > 180) {
-                             oldContent = " csp_list_180days"
-                         }
-                         if (AllowedTemplates.indexOf(lists[i].BaseTemplate) > -1) {
-                             liHTML = "<div class='csp_list_card csp_list_template_" + lists[i].BaseTemplate +
-                                 "' data-template-type='" + lists[i].BaseTemplate + "'>";
-                             aHTML = "<a class='csp_list_url' href='" + lists[i].RootFolder.ServerRelativeUrl + "'>";
-                             titleHTML = "<div class='csp_list_cardTitle'>" + lists[i].Title +
-                                 "<div class=\"csp_list_icon csp_list_icon_" + lists[i].BaseTemplate + "\"></div>" +
-                                 "</div>";
-                             descriptionHTML = "<div class='csp_list_cardDescription'>" + lists[i].Description + "</div>";
-                             footerHTML = "<div class='csp_list_cardFooter'><div class='csp_list_itemCount'>" + lists[i].ItemCount +
-                                 (lists[i].ItemCount > 1 ? " items" : " item") +
-                                 "</div>" +
-                                 "<div class='csp_list_lastModified" + oldContent + "'>Last Modified " +
-                                 moment(moment(lists[i].LastItemModifiedDate)).fromNow() +
-                                 "<span class='tooltiptext'>This content has not been changed in a long time.  Consider archiving it.</span>" +
-                                 "</div></div>";
+        setFilter();
+    }
 
-                             listHTML += liHTML + aHTML + titleHTML + descriptionHTML + footerHTML + "</a></div>";
-                         }
-                     }
-                 }
+    function setFilter() {
+        var buttons = document.getElementsByClassName("fl_list_btn-filter fl_list_filter");
+        var items = document.getElementsByClassName("fl_list_card");
 
-                 listHTML += "</div>";
+        if (buttons.length === 0) {
+            document.getElementById("fl_list_button_filter_clear").classList.add("fl_list_filter");
 
-                 defer.resolve(listHTML);
-             },
-             error: function (result) {
-                 defer.reject();
-                 console.log("Error:", result);
-             }
-         });
+            for (i = 0; i < items.length; i++) {
+                items[i].classList.remove("fl_list_filter");
+            }
+        } else {
+            document.getElementById("fl_list_button_filter_clear").classList.remove("fl_list_filter");
 
-         return defer.promise();
-     }
+            for (i = 0; i < items.length; i++) {
+                items[i].classList.add("fl_list_filter");
+            }
 
-     var sites = getListInfo();
+            for (i = 0; i < buttons.length; i++) {
+                for (j = 0; j < items.length; j++) {
+                    if (buttons[i].getAttribute("data-template-type") === items[j].getAttribute("data-template-type")) {
+                        items[j].classList.remove("fl_list_filter");
+                    }
+                }
+            }
 
-     $.when(sites).then(function (data) {
-         sourceData = data;
-         document.getElementById("csp_list_Container").innerHTML = sourceData;
-     });
-
-     function csp_list_hilite() {
-         var searchterm = document.getElementById("csp_list_SearchBox").value;
-         var searchexp = new RegExp(searchterm, "ig");
-
-         if (searchterm.length > 0) {
-             $(".csp_list_cardDescription").each(function (index, value) {
-
-                 var txt = $(this).text();
-                 var html = txt.replace(searchexp, "<span class='csp_list_hilite'>" + searchterm + "</span>")
-                 $(this).html(html);
-             });
-             $(".csp_list_cardTitle").each(function (index, value) {
-
-                 var txt = $(this).text();
-                 var html = txt.replace(searchexp, "<span class='csp_list_hilite'>" + searchterm + "</span>")
-                 $(this).html(html);
-             });
-         }
-         else {
-             document.getElementById("csp_list_Container").innerHTML = sourceData;
-             document.getElementById("csp_list_SearchBox").blur();
-             document.getElementById("csp_list_SearchBox").focus();
-         }
-
-         $(".csp_list_card").each(function (index, value) {
-             var str = $(this).find(".csp_list_hilite").text();
-             if (str.length == 0) {
-                 $(this).addClass("ms-hidden");
-             }
-         });
-     }
-
-     function cspToggleFilter(obj) {
-         obj.classList.toggle("csp_list_filter");
-         setFilter();
-     }
-
-     function cspClearFilter(obj) {
-         var buttons = document.getElementsByClassName("csp_list_btn-filter");
-
-         for (i = 0; i < buttons.length; i++) {
-             buttons[i].classList.remove("csp_list_filter");
-         }
-
-         setFilter();
-     }
-
-     function setFilter() {
-         var buttons = document.getElementsByClassName("csp_list_btn-filter csp_list_filter");
-         var items = document.getElementsByClassName("csp_list_card");
-
-         if (buttons.length === 0) {
-             document.getElementById("csp_list_button_filter_clear").classList.add("csp_list_filter");
-
-             for (i = 0; i < items.length; i++) {
-                 items[i].classList.remove("csp_list_filter");
-             }
-         } else {
-             document.getElementById("csp_list_button_filter_clear").classList.remove("csp_list_filter");
-
-             for (i = 0; i < items.length; i++) {
-                 items[i].classList.add("csp_list_filter");
-             }
-
-             for (i = 0; i < buttons.length; i++) {
-                 for (j = 0; j < items.length; j++) {
-                     if (buttons[i].getAttribute("data-template-type") === items[j].getAttribute("data-template-type")) {
-                         items[j].classList.remove("csp_list_filter");
-                     }
-                 }
-             }
-
-         }
-     }*/
+        }
+    }
 </script>
