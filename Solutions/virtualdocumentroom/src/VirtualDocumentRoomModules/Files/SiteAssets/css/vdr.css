@@ -2,3 +2,11 @@
     /* reset as oslo masterpage sets buttons to min-width of 78 */
     min-width: auto;
 }
+
+#vdr_container .tabcontent {
+    display: none;
+}
+
+#vdr_container .tabcontent.active {
+    display: block;
+}
