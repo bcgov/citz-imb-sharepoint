@@ -14,8 +14,8 @@
     }
 
     #fl_list_filter_buttons .fl_list_btn {
-        border: 2px solid #bcbcbc;
-        background-color: #bcbcbc;
+        border: 2px solid #3cabff;
+        background-color: #3cabff;
         color: #333;
         cursor: pointer;
         border-radius: 5px;
@@ -29,8 +29,8 @@
     }
 
     #fl_list_filter_buttons .fl_list_filter {
-        border: 2px solid #3cabff;
-        background-color: #3cabff;
+        border: 2px solid #bcbcbc;
+        background-color: #bcbcbc;
         color: #333;
         cursor: pointer;
     }
@@ -41,20 +41,25 @@
         display: table;
     }
 
-
-    .fl_list_url,
-    .fl_list_url:visited {
-        color: #333;
-        transition: .5s;
-        display: block;
-        height: calc(100% - 10px);
+    .fl_list_card {
+        display: none;
     }
 
-    .fl_list_url:hover {
+    .fl_list_card.fl_active {
+        display: block;
+    }
+
+    a.fl_list_card,
+    a.fl_list_card:visited {
+        text-decoration: none;
+        color: #333;
+        transition: .5s;
+    }
+
+    a.fl_list_card:hover {
         text-decoration: none;
         transition: .5s;
     }
-
 
     .fl_list_icon {
         position: absolute;
@@ -199,10 +204,7 @@
         border-color: black transparent transparent transparent;
     }
 
-    .fl_list_hilite {
-        background-color: #f3d250;
-        color: #333;
-    }
+
 
     /*****************************/
     #fl_list_container {
@@ -254,56 +256,49 @@
 </style>
 
 <div id="fl_list_header">
-    <input id="fl_list_SearchBox" type="search" placeholder="start typing here to filter by title or description"
-        onkeyup="fl_list_hilite()">
-    <button id="testbutton"></button>
+    <input id="fl_list_SearchBox" type="search" placeholder="start typing here to filter by title or description">
     <div id="fl_list_filter_buttons">
         <p>toggle a button to filter by type</p>
-        <button type="button" class="fl_list_btn fl_list_btn-clear fl_list_filter" id="fl_list_button_filter_clear"
-            onclick="fl_ClearFilter(this)" data-template-type="clear">
-            <div class="fl_list_icon fl_list_icon_clear"></div>Show
-            All
-        </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_100"
-            onclick="fl_ToggleFilter(this)" data-template-type="100">
+            data-template-type="100">
             <div class="fl_list_icon fl_list_icon_100"></div>Custom
             list
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_101"
-            onclick="fl_ToggleFilter(this)" data-template-type="101">
+            data-template-type="101">
             <div class="fl_list_icon fl_list_icon_101"></div>Document
             library
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_102"
-            onclick="fl_ToggleFilter(this)" data-template-type="102">
+            data-template-type="102">
             <div class="fl_list_icon fl_list_icon_102"></div>Survey
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_103"
-            onclick="fl_ToggleFilter(this)" data-template-type="103">
+            data-template-type="103">
             <div class="fl_list_icon fl_list_icon_103"></div>Links
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_104"
-            onclick="fl_ToggleFilter(this)" data-template-type="104">
+            data-template-type="104">
             <div class="fl_list_icon fl_list_icon_104"></div>Announcements
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_105"
-            onclick="fl_ToggleFilter(this)" data-template-type="105">
+            data-template-type="105">
             <div class="fl_list_icon fl_list_icon_105"></div>Contacts
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_106"
-            onclick="fl_ToggleFilter(this)" data-template-type="106">
+            data-template-type="106">
             <div class="fl_list_icon fl_list_icon_106"></div>Calendar
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_107"
-            onclick="fl_ToggleFilter(this)" data-template-type="107">
+            data-template-type="107">
             <div class="fl_list_icon fl_list_icon_107"></div>Tasks
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_108"
-            onclick="fl_ToggleFilter(this)" data-template-type="108">
+            data-template-type="108">
             <div class="fl_list_icon fl_list_icon_108"></div>Discussion board
         </button>
         <button type="button" class="fl_list_btn fl_list_btn-filter" id="fl_list_button_filter_109"
-            onclick="fl_ToggleFilter(this)" data-template-type="109">
+            data-template-type="109">
             <div class="fl_list_icon fl_list_icon_109"></div>Picture
             Library
         </button>
@@ -315,7 +310,6 @@
 <script>
     let sourceData = [];
     function itemCountToText(iCount) {
-        console.log(iCount, typeof iCount);
         if (iCount == 1) {
             return iCount + " item";
         } else {
@@ -333,10 +327,9 @@
             if (x > y) { return 1; }
             return 0;
         });
-
         for (i = 0; i < sourceData.length; i++) {
             //card
-            html += '<div class="fl_list_card" data-template-type="' + sourceData[i].BaseTemplate + '">';
+            html += '<a href="' + sourceData[i].ServerRelativeUrl + '" class="fl_list_card fl_active" data-template-type="' + sourceData[i].BaseTemplate + '">';
 
             //header
             html += '<div class="fl_list_card_header">';
@@ -367,14 +360,10 @@
             html += moment(sourceData[i].LastItemModifiedDate).fromNow() + '</div>';
             html += '</div>';
 
-            html += '</div>';
+            html += '</a>';
         }
         $("#fl_list_container").html(html);
     }
-
-    $("#fl_list_SearchBox").on("input", function () {
-        //document.getElementById("fl_list_Container").innerHTML = sourceData;
-    });
 
     $.ajax({
         type: "GET",
@@ -393,6 +382,7 @@
                 obj.ItemCount = item.ItemCount;
                 obj.LastItemModifiedDate = item.LastItemModifiedDate;
                 obj.Title = item.Title;
+                obj.ServerRelativeUrl = item.RootFolder.ServerRelativeUrl;
 
                 sourceData.push(obj);
             }
@@ -402,80 +392,17 @@
         window.console && console.log('Error ' + xhr.status + ' in obtaining sourceData - ' + xhr.statusText);
     });
 
-    //Reset filter on clear(x) click
-    function fl_list_hilite() {
-        var searchterm = document.getElementById("fl_list_SearchBox").value;
-        var searchexp = new RegExp(searchterm, "ig");
-
-        if (searchterm.length > 0) {
-            $(".fl_list_cardDescription").each(function (index, value) {
-
-                var txt = $(this).text();
-                var html = txt.replace(searchexp, "<span class='fl_list_hilite'>" + searchterm + "</span>")
-                $(this).html(html);
-            });
-            $(".fl_list_cardTitle").each(function (index, value) {
-
-                var txt = $(this).text();
-                var html = txt.replace(searchexp, "<span class='fl_list_hilite'>" + searchterm + "</span>")
-                $(this).html(html);
-            });
-        }
-        else {
-            document.getElementById("fl_list_Container").innerHTML = sourceData;
-            document.getElementById("fl_list_SearchBox").blur();
-            document.getElementById("fl_list_SearchBox").focus();
-        }
-
-        $(".fl_list_card").each(function (index, value) {
-            var str = $(this).find(".fl_list_hilite").text();
-            if (str.length == 0) {
-                $(this).addClass("ms-hidden");
-            }
+    $("#fl_list_SearchBox").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $(".fl_list_card.fl_active").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
-    }
+    });
 
-    function fl_ToggleFilter(obj) {
-        console.log(obj);
-        obj.classList.toggle("fl_list_filter");
-        setFilter();
-    }
-
-    function fl_ClearFilter(obj) {
-        var buttons = document.getElementsByClassName("fl_list_btn-filter");
-
-        for (i = 0; i < buttons.length; i++) {
-            buttons[i].classList.remove("fl_list_filter");
-        }
-
-        setFilter();
-    }
-
-    function setFilter() {
-        var buttons = document.getElementsByClassName("fl_list_btn-filter fl_list_filter");
-        var items = document.getElementsByClassName("fl_list_card");
-
-        if (buttons.length === 0) {
-            document.getElementById("fl_list_button_filter_clear").classList.add("fl_list_filter");
-
-            for (i = 0; i < items.length; i++) {
-                items[i].classList.remove("fl_list_filter");
-            }
-        } else {
-            document.getElementById("fl_list_button_filter_clear").classList.remove("fl_list_filter");
-
-            for (i = 0; i < items.length; i++) {
-                items[i].classList.add("fl_list_filter");
-            }
-
-            for (i = 0; i < buttons.length; i++) {
-                for (j = 0; j < items.length; j++) {
-                    if (buttons[i].getAttribute("data-template-type") === items[j].getAttribute("data-template-type")) {
-                        items[j].classList.remove("fl_list_filter");
-                    }
-                }
-            }
-
-        }
-    }
+    $(".fl_list_btn").on("click", function () {
+        $("#fl_list_SearchBox").val('').keyup();
+        $(this).toggleClass("fl_list_filter");
+        var template = $(this).data("template-type");
+        $(".fl_list_card[data-template-type='" + template + "']").toggleClass("fl_active");
+    });
 </script>
