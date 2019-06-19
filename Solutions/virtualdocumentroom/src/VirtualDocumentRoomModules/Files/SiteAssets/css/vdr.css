@@ -10,3 +10,17 @@
 #vdr_container .tabcontent.active {
     display: block;
 }
+
+#tab-3>div {
+    min-height: 100px;
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+#tab-3 #vdr_management {
+    background-color: orange;
+    color: inherit;
+}
