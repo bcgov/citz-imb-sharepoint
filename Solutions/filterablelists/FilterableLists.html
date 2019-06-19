@@ -207,10 +207,6 @@
 
 
     /*****************************/
-    #fl_list_container {
-        background-color: orange;
-    }
-
     .fl_list_card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         margin: 5px;
@@ -218,7 +214,6 @@
         width: 300px;
         height: 185px;
         float: left;
-        background-color: red;
     }
 
     .fl_list_card:hover {
@@ -308,7 +303,7 @@
 <div id="fl_list_container">Loading...</div>
 
 <script>
-    let sourceData = [];
+    var sourceData = [];
     function itemCountToText(iCount) {
         if (iCount == 1) {
             return iCount + " item";
@@ -316,8 +311,12 @@
             return iCount + " items";
         }
     }
-    function displayList(sort = "Title") {
-        let html = "";
+    function displayList(sort) {
+        if (sort === undefined) {
+            sort = "Title";
+        }
+
+        var html = "";
 
         sourceData.sort(function (a, b) {
             var x = a[sort].toLowerCase();
