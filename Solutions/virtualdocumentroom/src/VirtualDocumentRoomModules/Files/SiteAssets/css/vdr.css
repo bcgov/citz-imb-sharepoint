@@ -13,16 +13,12 @@
 
 #tab-3>div {
     min-height: 100px;
-    background-color: orangered;
-    color: white;
     padding: 5px;
     margin: 5px;
     font-size: 16px;
 }
 
 #tab-3 #vdr_management {
-    background-color: orange;
-    color: inherit;
 }
 
 #vdr_management::after {
@@ -50,37 +46,39 @@
 
 #vdr_proponent .vdr_proponent_header {
     font-weight: 800;
+    padding: .4em .1em;
     border-bottom: 1px solid #c5c5c5;
-    padding: 5px 10px 2px;
-    margin: 5px 10px 2px;
 }
 
 #vdr_proponent .vdr_proponent_name {
-    float: left;
-    width: 40%;
+    padding: .4em 1em;
+    line-height: normal;
+    margin-right: .1em;
+    display: inline-block;
+    width: 200px;
 }
 
 #vdr_proponent .vdr_proponent_header .vdr_proponent_name {}
 
 #vdr_proponent .vdr_proponent_uid {
-    float: left;
-    width: 30%;
+    padding: .4em 1em;
+    line-height: normal;
+    margin-right: .1em;
+    width: 90px;
+    display: inline-block;
 }
 
 #vdr_proponent .vdr_button {
-    float: right;
-    width: 125px;
+    width: 121px;
 }
 
 #vdr_proponent .vdr_proponent_header .vdr_proponent_uid {}
 
 #vdr_proponent .vdr_proponent_data {
-    padding: 5px;
-    margin: 5px;
 }
 
 #vdr_proponent .vdr_proponent_row {
-    padding: 2px 10px;
+    padding: .4em .1em;
 }
 
 #vdr_proponent .vdr_inactive {
