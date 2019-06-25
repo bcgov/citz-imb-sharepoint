@@ -1,4 +1,11 @@
 var config = {}
+var proponentID = "pID";
+var SiteGUID = "f2c7e0ec-3c1a-4275-92fc-bc1802f95cbc"; //https://citz.sp.gov.bc.ca/sites/DEV/vt/_api/site/id
+
+function writeActivity(action, info, success) {
+    //TODO: function to write to ActivityLog list
+    console.log(action, "|", info, "|", success, "|", proponentID, "|", _spPageContextInfo.userId);
+}
 
 /*
     cookie management
@@ -15,6 +22,7 @@ function setCookie(cname, cvalue, cdays, cpath) {
 
     document.cookie = cname + "=" + cvalue + "; " + expires + "; " + "path=/";
 }
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -55,12 +63,13 @@ function getTOS() {
                     buttons: {
                         Accept: function () {
                             setCookie(cname, "true", config.CookieDays.NumberValue, _spPageContextInfo.webAbsoluteUrl);
+                            writeActivity("Accepted Terms of Service", "", true);
                             $(this).dialog("close");
                         },
                         Decline: function () {
                             //chrome won't allow the dialog to close the parent window "Scripts may close only the windows that were opened by it."
                             //but ie will
-
+                            writeActivity("Declined Terms of Service", "", true);
                             window.close();
                             window.location = "/_layouts/signout.aspx";
                         }
@@ -72,45 +81,6 @@ function getTOS() {
         .fail(function (error) {
             window.console && console.log(error);
         });
-}
-
-function getGroups() {
-    $.ajax({
-        url: "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
-            "/_api/web/RoleAssignments?$expand=Member,Member/Users",
-        type: "GET",
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
-        }
-    }).done(function (data) {
-        var groupHtml = "<div id='vdr_group_data'>";
-        var results = data.d.results;
-
-        for (i = 0; i < results.length; i++) {
-            groupHtml += "<h3>";
-            groupHtml += results[i].Member.Title;
-            groupHtml += "</h3>";
-            groupHtml += "<div>"
-            for (j = 0; j < results[i].Member.Users.results.length; j++) {
-                groupHtml += "<div>";
-                groupHtml += results[i].Member.Users.results[j].Title;
-                groupHtml += "</div>";
-            }
-            groupHtml += "<a onclick='addUser()' class='ui-button ui-widget ui-corner-all'>";
-            groupHtml += "add a user";
-            groupHtml += "</a>";
-            groupHtml += "</div>";
-        }
-        groupHtml += "</div>";
-        $("#vdr_management").append(groupHtml);
-        $("#vdr_group_data").accordion({
-            collapsible: true,
-            active: false,
-            heightStyle: "content"
-        });
-    }).fail(function (error) {
-        window.console && console.log(error);
-    });
 }
 
 function activateProponent(ID) {
@@ -132,11 +102,11 @@ function activateProponent(ID) {
             "X-HTTP-Method": "MERGE"
         }
     }).done(function (data) {
-
+        writeActivity("Activate Proponent", ID, true);
         $("#vdr_proponent").remove();
         getProponents();
     }).fail(function (error) {
-        window.console && console.log(error);
+        writeActivity("Activate Proponent", "error " + error.status + ": " + error.statusText, false);
     });
 
     //create a group
@@ -148,7 +118,7 @@ function activateProponent(ID) {
 
 function deactivateProponent(ID, GroupID) {
     //update proponent list
-
+    console.log("deactivate", ID, groupID);
     $.ajax({
         url: "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
             "/_api/web/lists/GetByTitle('Proponents')/Items(" + ID + ")",
@@ -167,11 +137,11 @@ function deactivateProponent(ID, GroupID) {
             "X-HTTP-Method": "MERGE"
         }
     }).done(function (data) {
-
+        writeActivity("Deactivate Proponent", ID, true);
         $("#vdr_proponent").remove();
         getProponents();
     }).fail(function (error) {
-        window.console && console.log(error);
+        writeActivity("Deactivate Proponent", "error " + error.status + ": " + error.statusText, false);
     });
 
     //delete a group
@@ -200,10 +170,10 @@ function addProponent() {
     //generate an 8 digit random hexadecimal number and append 'v' to the beginning
     var UUID = 'V' + Math.floor(Math.random() * 16777215).toString(16).toUpperCase();
 
+    //TODO: change "_prefix - " to use the site name/url eg "VICO Template - "
     var groupName = "_prefix - " + UUID;
 
     var groupID;
-
 
     $("#vdr_dialog").html(addHtml).dialog({
         dialogClass: "no-close",
@@ -215,80 +185,45 @@ function addProponent() {
                     if ($("#input_proponent").val() === "") {
                         alert("Proponent Name is required.")
                     } else {
-                        //create a group
-                        $.ajax({
-                            url: "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
-                                "/_api/web/sitegroups",
-                            type: "POST",
-                            data: JSON.stringify(
-                                {
-                                    'Title': groupName,
-                                    'Description': 'some words about the vico site.  created by automation.'
-                                }
-                            ),
-                            headers: {
-                                "X-RequestDigest": $("#__REQUESTDIGEST").val(),
-                                "Accept": "application/json;odata=nometadata",
-                                "Content-Type": "application/json;odata=nometadata"
-                            }
-                        }).done(function (data) {
-                            console.log("create a group", data);
-                            groupID = data.Id;
-                            //update group
+                        var createNewGroup = createGroup(groupName, "created by automation", 242); //TOD: number should be dynamic
+                        $.when(createNewGroup).then(function (data) {
+                            writeActivity("Create Proponent Group", groupName, true);
+                            var groupId = data;
+                            //add to proponent list
                             $.ajax({
                                 url: "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
-                                    "/_api/Web/SiteGroups(" + groupID + ")",
+                                    "/_api/web/lists/GetByTitle('Proponents')/Items",
                                 type: "POST",
-                                body: {
-                                    '__metadata': {
-                                        'type': 'SP.Group'
-                                    }, 'Description': 'New description of the group'
-                                },
+                                data: JSON.stringify(
+                                    {
+                                        "Title": $("#input_proponent").val(),
+                                        "UUID": UUID,
+                                        "GroupId": groupId
+                                    }
+                                ),
                                 headers: {
-                                    //"Content-Type": "application/json;odata=nometadata",
-                                    "Content-Type": 'application/json;odata=verbose',
-                                    //'Accept': 'application/json;odata=verbose',
-                                    "X-HTTP-Method": "MERGE"
+                                    "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+                                    "Accept": "application/json;odata=nometadata",
+                                    "Content-Type": "application/json;odata=nometadata"
                                 }
                             }).done(function (data) {
-                                console.log("update a group", data);
-                                //add to proponent list
-                                $.ajax({
-                                    url: "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
-                                        "/_api/web/lists/GetByTitle('Proponents')/Items",
-                                    type: "POST",
-                                    data: JSON.stringify(
-                                        {
-                                            "Title": $("#input_proponent").val(),
-                                            "UUID": UUID,
-                                            "GroupId": groupID
-                                        }
-                                    ),
-                                    headers: {
-                                        "X-RequestDigest": $("#__REQUESTDIGEST").val(),
-                                        "Accept": "application/json;odata=nometadata",
-                                        "Content-Type": "application/json;odata=nometadata"
-                                    }
-                                }).done(function (data) {
-                                    console.log("create a proponent item", data);
-                                    //refresh the page information
-                                    $("#vdr_proponent").remove();
-                                    getProponents();
-                                }).fail(function (error) {
-                                    window.console && console.log(error);
-                                });
-
+                                writeActivity("Add Proponent to Proponent List", data.UUID, true);
+                                $("#vdr_proponent").remove();
+                                getProponents();
                             }).fail(function (error) {
-                                window.console && console.log(error);
+                                writeActivity("Add Proponent to Proponent List", "error " + error.status + ": " + error.statusText, false);
                             });
+                            //add permissions to site
+                            $.when(grantGroupPermissionToWeb(groupId, "Read")).then(function () {
+                                writeActivity("Grant Group Permission to Web", groupName, true);
+                            }).fail(function () {
+                                writeActivity("Grant Group Permission to Web", groupName, false);
+                            });
+                            //create a contribution library and apply permissions
+                            //create a question list and apply permissions???
                         }).fail(function (error) {
-                            window.console && console.log(error);
+                            writeActivity("Create Proponent Group", "error", false);
                         });
-                        //add permissions to site
-                        //create a contribution library and apply permissions
-                        //create a question list and apply permissions???
-
-
                         $(this).dialog("close");
                     }
                 }
@@ -304,7 +239,7 @@ function addProponent() {
 }
 
 function addUser() {
-    //to do adduser
+    //TODO: adduser
 }
 
 function getProponents() {
@@ -446,7 +381,7 @@ function createContent() {
                     active: false,
                     heightStyle: "content"
                 });
-                getGroups();
+                getWebGroups();
                 getProponents();
             },
             function (a, b) {
