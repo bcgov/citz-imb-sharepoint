@@ -222,3 +222,61 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
     });
     return defer.promise();
 }
+
+/**
+ * Adds a user to a group
+ *
+ * @param {integer} groupId the first value passed in must be the id of the group
+ * @param {integer} userId the second, and any subsequent values passed in must be id's for users
+ */
+function addUserToGroup(groupId, userId) {
+    console.log(groupId, userId, arguments);
+
+    $.when(getUserById(6)).then(function (data) {
+        console.log("getUserById", data);
+    });
+
+
+    if (arguments.length > 20) {
+        $.ajax({
+            url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups(" + groupId + ")/users",
+            type: "POST",
+            data: JSON.stringify({
+                '__metadata': { 'type': 'SP.User' },
+
+            })
+        }).done(function (data) {
+
+        }).fail(function (error) {
+            window.console && console.log(error);
+        });
+    } else {
+        return false;
+    }
+
+}
+
+/**
+ * Returns a promise of user information JSON object
+ * @param {boolean} [withGroups=false] if true, includes groups the user is a member of
+ * @param {...integer} userId one or more user id's
+ */
+function getUserById(withGroups, userId) {
+    var defer = $.Deferred();
+
+    var restCall = (withGroups === true) ? "/_api/web/getuserbyid(" + userId + ")?$expand=Groups" : "/_api/web/getuserbyid(" + userId + ")"
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + restCall,
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
