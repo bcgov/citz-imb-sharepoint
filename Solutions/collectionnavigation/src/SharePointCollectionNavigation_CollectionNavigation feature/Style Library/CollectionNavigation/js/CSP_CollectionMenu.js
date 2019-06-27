@@ -9,8 +9,8 @@ $().ready(function () {
     var DomainURL = "https://" + window.location.hostname;
     var pathArray = window.location.hostname.split('.');
     var SrchURL = '"' + pathArray[0] + "." + pathArray[1] + '*"';
-    var sOpt = "&selectproperties='Title,Path,Description,ParentLink'&rowlimit=500";
-    var apiUrl = _spPageContextInfo.siteAbsoluteUrl + "/_api/search/query?querytext='SPSiteUrl:" + SrchURL + " AND UrlDepth<4 (contentclass:sts_Web)'" + sOpt;
+    var sOpt = "&selectproperties='Title,Path,Description,ParentLink'&rowlimit=500&TrimDuplicates=false";
+    var apiUrl = _spPageContextInfo.siteAbsoluteUrl + "/_api/search/query?querytext='SPSiteUrl:" + SrchURL + " AND UrlDepth=3 (contentclass:sts_Web)'" + sOpt;
 
     var cssUrl = DomainURL + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/CollectionNavigation/css/CSP_CollectionMenu.css";
     var head = document.getElementsByTagName("head")[0];
@@ -19,7 +19,6 @@ $().ready(function () {
     style.rel = "stylesheet";
     style.href = cssUrl;
     head.appendChild(style);
-
     //ge t  all the first level sub-sites for all collections within the ministry domain
     $.ajax({
         url: apiUrl,
@@ -68,7 +67,9 @@ $().ready(function () {
                     cObj.Title = colTitle;
                     cObj.Path = colUrl;
                     cObj.Sites = [];
+                    cObj.Sites.push(sites[j]);
                     collections.push(cObj);
+
                 }
             }
 

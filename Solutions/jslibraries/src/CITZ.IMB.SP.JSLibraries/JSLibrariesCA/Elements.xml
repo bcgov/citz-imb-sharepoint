@@ -6,4 +6,6 @@
 	</CustomAction>
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/moment.min.js" Location="ScriptLink" Sequence="12">
 	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/citz.imb.sp.library.js" Location="ScriptLink" Sequence="20">
+	</CustomAction>
 </Elements>
