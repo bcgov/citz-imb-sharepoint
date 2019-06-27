@@ -1,4 +1,4 @@
-﻿<Feature Id="{b5d788db-931a-451c-9682-8c0d95a9b08b}" Title="Web Template feature of exported web template VICO Template" Version="1.0.0.0" Scope="Site" Hidden="FALSE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+﻿<Feature Id="{b5d788db-931a-451c-9682-8c0d95a9b08b}" Title="CITZ IMB Virtual Document Room" Description="A sub-site template that is configured to have the features needed for a Virtual Document Room (VDR), also known as a Virtual Information Control Office (VICO)." Version="1.0.0.0" Scope="Site" Hidden="FALSE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
 	<ElementManifests>
 		<ElementManifest Location="Elements.xml" />
 		<ElementFile Location="resources\resources.en-US.resx" />
