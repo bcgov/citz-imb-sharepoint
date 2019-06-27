@@ -1,40 +1,32 @@
-function getWebGroups() {
+function getWebGroups(withMembers) {
+    var defer = $.Deferred();
+
+    var restCall = (withMembers === true) ? "/_api/web/RoleAssignments?$expand=Member,Member/Users" : "/_api/web/RoleAssignments?$expand=Member"
+
     $.ajax({
-        url: "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
-            "/_api/web/RoleAssignments?$expand=Member,Member/Users",
+        url: _spPageContextInfo.webAbsoluteUrl + restCall,
         type: "GET",
         beforeSend: function (xhr) {
             xhr.setRequestHeader('Accept', 'application/json;odata=verbose');
         }
     }).done(function (data) {
-        var groupHtml = "<div id='vdr_group_data'>";
-        var results = data.d.results;
+        var arr = [];
 
-        for (i = 0; i < results.length; i++) {
-            groupHtml += "<h3>";
-            groupHtml += results[i].Member.Title;
-            groupHtml += "</h3>";
-            groupHtml += "<div>"
-            for (j = 0; j < results[i].Member.Users.results.length; j++) {
-                groupHtml += "<div>";
-                groupHtml += results[i].Member.Users.results[j].Title;
-                groupHtml += "</div>";
+        for (i = 0; i < data.d.results.length; i++) {
+            if (data.d.results[i].Member.PrincipalType === 8) {
+                //is a sharepoint group
+                arr.push(data.d.results[i].Member)
             }
-            groupHtml += "<a onclick='addUser()' class='ui-button ui-widget ui-corner-all'>";
-            groupHtml += "add a user";
-            groupHtml += "</a>";
-            groupHtml += "</div>";
+
         }
-        groupHtml += "</div>";
-        $("#vdr_management").append(groupHtml);
-        $("#vdr_group_data").accordion({
-            collapsible: true,
-            active: false,
-            heightStyle: "content"
-        });
+
+        defer.resolve(arr);
+
     }).fail(function (error) {
-        window.console && console.log(error);
+        defer.reject(error);
     });
+
+    return defer.promise();
 }
 
 function createGroup(groupName, description, ownerID) {
@@ -80,6 +72,27 @@ function createGroup(groupName, description, ownerID) {
     return defer.promise();
 }
 
+function deleteGroup(groupId) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl +
+            "/_api/web/sitegroups/removebyid(" + groupId + ")",
+        type: "POST",
+        headers: {
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata"
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
+
 function grantGroupPermissionToWeb(groupId, permissionLevel) {
     var defer = $.Deferred();
     $.ajax({
@@ -108,6 +121,61 @@ function grantGroupPermissionToWeb(groupId, permissionLevel) {
         });
     }).fail(function (error) {
         defer.reject();
+    });
+    return defer.promise();
+}
+
+function breakListInheritance(listId, copy, clear) {
+    var defer = $.Deferred();
+
+    copy = (copy === undefined) ? true : copy;
+    clear = (clear === undefined) ? false : clear;
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbyid('" + listId +
+            "')/breakroleinheritance(copyRoleAssignments=" + copy + ",clearSubscopes=" + clear + ")",
+        type: "POST",
+        headers: {
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose",
+            "X-RequestDigest": $("#__REQUESTDIGEST").val()
+        },
+        dataType: "json"
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
+
+function grantGroupPermissionToList(listId, groupId, permissionLevel) {
+    var defer = $.Deferred();
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/RoleDefinitions/getbyname('" + permissionLevel + "')",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose",
+            "X-RequestDigest": $("#__REQUESTDIGEST").val()
+        },
+        dataType: "json"
+    }).done(function (data) {
+        $.ajax({
+            url: _spPageContextInfo.webAbsoluteUrl +
+                "/_api/web/lists('" + listId + "')/roleassignments/addroleassignment(principalid=" + groupId + ",roledefid=" + data.d.Id + ")",
+            type: "POST",
+            headers: {
+                "X-RequestDigest": $("#__REQUESTDIGEST").val()
+            }
+        }).done(function (data) {
+            defer.resolve(data);
+        }).fail(function (error) {
+            defer.reject(error);
+        });
+    }).fail(function (error2) {
+        defer.reject(error2);
     });
     return defer.promise();
 }
