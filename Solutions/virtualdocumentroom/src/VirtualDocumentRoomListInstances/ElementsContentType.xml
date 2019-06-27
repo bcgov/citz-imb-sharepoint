@@ -4251,6 +4251,149 @@
 			</XmlDocument>
 		</XmlDocuments>
 	</ContentType>
+	<ContentType ID="0x0120D52000D20F33EBE8A5814CA8FCB3B43FC5B014" Name="RPD Incident" Group="_Custom Content Types" Overwrite="TRUE" ProgId="Sharepoint.DocumentSet" PushDownChangedResourceFilesOnly="TRUE">
+		<Folder TargetName="_cts/RPD Incident" />
+		<FieldRefs>
+			<FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+			<FieldRef ID="{b824e17e-a1b3-426e-aecf-f0184d900485}" Name="ItemChildCount" />
+			<FieldRef ID="{960ff01f-2b6d-4f1b-9c3f-e19ad8927341}" Name="FolderChildCount" />
+			<FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="FALSE" Hidden="TRUE" />
+			<FieldRef ID="{8553196d-ec8d-4564-9861-3dbe931050c8}" Name="FileLeafRef" Required="TRUE" Hidden="FALSE" />
+			<FieldRef ID="{cbb92da4-fd46-4c7d-af6c-3128c2a5576e}" Name="Description" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+			<FieldRef ID="{ae3e2a36-125d-45d3-9051-744b513536a6}" Name="_dlc_DocId" />
+			<FieldRef ID="{3b63724f-3418-461f-868b-7706f69b029c}" Name="_dlc_DocIdUrl" />
+			<FieldRef ID="{c010d384-479c-494f-968c-c413dbe3de29}" Name="_dlc_DocIdPersistId" Hidden="TRUE" />
+		</FieldRefs>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/welcomepageview">
+				<WelcomePageView xmlns="http://schemas.microsoft.com/office/documentsets/welcomepageview" LastModified="1/1/1 0:00:01 AM" />
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes">
+				<act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="05/13/2019 22:15:33">
+					<AllowedContentType id="0x0101" />
+				</act:AllowedContentTypes>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>DocumentSet ItemUpdated</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>100</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetEventReceiver</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>DocumentSet ItemAdded</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>100</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetItemsEventReceiver</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>DocumentSet ItemAdding</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>1</Type>
+						<SequenceNumber>100</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetItemsEventReceiver</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>DocumentSet ItemUpdating</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>2</Type>
+						<SequenceNumber>100</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetItemsEventReceiver</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>1000</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>1001</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10004</Type>
+						<SequenceNumber>1002</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>Document ID Generator</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10006</Type>
+						<SequenceNumber>1003</SequenceNumber>
+						<Url />
+						<Assembly>Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.Internal.DocIdHandler</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/sharedfields">
+				<sf:SharedFields xmlns:sf="http://schemas.microsoft.com/office/documentsets/sharedfields" LastModified="06/04/2019 16:05:23">
+					<SharedField id="cbb92da4-fd46-4c7d-af6c-3128c2a5576e" />
+				</sf:SharedFields>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/defaultdocuments">
+				<dd:DefaultDocuments xmlns:dd="http://schemas.microsoft.com/office/documentsets/defaultdocuments" LastModified="06/04/2019 16:05:23" AddSetName="True">
+					<DefaultDocument name="/Incident Report.xlsx" idContentType="0x0101" />
+				</dd:DefaultDocuments>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/welcomepagefields">
+				<wpf:WelcomePageFields xmlns:wpf="http://schemas.microsoft.com/office/documentsets/welcomepagefields" LastModified="06/04/2019 16:05:23">
+					<WelcomePageField id="8c11aa5e-da3a-44e2-beb5-c33f8818c3ac" />
+				</wpf:WelcomePageFields>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+					<Display>ListForm</Display>
+					<Edit>ListForm</Edit>
+					<New>DocSetDisplayForm</New>
+				</FormTemplates>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+				<FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+					<New>_layouts/15/NewDocSet.aspx</New>
+				</FormUrls>
+			</XmlDocument>
+		</XmlDocuments>
+	</ContentType>
 	<ContentType ID="0x0100DC2417D125A4489CA59DCC70E3F152B2" Name="Rule" Group="_Hidden" Description="Create a rule that moves content submitted to this site to the correct library or folder." Sealed="TRUE" Overwrite="TRUE" FeatureId="{0c8a9a47-22a9-4798-82f1-00e62a96006e}">
 		<Folder TargetName="_cts/Rule" />
 		<FieldRefs>

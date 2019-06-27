@@ -271,13 +271,14 @@
 		</Data>
 	</ListInstance>
 	<ListInstance FeatureId="{00000000-0000-0000-0000-000000000000}" TemplateType="116" Title="Master Page Gallery" Description="Use the master page gallery to store master pages. The master pages in this gallery are available to this site and any sites underneath it." Url="_catalogs/masterpage" CustomSchema="Files\_catalogs\masterpage\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" RootWebOnly="FALSE" />
+	<ListInstance FeatureId="{00bfea71-de22-43b2-a848-c05709900100}" TemplateType="100" Title="ActivityLog" Description="" Url="Lists/ActivityLog" CustomSchema="Files\Lists\ActivityLog\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" RootWebOnly="FALSE" />
 	<ListInstance FeatureId="{00bfea71-de22-43b2-a848-c05709900100}" TemplateType="100" Title="Config" Description="" Url="Lists/Config" CustomSchema="Files\Lists\Config\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" RootWebOnly="FALSE">
 		<Data>
 			<Rows>
 				<Row>
 					<Field Name="ContentTypeId">0x0100FC6E1B463D08FC4FBB1E78D1B8367C73</Field>
 					<Field Name="Key">TOS</Field>
-					<Field Name="MultiTextValue">&lt;div class="ExternalClassA0ABB4F645AD46889CFCBBCC6D9203F3"&gt;&lt;h1&gt;​Terms of Service&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Don't spill the beans!&lt;br&gt;&lt;/p&gt;&lt;/div&gt;</Field>
+					<Field Name="MultiTextValue">&lt;div class="ExternalClassA0ABB4F645AD46889CFCBBCC6D9203F3"&gt;&lt;h1&gt;​Terms of Service&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Don't spill the beans!&amp;#160; ever.&lt;br&gt;&lt;/p&gt;&lt;/div&gt;</Field>
 					<Field Name="YesNoValue">TRUE</Field>
 					<Field Name="ID">1</Field>
 					<Field Name="_ModerationStatus">0</Field>
@@ -298,9 +299,22 @@
 					<Field Name="FileLeafRef">2_.000</Field>
 					<Field Name="MetaInfo">2;#</Field>
 				</Row>
+				<Row>
+					<Field Name="ContentTypeId">0x0100FC6E1B463D08FC4FBB1E78D1B8367C73</Field>
+					<Field Name="Key">GroupPrefix</Field>
+					<Field Name="TextValue">Device Services VICO - </Field>
+					<Field Name="YesNoValue">TRUE</Field>
+					<Field Name="ID">3</Field>
+					<Field Name="_ModerationStatus">0</Field>
+					<Field Name="Order">300.000000000000</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FileLeafRef">3_.000</Field>
+					<Field Name="MetaInfo">3;#</Field>
+				</Row>
 			</Rows>
 		</Data>
 	</ListInstance>
+	<ListInstance FeatureId="{00bfea71-de22-43b2-a848-c05709900100}" TemplateType="100" Title="Proponents" Description="" Url="Lists/Proponents" CustomSchema="Files\Lists\Proponents\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" RootWebOnly="FALSE" />
 	<ListInstance FeatureId="{00bfea71-e717-4e80-aa17-d0c71b360101}" TemplateType="101" Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." Url="SiteAssets" CustomSchema="Files\SiteAssets\Schema.xml" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" RootWebOnly="FALSE">
 		<Data>
 			<Rows>

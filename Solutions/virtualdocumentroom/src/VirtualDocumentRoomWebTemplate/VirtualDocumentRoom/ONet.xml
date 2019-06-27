@@ -5,6 +5,8 @@
 		</NavBar>
 		<NavBar Name="Home" Url="/sites/DEV/vt" ID="1031" />
 		<NavBar Name="Recent" Url="" ID="1033">
+			<NavBarPage Name="ActivityLog" Url="Lists/ActivityLog/AllItems.aspx" />
+			<NavBarPage Name="Proponents" Url="Lists/Proponents/AllItems.aspx" />
 			<NavBarPage Name="Config" Url="Lists/Config/AllItems.aspx" />
 		</NavBar>
 		<NavBar Name="Site Contents" Url="_layouts/15/viewlsts.aspx" ID="1034" />
@@ -101,6 +103,8 @@
 				</Feature>
 				<!--ShareWithEveryone Feature-->
 				<Feature ID="{10f73b29-5779-46b3-85a8-4817a6e9a6c2}" Name="FeatureDefinition/15/10f73b29-5779-46b3-85a8-4817a6e9a6c2" />
+				<!--CITZ.IMB.SP.FilterableLists Feature-->
+				<Feature ID="{3bd9ab88-807b-4de4-9a03-49eda603658f}" Name="FeatureDefinition/15/3bd9ab88-807b-4de4-9a03-49eda603658f" />
 				<!--PowerView Feature-->
 				<Feature ID="{bf8b58f5-ebae-4a70-9848-622beaaf2043}" Name="FeatureDefinition/15/bf8b58f5-ebae-4a70-9848-622beaaf2043" />
 				<!--SearchDrivenContent Feature-->
@@ -232,31 +236,31 @@
 				<!--XmlFormLibrary Feature-->
 				<Feature ID="{00bfea71-1e1d-4562-b56a-f05371bb0115}" Name="FeatureDefinition/15/00bfea71-1e1d-4562-b56a-f05371bb0115" SourceVersion="0.0.0.0" />
 				<!--List Feature-->
-				<Feature ID="{d00b2edc-8efc-409e-8ece-2f2de121540e}" Name="List Feature">
+				<Feature ID="{d6e12623-ac03-4fd4-a534-18313509d73b}" Name="List Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Module Feature-->
-				<Feature ID="{335c57a3-3f92-4bf6-bffa-73f1b67f0c7c}" Name="Module Feature">
+				<Feature ID="{c8267ad7-8f8b-45f0-85a6-5f9a7713e614}" Name="Module Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Web EventReceivers Feature-->
-				<Feature ID="{d7f61f0d-127d-4f73-aaa0-42334ec8b3c6}" Name="Web EventReceivers Feature">
+				<Feature ID="{310860ef-13c5-427f-954b-2a99899148cb}" Name="Web EventReceivers Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--CustomAction Feature-->
-				<Feature ID="{04990b2d-c9fd-4dfc-86b3-4b664120d00f}" Name="CustomAction Feature">
+				<Feature ID="{a7bef278-f7bf-4d67-bf53-f651205d3817}" Name="CustomAction Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Property Bag Feature-->
-				<Feature ID="{7e97cd0b-6a2f-43f1-b12e-884f363bd34c}" Name="Property Bag Feature">
+				<Feature ID="{18542fec-db47-40c1-9b3a-8a843c5b9306}" Name="Property Bag Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>

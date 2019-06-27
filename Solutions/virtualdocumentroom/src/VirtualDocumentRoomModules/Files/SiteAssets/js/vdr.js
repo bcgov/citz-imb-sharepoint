@@ -522,7 +522,8 @@ function createContent() {
 }
 
 $().ready(function () {
-    var cssUrl = _spPageContextInfo.webAbsoluteUrl + "/SiteAssets/css/vdr.css";
+    var cssUrl = "https://" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl +
+        "/SiteAssets/css/vdr.css";
     var head = document.getElementsByTagName("head")[0];
     var style = document.createElement("link");
     style.type = "text/css";

@@ -1,4 +1,4 @@
-﻿<Solution SolutionId="{e75f8c6d-745c-4526-b2ca-1f47f99ebf92}" SharePointProductVersion="16.0.4822.1000" xmlns="http://schemas.microsoft.com/sharepoint/">
+﻿<Solution SolutionId="{6b29079d-3f64-440e-bca0-5fe0e0d6651d}" SharePointProductVersion="16.0.4822.1000" xmlns="http://schemas.microsoft.com/sharepoint/">
 	<FeatureManifests>
 		<FeatureManifest Location="VirtualDocumentRoomListInstances\Feature.xml" />
 		<FeatureManifest Location="VirtualDocumentRoomModules\Feature.xml" />
@@ -11,6 +11,7 @@
 		<ActivationDependency SolutionId="1ce0aa6e-0911-43ea-9099-e14c10e3adbc" SolutionName="CITZ.IMB.SP.CollectionNavigation.wsp" />
 		<ActivationDependency SolutionId="9872259d-fcad-4945-b724-701c1f47a10f" SolutionName="CITZ.IMB.SP.Breadcrumb.wsp" />
 		<ActivationDependency SolutionId="b563a004-e6d3-435a-a8eb-9ca381fe1237" SolutionName="CITZ.IMB.SP.ContactUs.wsp" />
+		<ActivationDependency SolutionId="e69bc4bc-88ab-4250-b418-58757e0ace1f" SolutionName="CITZ.IMB.SP.FilterableLists.wsp" />
 		<ActivationDependency SolutionId="f6911f52-1015-4008-8d29-dfbbb11f0e10" SolutionName="CITZ.IMB.SP.JSLibraries.wsp" />
 	</ActivationDependencies>
 </Solution>

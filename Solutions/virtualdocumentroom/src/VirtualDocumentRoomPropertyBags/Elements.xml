@@ -3,14 +3,14 @@
 		<Property Name="vti_folderitemcount" Value="0" Type="int" />
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="vti_replid" Value="rid:{06DDBC51-401B-4CBF-847D-238D5E5980D2}" Type="string" />
-		<Property Name="vti_nexttolasttimemodified" Value="2019-05-23T21:18:48Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-26T22:00:42Z" Type="DateTime" />
 		<Property Name="vti_parentid" Value="{A7A766D3-0CAC-4E18-AFF1-D9F75833E629}" Type="string" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:15Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-27T14:31:16Z" Type="DateTime" />
 		<Property Name="vti_welcomepage" Value="SitePages/Home.aspx" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
 		<Property Name="vti_metainfoversion" Value="4" Type="int" />
@@ -30,7 +30,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:16Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
@@ -55,7 +55,7 @@
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
 		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
 		<Property Name="vti_listtitle" Value="Composed Looks" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_listenableversioning" Value="false" Type="string" />
 		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
@@ -114,7 +114,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:17Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -278,7 +278,7 @@
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
 		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
 		<Property Name="vti_listtitle" Value="Master Page Gallery" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_listenableversioning" Value="true" Type="string" />
 		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
@@ -302,7 +302,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:16Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
@@ -393,7 +393,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:17Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -448,7 +448,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:17Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -745,7 +745,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:16Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
@@ -833,20 +833,23 @@
 		<Property Name="vti_customuploadpage" Value="/_layouts/15/UploadEx.aspx" Type="string" />
 		<Property Name="FollowLinkEnabled" Value="FALSE" Type="string" />
 		<Property Name="vti_defaultcharset" Value="utf-8" Type="string" />
-		<Property Name="vti_associateownergroup" Value="7" Type="string" />
+		<Property Name="vti_associateownergroup" Value="242" Type="string" />
 		<Property Name="vti_navbuttonnextlabel" Value="Next" Type="string" />
 		<Property Name="docid_msft_hier_prefix_webid" Value="619af9b3-8814-41af-ae85-d9771f36a6d8" Type="string" />
+		<Property Name="__InheritWebTemplates" Value="True" Type="string" />
 		<Property Name="vti_defaultlanguage" Value="en-us" Type="string" />
 		<Property Name="docid_enabled" Value="1" Type="string" />
 		<Property Name="vti_categories" Value="Travel Expense\ Report Business Competition Goals/Objectives Ideas Miscellaneous Waiting VIP In\ Process Planning Schedule" Type="string" />
-		<Property Name="vti_associatemembergroup" Value="9" Type="string" />
+		<Property Name="vti_associatemembergroup" Value="243" Type="string" />
+		<Property Name="__WebTemplates" Value="&lt;webtemplates&gt;&lt;lcid id=&quot;all&quot;&gt;&lt;webtemplate name=&quot;{6E6EF46A-7D1C-4BCF-BC3E-F5949845DB2F}#BlankSite&quot; /&gt;&lt;webtemplate name=&quot;{D5C85340-A986-432C-9881-7185A1EDE267}#CITZ.Team.Site&quot; /&gt;&lt;webtemplate name=&quot;BLOG#0&quot; /&gt;&lt;webtemplate name=&quot;PowerPivot#0&quot; /&gt;&lt;webtemplate name=&quot;PROJECTSITE#0&quot; /&gt;&lt;webtemplate name=&quot;{DE6FA1DC-A4C2-43F4-B611-FB3C4A9B56F5}#VirtualDocumentRoom&quot; /&gt;&lt;/lcid&gt;&lt;/webtemplates&gt;" Type="string" />
 		<Property Name="vti_navbuttonuplabel" Value="Up" Type="string" />
 		<Property Name="docid_msft_hier_siteprefix" Value="J5QNEFYF7CH5" Type="string" />
-		<Property Name="vti_associategroups" Value="9;3;3;8;7" Type="string" />
+		<Property Name="vti_associategroups" Value="243;9;3;8;7;242;244" Type="string" />
 		<Property Name="vti_ignorekeyboard" Value="0" Type="int" />
 		<Property Name="vti_extenderversion" Value="16.0.0.4822" Type="string" />
 		<Property Name="docid_customProvider_assembly" Value="Microsoft.Office.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Type="string" />
-		<Property Name="vti_associatevisitorgroup" Value="8" Type="string" />
+		<Property Name="vti_associatevisitorgroup" Value="244" Type="string" />
+		<Property Name="vti_createdassociategroups" Value="242;243;244" Type="string" />
 		<Property Name="vti_mastercssfilecache" Value="corev15app.css" Type="string" />
 		<Property Name="vti_approvallevels" Value="Approved Rejected Pending\ Review" Type="string" />
 		<Property Name="vti_navbuttonprevlabel" Value="Back" Type="string" />
@@ -861,7 +864,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:16Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -882,7 +885,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:05:04Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -894,8 +897,217 @@
 		<Property Name="vti_docstoretype" Value="1" Type="int" />
 		<Property Name="vti_replid" Value="rid:{389E2F88-B144-49F4-9B1C-23019A87CC40}" Type="string" />
 	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
+		<Property Name="vti_listbasetype" Value="0" Type="int" />
+		<Property Name="vti_listrequirecheckout" Value="false" Type="string" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_replid" Value="rid:{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_rtag" Value="rt:CD12C258-8C69-4687-BEAD-41BC6C9999D4@00000000256" Type="string" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
+		<Property Name="vti_listservertemplate" Value="100" Type="int" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_docstoreversion" Value="256" Type="int" />
+		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_listtitle" Value="ActivityLog" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-27T14:27:14Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-27T14:27:14Z" Type="DateTime" />
+		<Property Name="vti_parentid" Value="{389E2F88-B144-49F4-9B1C-23019A87CC40}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_listenableversioning" Value="false" Type="string" />
+		<Property Name="vti_listname" Value="{$ListId:Lists/ActivityLog;}" Type="string" />
+		<Property Name="vti_etag" Value="&quot;{CD12C258-8C69-4687-BEAD-41BC6C9999D4},256&quot;" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-25T14:40:59Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog/AllItems.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{BCA579F5-5A92-4D4D-9950-0FB3C2B7F93B}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:BCA579F5-5A92-4D4D-9950-0FB3C2B7F93B@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="2751" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{BCA579F5-5A92-4D4D-9950-0FB3C2B7F93B},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\viewpage.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{BCA579F5-5A92-4D4D-9950-0FB3C2B7F93B},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog/Attachments" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_parentid" Value="{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T14:40:59Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-25T14:40:59Z" Type="DateTime" />
+		<Property Name="vti_etag" Value="&quot;{A26CD26C-B6DF-4AAD-9AB0-9FC519BCD1D2},256&quot;" Type="string" />
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
+		<Property Name="vti_docstoreversion" Value="256" Type="int" />
+		<Property Name="vti_rtag" Value="rt:A26CD26C-B6DF-4AAD-9AB0-9FC519BCD1D2@00000000256" Type="string" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_replid" Value="rid:{A26CD26C-B6DF-4AAD-9AB0-9FC519BCD1D2}" Type="string" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog/DispForm.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{84644A92-9178-4031-BCAD-0246E3BA09F0}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:84644A92-9178-4031-BCAD-0246E3BA09F0@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="4230" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{84644A92-9178-4031-BCAD-0246E3BA09F0},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\form.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{84644A92-9178-4031-BCAD-0246E3BA09F0},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog/EditForm.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{607C12FE-B105-4578-ACEE-E41C96CA3232}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:607C12FE-B105-4578-ACEE-E41C96CA3232@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="4230" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{607C12FE-B105-4578-ACEE-E41C96CA3232},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\form.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{607C12FE-B105-4578-ACEE-E41C96CA3232},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog/Item" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_parentid" Value="{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-05-13T22:15:21Z" Type="DateTime" />
+		<Property Name="vti_etag" Value="&quot;{AEA7B7EC-F771-4F94-9A8B-A476449A88B5},1&quot;" Type="string" />
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_rtag" Value="rt:AEA7B7EC-F771-4F94-9A8B-A476449A88B5@00000000001" Type="string" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_replid" Value="rid:{AEA7B7EC-F771-4F94-9A8B-A476449A88B5}" Type="string" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/ActivityLog/NewForm.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{0E60C539-E773-49EB-9AE4-839E53B2E1F0}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:0E60C539-E773-49EB-9AE4-839E53B2E1F0@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="4230" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{0E60C539-E773-49EB-9AE4-839E53B2E1F0},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\form.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{CD12C258-8C69-4687-BEAD-41BC6C9999D4}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{0E60C539-E773-49EB-9AE4-839E53B2E1F0},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-25T14:41:01Z" Type="DateTime" />
+	</PropertyBag>
 	<PropertyBag Url="Lists/Config" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
-		<Property Name="vti_folderitemcount" Value="2" Type="int" />
+		<Property Name="vti_folderitemcount" Value="3" Type="int" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_replid" Value="rid:{1734A3A2-86D6-466F-8004-35D62B0F6D29}" Type="string" />
 		<Property Name="vti_listbasetype" Value="0" Type="int" />
@@ -906,7 +1118,7 @@
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
 		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
 		<Property Name="vti_listtitle" Value="Config" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_listenableversioning" Value="false" Type="string" />
 		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
@@ -914,7 +1126,7 @@
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="vti_timecreated" Value="2019-05-23T21:34:38Z" Type="DateTime" />
 		<Property Name="vti_etag" Value="&quot;{1734A3A2-86D6-466F-8004-35D62B0F6D29},256&quot;" Type="string" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:49:07Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-26T21:17:25Z" Type="DateTime" />
 		<Property Name="vti_hassubdirs" Value="true" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_docstoreversion" Value="256" Type="int" />
@@ -965,7 +1177,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:34:38Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -1055,7 +1267,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:34:39Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -1102,6 +1314,215 @@
 		<Property Name="vti_etag" Value="&quot;{65E0AE5B-591D-4077-A5B0-069B5B00D366},1&quot;" Type="string" />
 		<Property Name="vti_timelastwritten" Value="2019-05-23T21:34:39Z" Type="DateTime" />
 	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
+		<Property Name="vti_listbasetype" Value="0" Type="int" />
+		<Property Name="vti_listrequirecheckout" Value="false" Type="string" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_replid" Value="rid:{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_rtag" Value="rt:9D22883E-2A60-4998-B214-FDD8BCC0D264@00000000256" Type="string" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
+		<Property Name="vti_listservertemplate" Value="100" Type="int" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_docstoreversion" Value="256" Type="int" />
+		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_listtitle" Value="Proponents" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-27T14:31:29Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-26T22:06:24Z" Type="DateTime" />
+		<Property Name="vti_parentid" Value="{389E2F88-B144-49F4-9B1C-23019A87CC40}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_listenableversioning" Value="false" Type="string" />
+		<Property Name="vti_listname" Value="{$ListId:Lists/Proponents;}" Type="string" />
+		<Property Name="vti_etag" Value="&quot;{9D22883E-2A60-4998-B214-FDD8BCC0D264},256&quot;" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-20T14:44:19Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents/AllItems.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{21AED7FD-11FB-40CA-8E3E-916A910B7AD5}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:21AED7FD-11FB-40CA-8E3E-916A910B7AD5@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="2751" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{21AED7FD-11FB-40CA-8E3E-916A910B7AD5},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\viewpage.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{21AED7FD-11FB-40CA-8E3E-916A910B7AD5},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents/Attachments" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_parentid" Value="{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-20T14:44:19Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-20T14:44:19Z" Type="DateTime" />
+		<Property Name="vti_etag" Value="&quot;{482E759F-CC14-485B-B6AA-A625C802ED48},256&quot;" Type="string" />
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
+		<Property Name="vti_docstoreversion" Value="256" Type="int" />
+		<Property Name="vti_rtag" Value="rt:482E759F-CC14-485B-B6AA-A625C802ED48@00000000256" Type="string" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_replid" Value="rid:{482E759F-CC14-485B-B6AA-A625C802ED48}" Type="string" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents/DispForm.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{04FE1A3F-2995-4A00-B069-86B50B0631E5}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:04FE1A3F-2995-4A00-B069-86B50B0631E5@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="4230" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{04FE1A3F-2995-4A00-B069-86B50B0631E5},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\form.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{04FE1A3F-2995-4A00-B069-86B50B0631E5},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents/EditForm.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{6F202E2B-357F-4C9B-AD1A-BCC44FD8E79B}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:6F202E2B-357F-4C9B-AD1A-BCC44FD8E79B@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="4230" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{6F202E2B-357F-4C9B-AD1A-BCC44FD8E79B},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\form.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{6F202E2B-357F-4C9B-AD1A-BCC44FD8E79B},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents/Item" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_parentid" Value="{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-20T14:44:19Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-05-13T22:15:21Z" Type="DateTime" />
+		<Property Name="vti_etag" Value="&quot;{8A9AE88D-63FA-4663-A6F5-E6510F2844C8},1&quot;" Type="string" />
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_rtag" Value="rt:8A9AE88D-63FA-4663-A6F5-E6510F2844C8@00000000001" Type="string" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_replid" Value="rid:{8A9AE88D-63FA-4663-A6F5-E6510F2844C8}" Type="string" />
+	</PropertyBag>
+	<PropertyBag Url="Lists/Proponents/NewForm.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
+		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
+		<Property Name="vti_replid" Value="rid:{5DB3C361-2037-4689-86EE-46B5DE64934B}" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_setuppathversion" Value="15" Type="int" />
+		<Property Name="vti_rtag" Value="rt:5DB3C361-2037-4689-86EE-46B5DE64934B@00000000001" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
+		<Property Name="vti_filesize" Value="4230" Type="int" />
+		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_streamschema" Value="0" Type="int" />
+		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_nextbsn" Value="100" Type="string" />
+		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_cachedzones" Value="Main" Type="string" />
+		<Property Name="vti_contenttag" Value="{5DB3C361-2037-4689-86EE-46B5DE64934B},1,0" Type="string" />
+		<Property Name="vti_docstoretype" Value="0" Type="int" />
+		<Property Name="vti_charset" Value="utf-8" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="100" Type="string" />
+		<Property Name="vti_folderitemcount" Value="0" Type="int" />
+		<Property Name="vti_setuppath" Value="pages\form.aspx" Type="string" />
+		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
+		<Property Name="vti_parentid" Value="{9D22883E-2A60-4998-B214-FDD8BCC0D264}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_timelastmodified" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{5DB3C361-2037-4689-86EE-46B5DE64934B},1&quot;" Type="string" />
+		<Property Name="vti_timelastwritten" Value="2019-06-20T14:44:20Z" Type="DateTime" />
+	</PropertyBag>
 	<PropertyBag Url="m" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
 		<Property Name="vti_folderitemcount" Value="0" Type="int" />
 		<Property Name="vti_level" Value="1" Type="int" />
@@ -1110,7 +1531,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:04:19Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -1159,10 +1580,10 @@
 	<PropertyBag Url="SiteAssets" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
 		<Property Name="vti_hassubdirs" Value="true" Type="string" />
 		<Property Name="vti_listrequirecheckout" Value="false" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_replid" Value="rid:{3B673FCC-5939-4E5A-887A-57D25634FAF0}" Type="string" />
-		<Property Name="vti_rtag" Value="rt:3B673FCC-5939-4E5A-887A-57D25634FAF0@00000000004" Type="string" />
+		<Property Name="vti_rtag" Value="rt:3B673FCC-5939-4E5A-887A-57D25634FAF0@00000000005" Type="string" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
 		<Property Name="vti_listservertemplate" Value="101" Type="int" />
 		<Property Name="vti_modifiedby" Value="SHAREPOINT\system" Type="string" />
@@ -1173,22 +1594,22 @@
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="docid_msft_hier_list_guid" Value="ad479868c39348b585eb529c06a05196" Type="string" />
-		<Property Name="vti_docstoreversion" Value="4" Type="int" />
+		<Property Name="vti_docstoreversion" Value="5" Type="int" />
 		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="2" Type="int" />
 		<Property Name="vti_listtitle" Value="Site Assets" Type="string" />
-		<Property Name="vti_metainfoversion" Value="4" Type="int" />
+		<Property Name="vti_metainfoversion" Value="5" Type="int" />
 		<Property Name="IsAttachmentLibrary" Value="1" Type="int" />
 		<Property Name="vti_folderitemcount" Value="2" Type="int" />
 		<Property Name="docid_msft_hier_listid" Value="2117127339" Type="int" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:31:49Z" Type="DateTime" />
-		<Property Name="docid_msft_hier_listid_validate" Value="2019-05-23T21:32:48Z" Type="DateTime" />
-		<Property Name="vti_nexttolasttimemodified" Value="2019-05-23T21:31:39Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-25T19:42:41Z" Type="DateTime" />
+		<Property Name="docid_msft_hier_listid_validate" Value="9999-12-31T23:59:59Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-25T19:42:29Z" Type="DateTime" />
 		<Property Name="vti_parentid" Value="{06DDBC51-401B-4CBF-847D-238D5E5980D2}" Type="string" />
 		<Property Name="vti_listbasetype" Value="1" Type="int" />
 		<Property Name="vti_listenableversioning" Value="true" Type="string" />
 		<Property Name="vti_listname" Value="{$ListId:SiteAssets;}" Type="string" />
-		<Property Name="vti_etag" Value="&quot;{3B673FCC-5939-4E5A-887A-57D25634FAF0},4&quot;" Type="string" />
+		<Property Name="vti_etag" Value="&quot;{3B673FCC-5939-4E5A-887A-57D25634FAF0},5&quot;" Type="string" />
 		<Property Name="vti_timecreated" Value="2019-05-23T21:28:13Z" Type="DateTime" />
 	</PropertyBag>
 	<PropertyBag Url="SiteAssets/css" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
@@ -1202,7 +1623,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_listenableversioning" Value="true" Type="string" />
 		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
@@ -1219,41 +1640,41 @@
 		<Property Name="vti_listservertemplate" Value="101" Type="int" />
 	</PropertyBag>
 	<PropertyBag Url="SiteAssets/css/vdr.css" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
-		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_internalversion" Value="78849" Type="int" />
 		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
 		<Property Name="vti_replid" Value="rid:{0A63B6B1-220C-42FC-AAF3-8B9B114BE194}" Type="string" />
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="ContentTypeId" Value="0x01010082C04DE72F0C034D9F2444B1B32A8252" Type="string" />
 		<Property Name="vti_setuppathversion" Value="16" Type="int" />
-		<Property Name="vti_rtag" Value="rt:0A63B6B1-220C-42FC-AAF3-8B9B114BE194@00000000001" Type="string" />
-		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
-		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
-		<Property Name="vti_filesize" Value="130" Type="int" />
+		<Property Name="vti_rtag" Value="rt:0A63B6B1-220C-42FC-AAF3-8B9B114BE194@00000000308" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V155.0" Type="string" />
+		<Property Name="vti_sourcecontrolcheckincomment" Value="Updated from SP Editor" Type="string" />
+		<Property Name="vti_filesize" Value="1669" Type="int" />
 		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
 		<Property Name="vti_docstoretype" Value="0" Type="int" />
-		<Property Name="vti_etag" Value="&quot;{0A63B6B1-220C-42FC-AAF3-8B9B114BE194},1&quot;" Type="string" />
-		<Property Name="vti_nextbsn" Value="150" Type="string" />
-		<Property Name="vti_virusstatus" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{0A63B6B1-220C-42FC-AAF3-8B9B114BE194},308&quot;" Type="string" />
+		<Property Name="vti_nextbsn" Value="8678" Type="string" />
 		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
-		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_docstoreversion" Value="308" Type="int" />
 		<Property Name="_dlc_DocIdUrl" Value="https://citz.sp.gov.bc.ca/sites/DEV/vt/_layouts/15/DocIdRedir.aspx?ID=J5QNEFYF7CH5-2117127339-4, J5QNEFYF7CH5-2117127339-4" Type="string" />
-		<Property Name="vti_virusvendorid" Value="173" Type="int" />
 		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
 		<Property Name="vti_timecreated" Value="2019-05-23T21:31:49Z" Type="DateTime" />
-		<Property Name="vti_metainfoversion" Value="2" Type="int" />
-		<Property Name="vti_contenttag" Value="{0A63B6B1-220C-42FC-AAF3-8B9B114BE194},1,1" Type="string" />
+		<Property Name="vti_metainfoversion" Value="452" Type="int" />
+		<Property Name="vti_contenttag" Value="{0A63B6B1-220C-42FC-AAF3-8B9B114BE194},308,165" Type="string" />
 		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
-		<Property Name="vti_nextbsnallocated" Value="150" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="8678" Type="string" />
 		<Property Name="vti_folderitemcount" Value="0" Type="int" />
 		<Property Name="_dlc_DocId" Value="J5QNEFYF7CH5-2117127339-4" Type="string" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:31:49Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-21T17:34:16Z" Type="DateTime" />
 		<Property Name="vti_parentid" Value="{12DFC292-D658-4EEA-9D46-1282328C1ADF}" Type="string" />
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
-		<Property Name="vti_contentversion" Value="1" Type="int" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-21T17:33:32Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="165" Type="int" />
 		<Property Name="_dlc_DocIdItemGuid" Value="0a63b6b1-220c-42fc-aaf3-8b9b114be194" Type="string" />
-		<Property Name="vti_timelastwritten" Value="2019-05-23T21:31:49Z" Type="DateTime" />
+		<Property Name="vti_timelastwritten" Value="2019-06-21T17:34:16Z" Type="DateTime" />
 		<Property Name="vti_streamschema" Value="66" Type="int" />
 	</PropertyBag>
 	<PropertyBag Url="SiteAssets/Forms" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
@@ -1265,7 +1686,7 @@
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:13Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
@@ -1391,7 +1812,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:14Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -1588,78 +2009,79 @@
 		<Property Name="vti_timelastwritten" Value="2019-05-23T21:28:14Z" Type="DateTime" />
 	</PropertyBag>
 	<PropertyBag Url="SiteAssets/js" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
-		<Property Name="vti_folderitemcount" Value="1" Type="int" />
-		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
-		<Property Name="vti_replid" Value="rid:{33CBB339-7E58-4527-9447-EC9E03C699C7}" Type="string" />
+		<Property Name="vti_hassubdirs" Value="true" Type="string" />
 		<Property Name="vti_listbasetype" Value="1" Type="int" />
 		<Property Name="vti_listrequirecheckout" Value="false" Type="string" />
-		<Property Name="vti_parentid" Value="{3B673FCC-5939-4E5A-887A-57D25634FAF0}" Type="string" />
-		<Property Name="vti_isexecutable" Value="false" Type="string" />
-		<Property Name="vti_candeleteversion" Value="true" Type="string" />
-		<Property Name="vti_isbrowsable" Value="true" Type="string" />
-		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
-		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:30Z" Type="DateTime" />
-		<Property Name="vti_isscriptable" Value="false" Type="string" />
-		<Property Name="vti_listenableversioning" Value="true" Type="string" />
-		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
-		<Property Name="vti_listname" Value="{$ListId:SiteAssets;}" Type="string" />
-		<Property Name="vti_level" Value="1" Type="int" />
-		<Property Name="vti_timecreated" Value="2019-05-23T21:31:12Z" Type="DateTime" />
-		<Property Name="vti_etag" Value="&quot;{33CBB339-7E58-4527-9447-EC9E03C699C7},1&quot;" Type="string" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:31:38Z" Type="DateTime" />
-		<Property Name="vti_hassubdirs" Value="true" Type="string" />
-		<Property Name="vti_metainfoversion" Value="1" Type="int" />
-		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
+		<Property Name="vti_replid" Value="rid:{33CBB339-7E58-4527-9447-EC9E03C699C7}" Type="string" />
 		<Property Name="vti_rtag" Value="rt:33CBB339-7E58-4527-9447-EC9E03C699C7@00000000001" Type="string" />
-		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_isbrowsable" Value="true" Type="string" />
 		<Property Name="vti_listservertemplate" Value="101" Type="int" />
+		<Property Name="vti_docstoretype" Value="1" Type="int" />
+		<Property Name="vti_listenableminorversions" Value="false" Type="string" />
+		<Property Name="vti_level" Value="1" Type="int" />
+		<Property Name="vti_isscriptable" Value="false" Type="string" />
+		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
+		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+		<Property Name="vti_isexecutable" Value="false" Type="string" />
+		<Property Name="vti_metainfoversion" Value="1" Type="int" />
+		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
+		<Property Name="vti_folderitemcount" Value="1" Type="int" />
+		<Property Name="vti_timelastmodified" Value="2019-06-27T15:10:09Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-25T19:42:46Z" Type="DateTime" />
+		<Property Name="vti_parentid" Value="{3B673FCC-5939-4E5A-887A-57D25634FAF0}" Type="string" />
+		<Property Name="vti_candeleteversion" Value="true" Type="string" />
+		<Property Name="vti_listenableversioning" Value="true" Type="string" />
+		<Property Name="vti_listname" Value="{$ListId:SiteAssets;}" Type="string" />
+		<Property Name="vti_etag" Value="&quot;{33CBB339-7E58-4527-9447-EC9E03C699C7},1&quot;" Type="string" />
+		<Property Name="vti_timecreated" Value="2019-05-23T21:31:12Z" Type="DateTime" />
 	</PropertyBag>
 	<PropertyBag Url="SiteAssets/js/vdr.js" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
-		<Property Name="vti_internalversion" Value="257" Type="int" />
+		<Property Name="vti_internalversion" Value="154369" Type="int" />
 		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
 		<Property Name="vti_replid" Value="rid:{32D9CFE5-2657-4DEB-A425-96E27EE62BF4}" Type="string" />
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="ContentTypeId" Value="0x01010082C04DE72F0C034D9F2444B1B32A8252" Type="string" />
 		<Property Name="vti_setuppathversion" Value="16" Type="int" />
-		<Property Name="vti_rtag" Value="rt:32D9CFE5-2657-4DEB-A425-96E27EE62BF4@00000000001" Type="string" />
-		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
-		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
-		<Property Name="vti_filesize" Value="2874" Type="int" />
+		<Property Name="vti_rtag" Value="rt:32D9CFE5-2657-4DEB-A425-96E27EE62BF4@00000000603" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V302.0" Type="string" />
+		<Property Name="vti_sourcecontrolcheckincomment" Value="Updated from SP Editor" Type="string" />
+		<Property Name="vti_filesize" Value="23885" Type="int" />
 		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
 		<Property Name="vti_docstoretype" Value="0" Type="int" />
-		<Property Name="vti_etag" Value="&quot;{32D9CFE5-2657-4DEB-A425-96E27EE62BF4},1&quot;" Type="string" />
-		<Property Name="vti_nextbsn" Value="150" Type="string" />
-		<Property Name="vti_virusstatus" Value="0" Type="int" />
+		<Property Name="vti_etag" Value="&quot;{32D9CFE5-2657-4DEB-A425-96E27EE62BF4},603&quot;" Type="string" />
+		<Property Name="vti_nextbsn" Value="15646" Type="string" />
 		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
-		<Property Name="vti_docstoreversion" Value="1" Type="int" />
+		<Property Name="vti_docstoreversion" Value="603" Type="int" />
 		<Property Name="_dlc_DocIdUrl" Value="https://citz.sp.gov.bc.ca/sites/DEV/vt/_layouts/15/DocIdRedir.aspx?ID=J5QNEFYF7CH5-2117127339-3, J5QNEFYF7CH5-2117127339-3" Type="string" />
-		<Property Name="vti_virusvendorid" Value="173" Type="int" />
 		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
+		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
 		<Property Name="vti_timecreated" Value="2019-05-23T21:31:38Z" Type="DateTime" />
-		<Property Name="vti_metainfoversion" Value="2" Type="int" />
-		<Property Name="vti_contenttag" Value="{32D9CFE5-2657-4DEB-A425-96E27EE62BF4},1,1" Type="string" />
+		<Property Name="vti_metainfoversion" Value="905" Type="int" />
+		<Property Name="vti_contenttag" Value="{32D9CFE5-2657-4DEB-A425-96E27EE62BF4},603,302" Type="string" />
 		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
-		<Property Name="vti_nextbsnallocated" Value="150" Type="string" />
+		<Property Name="vti_nextbsnallocated" Value="15646" Type="string" />
 		<Property Name="vti_folderitemcount" Value="0" Type="int" />
 		<Property Name="_dlc_DocId" Value="J5QNEFYF7CH5-2117127339-3" Type="string" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:31:38Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-27T14:31:54Z" Type="DateTime" />
 		<Property Name="vti_parentid" Value="{33CBB339-7E58-4527-9447-EC9E03C699C7}" Type="string" />
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
-		<Property Name="vti_contentversion" Value="1" Type="int" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-27T14:31:53Z" Type="DateTime" />
+		<Property Name="vti_contentversion" Value="302" Type="int" />
 		<Property Name="_dlc_DocIdItemGuid" Value="32d9cfe5-2657-4deb-a425-96e27ee62bf4" Type="string" />
-		<Property Name="vti_timelastwritten" Value="2019-05-23T21:31:38Z" Type="DateTime" />
+		<Property Name="vti_timelastwritten" Value="2019-06-27T14:31:53Z" Type="DateTime" />
 		<Property Name="vti_streamschema" Value="66" Type="int" />
 	</PropertyBag>
 	<PropertyBag Url="SitePages" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
 		<Property Name="vti_hassubdirs" Value="true" Type="string" />
 		<Property Name="vti_listrequirecheckout" Value="false" Type="string" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:29Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:52Z" Type="DateTime" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_replid" Value="rid:{586F40F7-23DA-420C-BE43-D5C0A97B405B}" Type="string" />
-		<Property Name="vti_rtag" Value="rt:586F40F7-23DA-420C-BE43-D5C0A97B405B@00000000003" Type="string" />
+		<Property Name="vti_rtag" Value="rt:586F40F7-23DA-420C-BE43-D5C0A97B405B@00000000004" Type="string" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
 		<Property Name="vti_listservertemplate" Value="119" Type="int" />
 		<Property Name="vti_modifiedby" Value="SHAREPOINT\system" Type="string" />
@@ -1670,20 +2092,21 @@
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="docid_msft_hier_list_guid" Value="9fe8694619974d3cb99191e0413029bc" Type="string" />
-		<Property Name="vti_docstoreversion" Value="3" Type="int" />
+		<Property Name="vti_docstoreversion" Value="4" Type="int" />
 		<Property Name="vti_listenablemoderation" Value="false" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_listtitle" Value="Site Pages" Type="string" />
-		<Property Name="vti_metainfoversion" Value="3" Type="int" />
+		<Property Name="vti_metainfoversion" Value="4" Type="int" />
 		<Property Name="vti_folderitemcount" Value="2" Type="int" />
 		<Property Name="docid_msft_hier_listid" Value="1150994032" Type="int" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:15Z" Type="DateTime" />
-		<Property Name="docid_msft_hier_listid_validate" Value="2019-05-23T21:29:15Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-05T20:11:22Z" Type="DateTime" />
+		<Property Name="docid_msft_hier_listid_validate" Value="9999-12-31T23:59:59Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-05T20:10:54Z" Type="DateTime" />
 		<Property Name="vti_parentid" Value="{06DDBC51-401B-4CBF-847D-238D5E5980D2}" Type="string" />
 		<Property Name="vti_listbasetype" Value="1" Type="int" />
 		<Property Name="vti_listenableversioning" Value="true" Type="string" />
 		<Property Name="vti_listname" Value="{$ListId:SitePages;}" Type="string" />
-		<Property Name="vti_etag" Value="&quot;{586F40F7-23DA-420C-BE43-D5C0A97B405B},3&quot;" Type="string" />
+		<Property Name="vti_etag" Value="&quot;{586F40F7-23DA-420C-BE43-D5C0A97B405B},4&quot;" Type="string" />
 		<Property Name="vti_timecreated" Value="2019-05-23T21:28:12Z" Type="DateTime" />
 	</PropertyBag>
 	<PropertyBag Url="SitePages/Forms" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE">
@@ -1695,7 +2118,7 @@
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:12Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_isexecutable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
@@ -1996,7 +2419,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:13Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -2016,7 +2439,7 @@
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:13Z" Type="DateTime" />
-		<Property Name="vti_dirlateststamp" Value="2019-05-30T16:26:31Z" Type="DateTime" />
+		<Property Name="vti_dirlateststamp" Value="2019-06-27T15:50:53Z" Type="DateTime" />
 		<Property Name="vti_isscriptable" Value="false" Type="string" />
 		<Property Name="vti_metainfoversion" Value="1" Type="int" />
 		<Property Name="vti_isbrowsable" Value="true" Type="string" />
@@ -2029,32 +2452,32 @@
 		<Property Name="vti_replid" Value="rid:{9A318C95-E984-4756-942B-93CCF543360F}" Type="string" />
 	</PropertyBag>
 	<PropertyBag Url="SitePages/Home.aspx" ParentType="File" RootWebOnly="FALSE" HyperlinkBaseUrl="https://citz.sp.gov.bc.ca/sites/DEV/vt" AlwaysCreateFolder="TRUE">
-		<Property Name="vti_internalversion" Value="513" Type="int" />
+		<Property Name="vti_internalversion" Value="1025" Type="int" />
 		<Property Name="vti_metadatanextbsn" Value="100" Type="string" />
 		<Property Name="vti_replid" Value="rid:{71C77122-1EF0-48EF-88FC-34FDE2463CCD}" Type="string" />
 		<Property Name="vti_level" Value="1" Type="int" />
 		<Property Name="vti_metatags" Value="CollaborationServer SharePoint\ Team\ Web\ Site" Type="string" />
 		<Property Name="ContentTypeId" Value="0x010108004169B4108B35724DB885F17914A2453D" Type="string" />
 		<Property Name="vti_setuppathversion" Value="15" Type="int" />
-		<Property Name="vti_rtag" Value="rt:71C77122-1EF0-48EF-88FC-34FDE2463CCD@00000000002" Type="string" />
-		<Property Name="vti_sourcecontrolversion" Value="V1.0" Type="string" />
-		<Property Name="WikiField" Value="&lt;div class=&quot;ExternalClassA5C1C0ABC94549E18907488A8B87D024&quot;&gt;&#xD;&#xA;                &lt;table id=&quot;layoutsTable&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&#xD;&#xA;                    &lt;tbody&gt;&#xD;&#xA;                        &lt;tr style=&quot;vertical-align&amp;#58;top;&quot;&gt;&#xD;&#xA;                            &lt;td style=&quot;width&amp;#58;100%;padding&amp;#58;0px;&quot;&gt;&#xD;&#xA;        &lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&#xD;&#xA;          &lt;div class=&quot;ms-rte-layoutszone-inner&quot; style=&quot;min-height&amp;#58;60px;word-wrap&amp;#58;break-word;margin&amp;#58;0px;border&amp;#58;0px;&quot;&gt;&#xD;&#xA;          &lt;/div&gt;&#xD;&#xA;        &lt;/div&gt;&#xD;&#xA;      &lt;/td&gt;&#xD;&#xA;            &lt;/tr&gt;&#xD;&#xA;        &lt;/tbody&gt;&#xD;&#xA;    &lt;/table&gt;&#xD;&#xA;    &lt;span id=&quot;layoutsData&quot; style=&quot;display&amp;#58;none;&quot;&gt;false,false,1&lt;/span&gt;&lt;/div&gt;" Type="string" />
+		<Property Name="vti_rtag" Value="rt:71C77122-1EF0-48EF-88FC-34FDE2463CCD@00000000004" Type="string" />
+		<Property Name="vti_sourcecontrolversion" Value="V3.0" Type="string" />
+		<Property Name="WikiField" Value="&lt;div class=&quot;ExternalClassA5C1C0ABC94549E18907488A8B87D024&quot;&gt;&#xD;&#xA;                &lt;table id=&quot;layoutsTable&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;vertical-align&amp;#58;top;&quot;&gt;&lt;td style=&quot;width&amp;#58;100%;padding&amp;#58;0px;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-outer&quot; style=&quot;width&amp;#58;100%;&quot;&gt;&lt;div class=&quot;ms-rte-layoutszone-inner&quot;&gt;​​&#xD;&#xA;          &lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&#xD;&#xA;    &lt;span id=&quot;layoutsData&quot; style=&quot;display&amp;#58;none;&quot;&gt;false,false,1&lt;/span&gt;&lt;/div&gt;" Type="string" />
 		<Property Name="vti_filesize" Value="3356" Type="int" />
 		<Property Name="vti_modifiedby" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
 		<Property Name="vti_streamschema" Value="0" Type="int" />
-		<Property Name="vti_etag" Value="&quot;{71C77122-1EF0-48EF-88FC-34FDE2463CCD},2&quot;" Type="string" />
+		<Property Name="vti_etag" Value="&quot;{71C77122-1EF0-48EF-88FC-34FDE2463CCD},4&quot;" Type="string" />
 		<Property Name="vti_nextbsn" Value="100" Type="string" />
 		<Property Name="vti_parserversion" Value="16.0.0.4822" Type="string" />
-		<Property Name="vti_docstoreversion" Value="2" Type="int" />
+		<Property Name="vti_docstoreversion" Value="4" Type="int" />
 		<Property Name="_dlc_DocIdUrl" Value="https://citz.sp.gov.bc.ca/sites/DEV/vt/_layouts/15/DocIdRedir.aspx?ID=J5QNEFYF7CH5-1150994032-1, J5QNEFYF7CH5-1150994032-1" Type="string" />
 		<Property Name="vti_author" Value="i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844" Type="string" />
 		<Property Name="vti_sourcecontrolcookie" Value="fp_internal" Type="string" />
 		<Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
 		<Property Name="vti_contentversionisdirty" Value="false" Type="string" />
 		<Property Name="vti_timecreated" Value="2019-05-23T21:28:14Z" Type="DateTime" />
-		<Property Name="vti_metainfoversion" Value="3" Type="int" />
+		<Property Name="vti_metainfoversion" Value="5" Type="int" />
 		<Property Name="vti_cachedzones" Value="Bottom" Type="string" />
-		<Property Name="vti_contenttag" Value="{71C77122-1EF0-48EF-88FC-34FDE2463CCD},2,0" Type="string" />
+		<Property Name="vti_contenttag" Value="{71C77122-1EF0-48EF-88FC-34FDE2463CCD},4,0" Type="string" />
 		<Property Name="vti_docstoretype" Value="0" Type="int" />
 		<Property Name="vti_canmaybeedit" Value="true" Type="string" />
 		<Property Name="vti_charset" Value="utf-8" Type="string" />
@@ -2065,8 +2488,8 @@
 		<Property Name="vti_hasdefaultcontent" Value="true" Type="string" />
 		<Property Name="vti_parentid" Value="{586F40F7-23DA-420C-BE43-D5C0A97B405B}" Type="string" />
 		<Property Name="vti_candeleteversion" Value="true" Type="string" />
-		<Property Name="vti_nexttolasttimemodified" Value="2019-05-23T21:28:14Z" Type="DateTime" />
-		<Property Name="vti_timelastmodified" Value="2019-05-23T21:28:15Z" Type="DateTime" />
+		<Property Name="vti_nexttolasttimemodified" Value="2019-06-05T16:57:06Z" Type="DateTime" />
+		<Property Name="vti_timelastmodified" Value="2019-06-05T16:59:31Z" Type="DateTime" />
 		<Property Name="vti_contentversion" Value="0" Type="int" />
 		<Property Name="_dlc_DocIdItemGuid" Value="71c77122-1ef0-48ef-88fc-34fde2463ccd" Type="string" />
 		<Property Name="vti_timelastwritten" Value="2019-05-23T21:28:14Z" Type="DateTime" />
