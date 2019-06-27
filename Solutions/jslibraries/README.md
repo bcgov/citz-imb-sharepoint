@@ -8,15 +8,15 @@ Includes:
 * citz.imb.sp.library.js
 
 ## citz.imb.sp.library.js
-* getWebGroups(withMembers)
+### getWebGroups(withMembers)
 > Returns a promise of a JSON object containing SharePoint Groups having permissions on the current web
-* createGroup(groupName, description, ownerID)
+### createGroup(groupName, description, ownerID)
 > Creats a new group and returns the ID
-* deleteGroup(groupId)
+### deleteGroup(groupId)
 > Deletes a group from the collection
-* grantGroupPermissionToWeb(groupId, permissionLevel)
+### grantGroupPermissionToWeb(groupId, permissionLevel)
 > Grants permissions to the current web
-* breakListInheritance(listId, copy, clear)
+### breakListInheritance(listId, copy, clear)
 > Sets a list to have unique permissions
-* grantGroupPermissionToList(listId, groupId, permissionLevel)
+### grantGroupPermissionToList(listId, groupId, permissionLevel)
 > Grants permissions to a list
