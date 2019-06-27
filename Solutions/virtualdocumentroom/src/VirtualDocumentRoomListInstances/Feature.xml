@@ -1,4 +1,4 @@
-﻿<Feature Id="{d00b2edc-8efc-409e-8ece-2f2de121540e}" Title="List Instances feature of exported web template &quot;VICO Template&quot;" Hidden="TRUE" Version="1.0.0.0" Scope="Web" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+﻿<Feature Id="{d6e12623-ac03-4fd4-a534-18313509d73b}" Title="List Instances feature of exported web template &quot;VICO Template&quot;" Hidden="TRUE" Version="1.0.0.0" Scope="Web" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
 	<ElementManifests>
 		<ElementManifest Location="Elements.xml" />
 		<ElementManifest Location="ElementsFields.xml" />
@@ -6,7 +6,9 @@
 		<ElementFile Location="resources\resources.en-US.resx" />
 		<ElementFile Location="Files\_catalogs\design\Schema.xml" />
 		<ElementFile Location="Files\_catalogs\masterpage\Schema.xml" />
+		<ElementFile Location="Files\Lists\ActivityLog\Schema.xml" />
 		<ElementFile Location="Files\Lists\Config\Schema.xml" />
+		<ElementFile Location="Files\Lists\Proponents\Schema.xml" />
 		<ElementFile Location="Files\SiteAssets\Schema.xml" />
 		<ElementFile Location="Files\SitePages\Schema.xml" />
 	</ElementManifests>
