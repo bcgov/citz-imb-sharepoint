@@ -10,6 +10,7 @@ Scope="Site" Title="CITZ IMB SharePoint Javascript Libraries">
 		<ElementFile Location="Style Library\JSLibraries\js\jquery-3.3.1.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\jquery-ui.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\moment.min.js" />
+		<ElementFile Location="Style Library\JSLibraries\js\citz.imb.sp.library.js" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.structure.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.theme.min.css" />
