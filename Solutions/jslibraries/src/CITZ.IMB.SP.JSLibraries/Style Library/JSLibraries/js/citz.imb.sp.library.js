@@ -230,44 +230,37 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
  * @param {integer} userId the second, and any subsequent values passed in must be id's for users
  */
 function addUserToGroup(groupId, userId) {
-    console.log(groupId, userId, arguments);
+    SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
+        var ctx = new SP.ClientContext();
+        var groups = ctx.get_web().get_siteGroups();
+        var group = groups.getById(groupId);
+        var user = ctx.get_web().getUserById(userId);
+        var groupUsers = group.get_users();
+        groupUsers.addUser(user);
 
-    $.when(getUserById(6)).then(function (data) {
-        console.log("getUserById", data);
+        ctx.load(user);
+        ctx.load(group);
+        ctx.executeQueryAsync(function (sender, args) {
+            return true;
+        }, function (sender, args) {
+            window.console && console.log("Error: " + args.get_message());
+            return false;
+        })
     });
-
-
-    if (arguments.length > 20) {
-        $.ajax({
-            url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups(" + groupId + ")/users",
-            type: "POST",
-            data: JSON.stringify({
-                '__metadata': { 'type': 'SP.User' },
-
-            })
-        }).done(function (data) {
-
-        }).fail(function (error) {
-            window.console && console.log(error);
-        });
-    } else {
-        return false;
-    }
-
 }
 
 /**
  * Returns a promise of user information JSON object
  * @param {boolean} [withGroups=false] if true, includes groups the user is a member of
- * @param {...integer} userId one or more user id's
+ * @param {integer} userId user id
  */
 function getUserById(withGroups, userId) {
     var defer = $.Deferred();
 
-    var restCall = (withGroups === true) ? "/_api/web/getuserbyid(" + userId + ")?$expand=Groups" : "/_api/web/getuserbyid(" + userId + ")"
+    var restCall = (withGroups === true) ? "?$expand=Groups" : "";
 
     $.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl + restCall,
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/getuserbyid(" + userId + ")" + restCall,
         type: "GET",
         headers: {
             "accept": "application/json;odata=verbose"
