@@ -227,14 +227,14 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
  * Adds a user to a group
  *
  * @param {integer} groupId the first value passed in must be the id of the group
- * @param {integer} userId the second, and any subsequent values passed in must be id's for users
+ * @param {integer} logonName user logon eg "i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844"
  */
-function addUserToGroup(groupId, userId) {
+function addUserToGroup(groupId, logonName) {
     SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
         var ctx = new SP.ClientContext();
         var groups = ctx.get_web().get_siteGroups();
         var group = groups.getById(groupId);
-        var user = ctx.get_web().getUserById(userId);
+        var user = ctx.get_web().ensureUser(logonName);
         var groupUsers = group.get_users();
         groupUsers.addUser(user);
 
