@@ -381,10 +381,10 @@ function addUser(groupId) {
 }
 
 function removeUser(groupId, userId) {
-    //TODO: removeuser
-    console.log(groupId, userId);
-    writeActivity("Remove user", "group: " + groupId + " | user: " + userId, true);
-
+    $.when(removeUserFromGroup(groupId, userId)).then(function () {
+        writeActivity("Remove user", "group: " + groupId + " | user: " + userId, true);
+        displayWebGroups();
+    });
 }
 
 function displayProponents() {
