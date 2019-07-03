@@ -55,7 +55,9 @@ function writeActivity(action, info, success) {
             "Accept": "application/json;odata=nometadata",
             "Content-Type": "application/json;odata=nometadata"
         }
-    }).done().fail();
+    }).done(function () {
+        console.log(action, info, success, currentUser);
+    }).fail();
 }
 
 function setCookie(cname, cvalue, cdays, cpath) {
@@ -230,7 +232,6 @@ function addProponent() {
     //generate an 8 digit random hexadecimal number and append 'v' to the beginning
     var UUID = 'V' + Math.floor(Math.random() * 16777215).toString(16).toUpperCase();
 
-    //TODO: change "_prefix - " to use the site name/url eg "VICO Template - "
     var groupName = groupPrefix + UUID;
 
     var groupID;
@@ -331,8 +332,65 @@ function addProponent() {
     });
 }
 
-function addUser() {
-    //TODO: adduser
+function initializePeoplePicker(peoplePickerElementId) {
+    var schema = {};
+    schema['PrincipalAccountType'] = 'User';
+    schema['SearchPrincipleSource'] = 15;
+    schema['ResolvePrincipalSource'] = 15;
+    schema['AllowMulitpleValues'] = true;
+    schema['MaximumEntitySuggestions'] = 5;
+    schema['Width'] = '280px';
+    this.SPClientPeoplePicker_InitStandaloneControlWrapper(peoplePickerElementId, null, schema);
+}
+
+
+function addUser(groupId) {
+    var userId;
+    var addHtml = "<div id='vdr_user_dialog'>";
+    addHtml += "<label>Enter Name</label>";
+    addHtml += "<div id='input_user'></div>";
+    addHtml += "</div>";
+
+    $("#vdr_dialog").html(addHtml);
+
+    initializePeoplePicker("input_user");
+
+    $("#vdr_dialog").dialog({
+        dialogClass: "no-close",
+        title: "Add a User",
+        height: 250,
+        width: 350,
+        buttons: {
+            "Create": function () {
+                SP.SOD.executeFunc('clientpeoplepicker.js', 'SPClientPeoplePicker', function () {
+                    var peoplePickerTopDivId = $('#input_user').children().children().attr('id');
+                    var peoplePicker = this.SPClientPeoplePicker.SPClientPeoplePickerDict[peoplePickerTopDivId];
+                    var users = peoplePicker.GetAllUserInfo();
+                    for (i = 0; i < users.length; i++) {
+                        addUserToGroup(groupId, users[i]);
+                    }
+                    console.log(users);
+
+                    writeActivity("add a user", "group: " + groupId + " | user: " + userId, true);
+
+
+                });
+                $(this).dialog("close");
+            },
+            "Cancel": function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+
+
+}
+
+function removeUser(groupId, userId) {
+    //TODO: removeuser
+    writeActivity("Remove user", "group: " + groupId + " | user: " + userId, true);
+
 }
 
 function displayProponents() {
@@ -398,15 +456,24 @@ function displayWebGroups() {
             groupHtml += "<h3>";
             groupHtml += data[i].Title;
             groupHtml += "</h3>";
-            groupHtml += "<div>"
-            for (j = 0; j < data[i].Users.results.length; j++) {
-                groupHtml += "<div>";
-                groupHtml += data[i].Users.results[j].Title;
-                groupHtml += "</div>";
-            }
-            groupHtml += "<a onclick='addUser()' class='ui-button ui-widget ui-corner-all'>";
+            groupHtml += "<div id='vdr_user_rows'>"
+            groupHtml += "<div class='vdr_user_row_header'>";
+            groupHtml += "<div class='vdr_user_title'>";
+            groupHtml += "</div>";
+            groupHtml += "<a onclick='addUser(" + data[i].Id + ")' class='ui-button ui-widget ui-corner-all vdr_button'>";
             groupHtml += "add a user";
             groupHtml += "</a>";
+            groupHtml += "</div>";
+            for (j = 0; j < data[i].Users.results.length; j++) {
+                groupHtml += "<div class='vdr_user_row'>";
+                groupHtml += "<div class='vdr_user_title'>";
+                groupHtml += data[i].Users.results[j].Title;
+                groupHtml += "</div>";
+                groupHtml += "<a onclick='removeUser(" + data[i].Id + ", " + data[i].Users.results[j].Id + ")' class='ui-button ui-widget ui-corner-all vdr_button'>";
+                groupHtml += "remove user";
+                groupHtml += "</a>";
+                groupHtml += "</div>"
+            }
             groupHtml += "</div>";
         }
         groupHtml += "</div>";
@@ -522,13 +589,32 @@ function createContent() {
 }
 
 $().ready(function () {
-    var cssUrl = _spPageContextInfo.webAbsoluteUrl + "/SiteAssets/css/vdr.css";
     var head = document.getElementsByTagName("head")[0];
     var style = document.createElement("link");
     style.type = "text/css";
     style.rel = "stylesheet";
-    style.href = cssUrl;
+    style.href = _spPageContextInfo.webAbsoluteUrl + "/SiteAssets/css/vdr.css";
     head.appendChild(style);
+
+    //add the js libraries needed for peoplepicker
+    var clienttemplates = document.createElement("script");
+    clienttemplates.type = "text/javascript";
+    clienttemplates.src = "_layouts/15/clienttemplates.js";
+    head.appendChild(clienttemplates);
+    var clientforms = document.createElement("script");
+    clientforms.type = "text/javascript";
+    clientforms.src = "_layouts/15/clientforms.js";
+    head.appendChild(clientforms);
+    var clientpeoplepicker = document.createElement("script");
+    clientpeoplepicker.type = "text/javascript";
+    clientpeoplepicker.src = "_layouts/15/clientpeoplepicker.js";
+    head.appendChild(clientpeoplepicker);
+    var autofill = document.createElement("script");
+    autofill.type = "text/javascript";
+    autofill.src = "_layouts/15/autofill.js";
+    head.appendChild(autofill);
+
+
 
     //create a dialog element
     $("body").append("<div id='vdr_dialog'></div>");
