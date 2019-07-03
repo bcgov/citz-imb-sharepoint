@@ -345,7 +345,6 @@ function initializePeoplePicker(peoplePickerElementId) {
 
 
 function addUser(groupId) {
-    var userId;
     var addHtml = "<div id='vdr_user_dialog'>";
     addHtml += "<label>Enter Name</label>";
     addHtml += "<div id='input_user'></div>";
@@ -367,13 +366,10 @@ function addUser(groupId) {
                     var peoplePicker = this.SPClientPeoplePicker.SPClientPeoplePickerDict[peoplePickerTopDivId];
                     var users = peoplePicker.GetAllUserInfo();
                     for (i = 0; i < users.length; i++) {
-                        addUserToGroup(groupId, users[i]);
+                        addUserToGroup(groupId, users[i].Key);
+                        writeActivity("add a user", "group: " + groupId + " | user: " + users[i].DisplayText, true);
                     }
-                    console.log(users);
-
-                    writeActivity("add a user", "group: " + groupId + " | user: " + userId, true);
-
-
+                    displayWebGroups();
                 });
                 $(this).dialog("close");
             },
@@ -382,13 +378,11 @@ function addUser(groupId) {
             }
         }
     });
-
-
-
 }
 
 function removeUser(groupId, userId) {
     //TODO: removeuser
+    console.log(groupId, userId);
     writeActivity("Remove user", "group: " + groupId + " | user: " + userId, true);
 
 }
