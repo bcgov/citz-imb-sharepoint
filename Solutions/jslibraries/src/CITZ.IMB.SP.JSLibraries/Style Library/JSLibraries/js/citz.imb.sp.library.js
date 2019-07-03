@@ -227,7 +227,7 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
  * Adds a user to a group
  *
  * @param {integer} groupId the first value passed in must be the id of the group
- * @param {integer} logonName user logon eg "i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844"
+ * @param {string} logonName user logon eg "i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844"
  */
 function addUserToGroup(groupId, logonName) {
     SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
@@ -246,6 +246,29 @@ function addUserToGroup(groupId, logonName) {
             window.console && console.log("Error: " + args.get_message());
             return false;
         })
+    });
+}
+
+/**
+ * Removes a user from a group
+ *
+ * @param {integer} groupId the first value passed in must be the id of the group
+ * @param {integer} userId the user id
+ */
+function removeUserFromGroup(groupId, userId) {
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl +
+            "/_api/web/sitegroups(" + groupId + ")/users/removebyid(" + userId + ")",
+        type: "POST",
+        headers: {
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose",
+            "X-RequestDigest": $("#__REQUESTDIGEST").val()
+        }
+    }).done(function (data) {
+        console.log(data);
+    }).fail(function (error) {
+        window.console & console.log(error);
     });
 }
 
