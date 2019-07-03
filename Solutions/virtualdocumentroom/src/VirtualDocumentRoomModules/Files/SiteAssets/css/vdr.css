@@ -19,6 +19,7 @@
 }
 
 #tab-3 #vdr_management {
+    min-width: 1060px;
 }
 
 #vdr_management::after {
@@ -28,18 +29,20 @@
 }
 
 #vdr_group_data {
+    min-width: 520px;
     width: 48%;
     float: left;
 }
 
 #vdr_proponent {
+    min-width: 520px;
     width: 48%;
     float: right;
 }
 
 #vdr_proponent {
     border: 1px solid #c5c5c5;
-    background-color: #f6f6f6;
+    background-color: #fefefe;
     padding: 2px;
     margin: 2px;
 }
@@ -74,8 +77,7 @@
 
 #vdr_proponent .vdr_proponent_header .vdr_proponent_uid {}
 
-#vdr_proponent .vdr_proponent_data {
-}
+#vdr_proponent .vdr_proponent_data {}
 
 #vdr_proponent .vdr_proponent_row {
     padding: .4em .1em;
@@ -89,4 +91,37 @@
     content: "";
     clear: both;
     display: table;
+}
+
+#vdr_group_data #vdr_user_rows {
+    border: 1px solid #c5c5c5;
+    background-color: #fefefe;
+    padding: 2px;
+    margin: 2px;
+}
+
+#vdr_group_data .vdr_user_row_header {
+    font-weight: 800;
+    padding: .4em .1em;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+#vdr_group_data .vdr_user_row {
+    padding: .4em .1em;
+}
+
+#vdr_group_data .vdr_user_title {
+    padding: .4em .1em;
+    line-height: normal;
+    margin-right: .1em;
+    display: inline-block;
+    width: 315px;
+}
+
+#vdr_group_data .vdr_button {
+    width: 121px;
+}
+
+#vdr_dialog {
+    overflow: visible;
 }
