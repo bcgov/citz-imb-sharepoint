@@ -222,3 +222,77 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
     });
     return defer.promise();
 }
+
+/**
+ * Adds a user to a group
+ *
+ * @param {integer} groupId the first value passed in must be the id of the group
+ * @param {string} logonName user logon eg "i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844"
+ */
+function addUserToGroup(groupId, logonName) {
+    SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
+        var ctx = new SP.ClientContext();
+        var groups = ctx.get_web().get_siteGroups();
+        var group = groups.getById(groupId);
+        var user = ctx.get_web().ensureUser(logonName);
+        var groupUsers = group.get_users();
+        groupUsers.addUser(user);
+
+        ctx.load(user);
+        ctx.load(group);
+        ctx.executeQueryAsync(function (sender, args) {
+            return true;
+        }, function (sender, args) {
+            window.console && console.log("Error: " + args.get_message());
+            return false;
+        })
+    });
+}
+
+/**
+ * Removes a user from a group
+ *
+ * @param {integer} groupId the first value passed in must be the id of the group
+ * @param {integer} userId the user id
+ */
+function removeUserFromGroup(groupId, userId) {
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl +
+            "/_api/web/sitegroups(" + groupId + ")/users/removebyid(" + userId + ")",
+        type: "POST",
+        headers: {
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose",
+            "X-RequestDigest": $("#__REQUESTDIGEST").val()
+        }
+    }).done(function (data) {
+        console.log(data);
+    }).fail(function (error) {
+        window.console & console.log(error);
+    });
+}
+
+/**
+ * Returns a promise of user information JSON object
+ * @param {boolean} [withGroups=false] if true, includes groups the user is a member of
+ * @param {integer} userId user id
+ */
+function getUserById(withGroups, userId) {
+    var defer = $.Deferred();
+
+    var restCall = (withGroups === true) ? "?$expand=Groups" : "";
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/getuserbyid(" + userId + ")" + restCall,
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
