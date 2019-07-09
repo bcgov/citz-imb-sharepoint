@@ -6,7 +6,8 @@ var visitorGroupID;
 var groupPrefix;
 var groupDescription = "created by automation";
 var currentUser;
-
+//TODO: on site creation:
+// set permissions on ActivityLog and Proponents list
 function initateVariables() {
     $.ajax({
         url: _spPageContextInfo.webAbsoluteUrl +
