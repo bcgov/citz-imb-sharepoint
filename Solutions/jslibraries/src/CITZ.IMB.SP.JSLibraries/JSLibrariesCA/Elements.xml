@@ -6,6 +6,12 @@
 	</CustomAction>
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/moment.min.js" Location="ScriptLink" Sequence="12">
 	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/numeral.min.js" Location="ScriptLink" Sequence="13">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/chart.min.js" Location="ScriptLink" Sequence="14">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/fontawesome.min.js" Location="ScriptLink" Sequence="15">
+	</CustomAction>
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/JSLibraries/js/citz.imb.sp.library.js" Location="ScriptLink" Sequence="20">
 	</CustomAction>
 </Elements>
