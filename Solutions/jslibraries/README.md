@@ -5,6 +5,7 @@ Includes:
 * [jquery-3.3.1.min.js](https://jquery.com/)
 * [jquery-ui.min.js](https://jqueryui.com/)
 * [moment.min.js](https://momentjs.com/)
+* [datatables.min.js](https://datatables.net/)
 * citz.imb.sp.library.js
 
 ## citz.imb.sp.library.js
