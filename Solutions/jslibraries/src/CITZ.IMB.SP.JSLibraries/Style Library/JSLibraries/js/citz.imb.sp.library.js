@@ -5,13 +5,13 @@ $().ready(function () {
     var jqueryStyle = document.createElement("link");
     jqueryStyle.type = "text/css";
     jqueryStyle.rel = "stylesheet";
-    jqueryStyle.href = _spPageContextInfo.siteAbsolutUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";;
+    jqueryStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";;
     head.appendChild(jqueryStyle);
 
     var dataTablesStyle = document.createElement("link");
     dataTablesStyle.type = "text/css";
     dataTablesStyle.rel = "stylesheet";
-    dataTablesStyle.href = _spPageContextInfo.siteAbsolutUrl + "/Style%20Library/JSLibraries/css/datatables.min.css";;
+    dataTablesStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/JSLibraries/css/datatables.min.css";;
     head.appendChild(dataTablesStyle);
 
 });
