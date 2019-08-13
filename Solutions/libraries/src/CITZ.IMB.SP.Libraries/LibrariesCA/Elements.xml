@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/jquery-3.3.1.min.js" Location="ScriptLink" Sequence="10">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/jquery-ui.min.js" Location="ScriptLink" Sequence="11">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/moment.min.js" Location="ScriptLink" Sequence="12">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/datatables.min.js" Location="ScriptLink" Sequence="13">
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/numeral.min.js" Location="ScriptLink" Sequence="13">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/chart.min.js" Location="ScriptLink" Sequence="14">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/fontawesome.min.js" Location="ScriptLink" Sequence="15">
+	</CustomAction>
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/citz.imb.sp.library.js" Location="ScriptLink" Sequence="20">
+	</CustomAction>
+</Elements>
