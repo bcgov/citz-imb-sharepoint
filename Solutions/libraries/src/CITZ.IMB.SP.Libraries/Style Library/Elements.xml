@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<Module Name="StyleLibraryCSS" Url="Style Library/JSLibraries/css" RootWebOnly="FALSE" Path="Style Library\JSLibraries\css">
+	<Module Name="StyleLibraryCSS" Url="Style Library/Libraries/css" RootWebOnly="FALSE" Path="Style Library\Libraries\css">
 		<File Url="jquery-ui.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.structure.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.theme.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
@@ -8,7 +8,7 @@
 		<File Url="chart.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="fontawesome.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 	</Module>
-	<Module Name="StyleLibraryJS" Url="Style Library/JSLibraries/js" RootWebOnly="FALSE" Path="Style Library\JSLibraries\js">
+	<Module Name="StyleLibraryJS" Url="Style Library/Libraries/js" RootWebOnly="FALSE" Path="Style Library\Libraries\js">
 		<File Url="jquery-3.3.1.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="moment.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
@@ -18,7 +18,7 @@
 		<File Url="fontawesome.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="citz.imb.sp.library.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 	</Module>
-	<Module Name="StyleLibraryIMG" Url="Style Library/JSLibraries/images" RootWebOnly="FALSE" Path="Style Library\JSLibraries\images">
+	<Module Name="StyleLibraryIMG" Url="Style Library/Libraries/images" RootWebOnly="FALSE" Path="Style Library\Libraries\images">
 		<File Url="ui-icons_444444_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="ui-icons_555555_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="ui-icons_777620_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
