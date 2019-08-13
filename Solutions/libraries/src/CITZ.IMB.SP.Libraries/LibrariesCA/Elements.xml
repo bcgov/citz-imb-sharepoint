@@ -7,6 +7,7 @@
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/moment.min.js" Location="ScriptLink" Sequence="12">
 	</CustomAction>
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/datatables.min.js" Location="ScriptLink" Sequence="13">
+	</CustomAction>
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/numeral.min.js" Location="ScriptLink" Sequence="13">
 	</CustomAction>
 	<CustomAction ScriptSrc="~SiteCollection/Style Library/Libraries/js/chart.min.js" Location="ScriptLink" Sequence="14">
