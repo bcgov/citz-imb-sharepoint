@@ -7,11 +7,16 @@
 		<ElementFile Location="Style Library\JSLibraries\js\jquery-ui.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\moment.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\datatables.min.js" />
+		<ElementFile Location="Style Library\JSLibraries\js\numeral.min.js" />
+		<ElementFile Location="Style Library\JSLibraries\js\chart.min.js" />
+		<ElementFile Location="Style Library\JSLibraries\js\fontawesome.min.js" />
 		<ElementFile Location="Style Library\JSLibraries\js\citz.imb.sp.library.js" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.structure.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\jquery-ui.theme.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\css\datatables.min.css" />
+		<ElementFile Location="Style Library\JSLibraries\css\chart.min.css" />
+		<ElementFile Location="Style Library\JSLibraries\css\fontawesome.min.css" />
 		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_444444_256x240.png" />
 		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_555555_256x240.png" />
 		<ElementFile Location="Style Library\JSLibraries\images\ui-icons_777620_256x240.png" />
