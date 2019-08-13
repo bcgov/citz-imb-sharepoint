@@ -5,30 +5,30 @@ $().ready(function () {
     var jqueryStyle = document.createElement("link");
     jqueryStyle.type = "text/css";
     jqueryStyle.rel = "stylesheet";
-    jqueryStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";;
+    jqueryStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/Libraries/css/jquery-ui.min.css";;
     head.appendChild(jqueryStyle);
 
     var dataTablesStyle = document.createElement("link");
     dataTablesStyle.type = "text/css";
     dataTablesStyle.rel = "stylesheet";
-    dataTablesStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/JSLibraries/css/datatables.min.css";;
+    dataTablesStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/Libraries/css/datatables.min.css";;
     head.appendChild(dataTablesStyle);
     var jqueryUIStyle = document.createElement("link");
     jqueryUIStyle.type = "text/css";
     jqueryUIStyle.rel = "stylesheet";
-    jqueryUIStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";
+    jqueryUIStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/Libraries/css/jquery-ui.min.css";
     head.appendChild(jqueryUIStyle);
 
     var chartStyle = document.createElement("link");
     chartStyle.type = "text/css";
     chartStyle.rel = "stylesheet";
-    chartStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/chart.min.css";
+    chartStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/Libraries/css/chart.min.css";
     head.appendChild(chartStyle);
 
     var fontAwesomeStyle = document.createElement("link");
     fontAwesomeStyle.type = "text/css";
     fontAwesomeStyle.rel = "stylesheet";
-    fontAwesomeStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/fontawesome.min.css";
+    fontAwesomeStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/Libraries/css/fontawesome.min.css";
     head.appendChild(fontAwesomeStyle);
 
 });

@@ -2,7 +2,7 @@
 Creates a breadcrumb on all pages within the SharePoint Collection.  Also hides pageTitle.
 
 ## Pre-requisites:
-- Requires [CITZ.IMB.SP.JSLibraries](../jslibraries) solution.
+- Requires [CITZ.IMB.SP.Libraries](../libraries) solution.
 - requires minimal download feature to be disabled in all sites in the collection.
 
 ## Known issues:
