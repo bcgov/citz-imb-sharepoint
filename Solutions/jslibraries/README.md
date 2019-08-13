@@ -5,6 +5,9 @@ Includes:
 * [jquery-3.3.1.min.js](https://jquery.com/)
 * [jquery-ui.min.js](https://jqueryui.com/)
 * [moment.min.js](https://momentjs.com/)
+* [numeral.min.js](http://numeraljs.com/)
+* [chart.min.js](https://www.chartjs.org/)
+* [fontawesome.min.js](https://fontawesome.com)
 * citz.imb.sp.library.js
 
 ## citz.imb.sp.library.js

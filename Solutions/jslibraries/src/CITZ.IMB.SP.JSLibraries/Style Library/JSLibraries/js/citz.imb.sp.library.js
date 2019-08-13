@@ -1,12 +1,25 @@
 $().ready(function () {
     //put the css reference on the page
-    var jqeryUICssUrl = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";
     var head = document.getElementsByTagName("head")[0];
-    var style = document.createElement("link");
-    style.type = "text/css";
-    style.rel = "stylesheet";
-    style.href = jqeryUICssUrl;
-    head.appendChild(style);
+
+    var jqueryUIStyle = document.createElement("link");
+    jqueryUIStyle.type = "text/css";
+    jqueryUIStyle.rel = "stylesheet";
+    jqueryUIStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";
+    head.appendChild(jqueryUIStyle);
+
+    var chartStyle = document.createElement("link");
+    chartStyle.type = "text/css";
+    chartStyle.rel = "stylesheet";
+    chartStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/chart.min.css";
+    head.appendChild(chartStyle);
+
+    var fontAwesomeStyle = document.createElement("link");
+    fontAwesomeStyle.type = "text/css";
+    fontAwesomeStyle.rel = "stylesheet";
+    fontAwesomeStyle.href = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/JSLibraries/css/fontawesome.min.css";
+    head.appendChild(fontAwesomeStyle);
+
 });
 
 /**
