@@ -2,7 +2,7 @@
 Creates a Navigation Menu in SharePoint for all Collections in the domain, with dropdowns for sites under the root site.
 
 ## Pre-requisites:
-- Requires [CITZ.IMB.SP.JSLibraries](../jslibraries) solution.
+- Requires [CITZ.IMB.SP.Libraries](../libraries) solution.
 
 ## Example:
 
