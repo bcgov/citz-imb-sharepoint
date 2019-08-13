@@ -4,6 +4,7 @@
 		<File Url="jquery-ui.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.structure.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.theme.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+		<File Url="datatables.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="chart.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="fontawesome.min.css" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 	</Module>
@@ -11,6 +12,7 @@
 		<File Url="jquery-3.3.1.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="jquery-ui.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="moment.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+		<File Url="datatables.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="numeral.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="chart.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="fontawesome.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />

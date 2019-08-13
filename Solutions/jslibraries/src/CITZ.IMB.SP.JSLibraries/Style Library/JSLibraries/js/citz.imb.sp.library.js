@@ -2,6 +2,17 @@ $().ready(function () {
     //put the css reference on the page
     var head = document.getElementsByTagName("head")[0];
 
+    var jqueryStyle = document.createElement("link");
+    jqueryStyle.type = "text/css";
+    jqueryStyle.rel = "stylesheet";
+    jqueryStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/JSLibraries/css/jquery-ui.min.css";;
+    head.appendChild(jqueryStyle);
+
+    var dataTablesStyle = document.createElement("link");
+    dataTablesStyle.type = "text/css";
+    dataTablesStyle.rel = "stylesheet";
+    dataTablesStyle.href = _spPageContextInfo.siteAbsoluteUrl + "/Style%20Library/JSLibraries/css/datatables.min.css";;
+    head.appendChild(dataTablesStyle);
     var jqueryUIStyle = document.createElement("link");
     jqueryUIStyle.type = "text/css";
     jqueryUIStyle.rel = "stylesheet";
