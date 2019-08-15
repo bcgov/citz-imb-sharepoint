@@ -6,7 +6,7 @@
 - [Breadcrumb Navigation](./Solutions/breadcrumbs) - Collection Feature
 - [Collection Navigation](./Solutions/collectionnavigation) - Collection Feature
 - [Contact Us](./Solutions/contactus) - Collection Feature
-- [Javascript Libraries](./Solutions/libraries) - Collection Feature
+- [Libraries](./Solutions/libraries) - Collection Feature
 - [Filterable Lists](./Solutions/filterablelists) - Collection Feature
 
 ## Usage
