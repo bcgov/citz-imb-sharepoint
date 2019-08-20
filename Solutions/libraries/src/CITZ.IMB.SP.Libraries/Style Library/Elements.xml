@@ -18,7 +18,7 @@
 		<File Url="fontawesome.min.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="citz.imb.sp.library.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 	</Module>
-	<Module Name="StyleLibraryIMG" Url="Style Library/Libraries/images" RootWebOnly="FALSE" Path="Style Library\Libraries\images">
+	<Module Name="StyleLibraryIMG" Url="Style Library/Libraries/css/images" RootWebOnly="FALSE" Path="Style Library\Libraries\images">
 		<File Url="ui-icons_444444_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="ui-icons_555555_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 		<File Url="ui-icons_777620_256x240.png" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />

@@ -6,7 +6,7 @@
 - [Breadcrumb Navigation](./Solutions/breadcrumbs) - Collection Feature
 - [Collection Navigation](./Solutions/collectionnavigation) - Collection Feature
 - [Contact Us](./Solutions/contactus) - Collection Feature
-- [Javascript Libraries](./Solutions/libraries) - Collection Feature
+- [Libraries](./Solutions/libraries) - Collection Feature
 - [Filterable Lists](./Solutions/filterablelists) - Collection Feature
 
 ## Usage
@@ -19,14 +19,14 @@
 - You can disable the feature in the _Manage site features_ page (found in the _site settings_ of the site)
 
 ## Requirements
-- Most of the solutions posted here require the [Javascript Libraries](./Solutions/libraries) feature be activated first.
+- Most of the solutions posted here require the [Libraries](./Solutions/libraries) feature be activated first.
 
 ## Installation
 ### Apps
 - no apps yet, waiting for an app store
 ### Solutions
 1. Download the *.wsp file for the specific solution
-2. Upload to the _Solutions Gallery_ in your Site Collection (found in the _site settings_ of the root site)
+2. Upload the *.wsp file to the _Solutions Gallery_ in your Site Collection (found in the _site settings_ of the root site)
 3. Activate the solution
 
 ## Getting Help or Reporting an Issue
