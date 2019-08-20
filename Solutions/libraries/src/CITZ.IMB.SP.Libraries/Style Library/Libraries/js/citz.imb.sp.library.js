@@ -206,21 +206,45 @@ function addUserToGroup(groupId, logonName) {
  * @param {integer} groupId the first value passed in must be the id of the group
  * @param {integer} userId the user id
  */
-function removeUserFromGroup(groupId, userId) {
-    $.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl +
-            "/_api/web/sitegroups(" + groupId + ")/users/removebyid(" + userId + ")",
-        type: "POST",
-        headers: {
-            "accept": "application/json;odata=verbose",
-            "content-type": "application/json;odata=verbose",
-            "X-RequestDigest": $("#__REQUESTDIGEST").val()
-        }
-    }).done(function (data) {
-        console.log(data);
-    }).fail(function (error) {
-        window.console & console.log(error);
-    });
+function removeUserFromGroup(groupId, user) {
+    var defer = $.Deferred();
+    var _userId;
+
+    var removeUser = function () {
+        $.ajax({
+            url: _spPageContextInfo.webAbsoluteUrl +
+                "/_api/web/sitegroups(" + groupId + ")/users/removebyid(" + _userId + ")",
+            type: "POST",
+            headers: {
+                "accept": "application/json;odata=verbose",
+                "content-type": "application/json;odata=verbose",
+                "X-RequestDigest": $("#__REQUESTDIGEST").val()
+            }
+        }).done(function (data) {
+            defer.resolve(data);
+        }).fail(function (error) {
+            window.console & console.log(error);
+            defer.reject();
+        });
+    }
+
+    if (typeof user === "number") {
+        _userId = user;
+        removeUser();
+    } else if (typeof user === "string") {
+        $.when(getUserByName(user)).done(function (data) {
+            console.log(data);
+            _userId = data.Id;
+            removeUser();
+        }).fail(function (err) {
+            window.console && console.log(err);
+            defer.reject(err);
+        });
+    } else {
+        defer.reject("not a valid userId");
+    }
+
+    return defer.promise();
 }
 
 /**
@@ -248,6 +272,23 @@ function getUserById(withGroups, userId) {
     return defer.promise();
 }
 
+function getUserByName(userName) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/SiteUserInfoList/items?$filter=Title eq '" + userName + "'",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d.results[0]);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
 /**
  * returns a promise about the current user
  */
@@ -408,7 +449,7 @@ function getItems(listName) {
             'Accept': 'application/json;odata=verbose'
         }
     }).done(function (data) {
-        defer.resolve(data);
+        defer.resolve(data.d.results);
     }).fail(function (err) {
         window.console && console.log(err);
         defer.reject(err);
