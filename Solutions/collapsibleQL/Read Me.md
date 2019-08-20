@@ -19,24 +19,15 @@ Transforms Default Quick launch into an accordian style quick launch.
    
  ### Collapsible Quick Launch
 
- #### (collapsed) > Menu Item 1
+ <li>(collapsed) > Menu Item 1</li>
  
- #### (expanded) ˅ Menu Item 1
- ####                 Sub-Menu item a
- ####                 Sub-Menu item b
- ####                 Sub-Menu item c
- ####                 Sub-Menu item d
+ <li>(expanded) ˅ Menu Item 1
+              <ul>
+                 <li>Sub-Menu item a</li>
+                 <li>Sub-Menu item b</li>
+                 <li>Sub-Menu item c</li>
+                 <li>Sub-Menu item d</li>
+              </ul>
 
    
-      
-<ul>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item
-<ul>
-<li>Indented item</li>
-<li>Indented item</li>
-</ul>
-</li>
-<li>Fourth item</li>
-</ul>
+
