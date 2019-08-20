@@ -339,32 +339,131 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
 //-----------------------------------------------------------------------------------
 // Lists
 //-----------------------------------------------------------------------------------
-function getListByName(listName) {
-    console.log("getListByName", arguments);
-}
+
 //-----------------------------------------------------------------------------------
 // Items
 //-----------------------------------------------------------------------------------
 
-function getItems(listId, item) {
-    console.log("getItems", arguments);
-}
+/**
+ * returns a promise of all items of a list
+ * @param {string} listName - the name of the list
+ */
+function getItems(listName) {
+    var defer = $.Deferred();
 
-function addItemToList(listId, item) {
-    console.log("addItemToList", arguments);
     $.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web",
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items",
         type: "GET",
         headers: {
             'Accept': 'application/json;odata=verbose'
         }
     }).done(function (data) {
-        console.log(data);
+        defer.resolve(data);
     }).fail(function (err) {
         window.console && console.log(err);
+        defer.reject(err);
     });
+
+    return defer.promise();
 }
 
-function removeItemFromList(listId, item) {
+/**
+ * returns a promise of a specified item
+ * @param {string} listName
+ * @param {integer} itemId
+ */
+function getItem(listName, itemId) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items(" + itemId + ")",
+        type: "GET",
+        headers: {
+            'Accept': 'application/json;odata=verbose'
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+
+/**
+ *returns the promise of an array of IDs that match the itemFilter
+ *see https://social.technet.microsoft.com/wiki/contents/articles/35796.sharepoint-2013-using-rest-api-for-selecting-filtering-sorting-and-pagination-in-sharepoint-list.aspx
+ *for formatting of itemFilter
+ * @param {string} listName
+ * @param {string} itemFilter
+ */
+function lookupItemId(listName, itemFilter) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items?$filter=" + itemFilter + "&$select=ID",
+        type: "GET",
+        headers: {
+            'Accept': 'application/json;odata=verbose'
+        }
+    }).done(function (data) {
+        defer.resolve(data.d.results)
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    })
+
+    return defer.promise();
+}
+
+/**
+ * adds an item to a list
+ * @param {string} listName
+ * @param {object} item - properties are fields, values are values
+ */
+function addItemToList(listName, item) {
+    var defer = $.Deferred();
+
+    item.__metadata = { 'type': 'SP.Data.' + listName + 'ListItem' };
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items",
+        type: "POST",
+        headers: {
+            'X-RequestDigest': $("#__REQUESTDIGEST").val(),
+            'Accept': 'application/json;odata=verbose',
+            'Content-Type': 'application/json;odata=verbose'
+        },
+        data: JSON.stringify(item)
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+
+/**
+ *deletes an item from a list
+ * @param {string} listName
+ * @param {integer} itemId
+ */
+function removeItemFromList(listName, itemId) {
     console.log("removeItemFromList", arguments);
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('" + listName + "')/items(" + itemId + ")",
+        method: "DELETE",
+        headers: {
+            "Accept": "application/json; odata=verbose",
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "If-Match": "*"
+        }
+    }).done(function (data) {
+        console.log(data);
+    }).fail(function (error) {
+        window.console && console.log(err);
+    });
 }
