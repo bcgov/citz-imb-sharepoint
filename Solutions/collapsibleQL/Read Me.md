@@ -14,7 +14,7 @@ Transforms Default Quick launch into an accordian style quick launch.
    #### Sub-Menu item c
    #### Sub-Menu item d
    
-### Collapible Quick Launch
+### Collapsible Quick Launch
 
  #### (collapsed) > Menu Item 1
  
