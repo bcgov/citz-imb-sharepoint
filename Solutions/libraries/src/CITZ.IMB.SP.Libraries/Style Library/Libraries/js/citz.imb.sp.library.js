@@ -143,6 +143,33 @@ function deleteGroup(groupId) {
     return defer.promise();
 }
 
+/**
+ * returns a promise of the associated owner, member, and visitor groups
+ * @param {url} webSite uses webAbsoluteUrl if omitted
+ */
+function getAssociatedGroups(webSite) {
+    var defer = $.Deferred();
+
+    var _webSite = webSite || _spPageContextInfo.webAbsoluteUrl;
+
+    $.ajax({
+        url: _webSite +
+            "/_api/web?$expand=AssociatedOwnerGroup,AssociatedMemberGroup,AssociatedvisitorGroup" +
+            "&$select=AssociatedOwnerGroup,AssociatedMemberGroup,AssociatedvisitorGroup",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject();
+    });
+
+    return defer.promise();
+}
+
 //-----------------------------------------------------------------------------------
 // Users
 //-----------------------------------------------------------------------------------
@@ -221,6 +248,27 @@ function getUserById(withGroups, userId) {
     return defer.promise();
 }
 
+/**
+ * returns a promise about the current user
+ */
+function getCurrentUser() {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/CurrentUser",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
 //-----------------------------------------------------------------------------------
 // Permissions
 //-----------------------------------------------------------------------------------
@@ -335,6 +383,8 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
 //-----------------------------------------------------------------------------------
 // Sites
 //-----------------------------------------------------------------------------------
+
+
 
 //-----------------------------------------------------------------------------------
 // Lists

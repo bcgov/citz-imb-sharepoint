@@ -19,6 +19,8 @@ Includes:
 > Creats a new group and returns the ID
 #### deleteGroup(*groupId*)
 > Deletes a group from the collection
+#### getAssociatedGroups(*webSite*)
+> Returns a promise of the associated owner, member, and visitor groups
 
 ### PERMISSIONS
 #### grantGroupPermissionToWeb(*groupId, permissionLevel*)
@@ -35,6 +37,8 @@ Includes:
 > Removes a user from a group
 #### getUserById(*withGroups, userId*)
 > Returns a promise of user information JSON object
+#### getCurrentUser()
+> Returns a promise about the current user
 
 ### SITES
 
