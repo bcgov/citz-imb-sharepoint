@@ -204,7 +204,7 @@ function addUserToGroup(groupId, logonName) {
  * Removes a user from a group
  *
  * @param {integer} groupId the first value passed in must be the id of the group
- * @param {integer} userId the user id
+ * @param {integer or string} user the user id or the display name (eg 'Toews, Scott D CITZ:EX')
  */
 function removeUserFromGroup(groupId, user) {
     var defer = $.Deferred();
