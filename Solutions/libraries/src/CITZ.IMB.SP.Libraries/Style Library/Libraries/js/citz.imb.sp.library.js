@@ -1,5 +1,5 @@
 $().ready(function () {
-    //put the css reference on the page
+    //put the css references on the page
     var head = document.getElementsByTagName("head")[0];
 
     var jqueryStyle = document.createElement("link");
@@ -33,6 +33,9 @@ $().ready(function () {
 
 });
 
+//-----------------------------------------------------------------------------------
+// Groups
+//-----------------------------------------------------------------------------------
 /**
  * Returns a promise of a JSON object containing SharePoint Groups having permissions on the current web
  *
@@ -141,6 +144,177 @@ function deleteGroup(groupId) {
 }
 
 /**
+ * returns a promise of the associated owner, member, and visitor groups
+ * @param {url} webSite uses webAbsoluteUrl if omitted
+ */
+function getAssociatedGroups(webSite) {
+    var defer = $.Deferred();
+
+    var _webSite = webSite || _spPageContextInfo.webAbsoluteUrl;
+
+    $.ajax({
+        url: _webSite +
+            "/_api/web?$expand=AssociatedOwnerGroup,AssociatedMemberGroup,AssociatedvisitorGroup" +
+            "&$select=AssociatedOwnerGroup,AssociatedMemberGroup,AssociatedvisitorGroup",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject();
+    });
+
+    return defer.promise();
+}
+
+//-----------------------------------------------------------------------------------
+// Users
+//-----------------------------------------------------------------------------------
+
+/**
+ * Adds a user to a group
+ *
+ * @param {integer} groupId the first value passed in must be the id of the group
+ * @param {string} logonName user logon eg "i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844"
+ */
+function addUserToGroup(groupId, logonName) {
+    SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
+        var ctx = new SP.ClientContext();
+        var groups = ctx.get_web().get_siteGroups();
+        var group = groups.getById(groupId);
+        var user = ctx.get_web().ensureUser(logonName);
+        var groupUsers = group.get_users();
+        groupUsers.addUser(user);
+
+        ctx.load(user);
+        ctx.load(group);
+        ctx.executeQueryAsync(function (sender, args) {
+            return true;
+        }, function (sender, args) {
+            window.console && console.log("Error: " + args.get_message());
+            return false;
+        })
+    });
+}
+
+/**
+ * Removes a user from a group
+ *
+ * @param {integer} groupId the first value passed in must be the id of the group
+ * @param {integer or string} user the user id or the display name (eg 'Toews, Scott D CITZ:EX')
+ */
+function removeUserFromGroup(groupId, user) {
+    var defer = $.Deferred();
+    var _userId;
+
+    var removeUser = function () {
+        $.ajax({
+            url: _spPageContextInfo.webAbsoluteUrl +
+                "/_api/web/sitegroups(" + groupId + ")/users/removebyid(" + _userId + ")",
+            type: "POST",
+            headers: {
+                "accept": "application/json;odata=verbose",
+                "content-type": "application/json;odata=verbose",
+                "X-RequestDigest": $("#__REQUESTDIGEST").val()
+            }
+        }).done(function (data) {
+            defer.resolve(data);
+        }).fail(function (error) {
+            window.console & console.log(error);
+            defer.reject();
+        });
+    }
+
+    if (typeof user === "number") {
+        _userId = user;
+        removeUser();
+    } else if (typeof user === "string") {
+        $.when(getUserByName(user)).done(function (data) {
+            console.log(data);
+            _userId = data.Id;
+            removeUser();
+        }).fail(function (err) {
+            window.console && console.log(err);
+            defer.reject(err);
+        });
+    } else {
+        defer.reject("not a valid userId");
+    }
+
+    return defer.promise();
+}
+
+/**
+ * Returns a promise of user information JSON object
+ * @param {boolean} [withGroups=false] if true, includes groups the user is a member of
+ * @param {integer} userId user id
+ */
+function getUserById(withGroups, userId) {
+    var defer = $.Deferred();
+
+    var restCall = (withGroups === true) ? "?$expand=Groups" : "";
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/getuserbyid(" + userId + ")" + restCall,
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
+
+function getUserByName(userName) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/SiteUserInfoList/items?$filter=Title eq '" + userName + "'",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d.results[0]);
+    }).fail(function (error) {
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
+/**
+ * returns a promise about the current user
+ */
+function getCurrentUser() {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/CurrentUser",
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose"
+        }
+    }).done(function (data) {
+        defer.resolve(data.d);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+//-----------------------------------------------------------------------------------
+// Permissions
+//-----------------------------------------------------------------------------------
+
+/**
  * Grants permissions to the current web
  *
  * @param {integer} groupId the group to grant permssions to
@@ -247,76 +421,263 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
     return defer.promise();
 }
 
-/**
- * Adds a user to a group
- *
- * @param {integer} groupId the first value passed in must be the id of the group
- * @param {string} logonName user logon eg "i:0ǵ.t|bcgovidp|a32d6f859c66450ca4995b0b2bf0a844"
- */
-function addUserToGroup(groupId, logonName) {
-    SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
-        var ctx = new SP.ClientContext();
-        var groups = ctx.get_web().get_siteGroups();
-        var group = groups.getById(groupId);
-        var user = ctx.get_web().ensureUser(logonName);
-        var groupUsers = group.get_users();
-        groupUsers.addUser(user);
+//-----------------------------------------------------------------------------------
+// Sites
+//-----------------------------------------------------------------------------------
 
-        ctx.load(user);
-        ctx.load(group);
-        ctx.executeQueryAsync(function (sender, args) {
-            return true;
-        }, function (sender, args) {
-            window.console && console.log("Error: " + args.get_message());
-            return false;
-        })
+
+
+//-----------------------------------------------------------------------------------
+// Lists
+//-----------------------------------------------------------------------------------
+
+function getList(listName) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl +
+            "/_api/web/lists/GetByTitle('" + listName + "')",
+        type: "GET",
+        headers: {
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata"
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject(error);
     });
+
+    return defer.promise();
+}
+/**
+ * creates a list or library
+ * @param {object} listInfo
+ * required properties: Title
+ * optional properties: AllowContentTypes: [false]
+ *                      BaseTemplate: [101]
+ *                      ContentTypesEnabled: [false]
+ *                      Description: []
+ */
+function createList(listInfo) {
+    var defer = $.Deferred();
+
+    listInfo.__metadata = { "type": "SP.List" };
+    listInfo.AllowContentTypes = listInfo.AllowContentTypes || false;
+    listInfo.BaseTemplate = listInfo.BaseTemplate || 101;
+    listInfo.ContentTypesEnabled = listInfo.ContentTypesEnabled || false;
+    listInfo.Description = listInfo.Description || "";
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists",
+        type: "POST",
+        headers: {
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose"
+        },
+        data: JSON.stringify(listInfo)
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+//-----------------------------------------------------------------------------------
+// Items
+//-----------------------------------------------------------------------------------
+
+/**
+ * returns a promise of all items of a list
+ * @param {string} listName - the name of the list
+ */
+function getItems(listName) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items",
+        type: "GET",
+        headers: {
+            'Accept': 'application/json;odata=verbose'
+        }
+    }).done(function (data) {
+        defer.resolve(data.d.results);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
 }
 
 /**
- * Removes a user from a group
- *
- * @param {integer} groupId the first value passed in must be the id of the group
- * @param {integer} userId the user id
+ * returns a promise of a specified item
+ * @param {string} listName
+ * @param {integer} itemId
  */
-function removeUserFromGroup(groupId, userId) {
+function getItem(listName, itemId) {
+    var defer = $.Deferred();
+
     $.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl +
-            "/_api/web/sitegroups(" + groupId + ")/users/removebyid(" + userId + ")",
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items(" + itemId + ")",
+        type: "GET",
+        headers: {
+            'Accept': 'application/json;odata=verbose'
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+
+/**
+ *returns the promise of an array of IDs that match the itemFilter
+ *see https://social.technet.microsoft.com/wiki/contents/articles/35796.sharepoint-2013-using-rest-api-for-selecting-filtering-sorting-and-pagination-in-sharepoint-list.aspx
+ *for formatting of itemFilter
+ * @param {string} listName
+ * @param {string} itemFilter
+ */
+function lookupItemId(listName, itemFilter) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items?$filter=" + itemFilter + "&$select=ID",
+        type: "GET",
+        headers: {
+            'Accept': 'application/json;odata=verbose'
+        }
+    }).done(function (data) {
+        defer.resolve(data.d.results)
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    })
+
+    return defer.promise();
+}
+
+/**
+ * adds an item to a list
+ * @param {string} listName
+ * @param {object} item - properties are fields, values are values
+ */
+function addItemToList(listName, item) {
+    var defer = $.Deferred();
+
+    item.__metadata = { 'type': 'SP.Data.' + listName + 'ListItem' };
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items",
         type: "POST",
         headers: {
-            "accept": "application/json;odata=verbose",
-            "content-type": "application/json;odata=verbose",
-            "X-RequestDigest": $("#__REQUESTDIGEST").val()
+            'X-RequestDigest': $("#__REQUESTDIGEST").val(),
+            'Accept': 'application/json;odata=verbose',
+            'Content-Type': 'application/json;odata=verbose'
+        },
+        data: JSON.stringify(item)
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+
+/**
+ *deletes an item from a list
+ * @param {string} listName
+ * @param {integer} itemId
+ */
+function removeItemFromList(listName, itemId) {
+    console.log("removeItemFromList", arguments);
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('" + listName + "')/items(" + itemId + ")",
+        method: "DELETE",
+        headers: {
+            "Accept": "application/json; odata=verbose",
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "If-Match": "*"
         }
     }).done(function (data) {
         console.log(data);
     }).fail(function (error) {
-        window.console & console.log(error);
+        window.console && console.log(err);
     });
 }
 
 /**
- * Returns a promise of user information JSON object
- * @param {boolean} [withGroups=false] if true, includes groups the user is a member of
- * @param {integer} userId user id
+ * updates a list item
+ * @param {string} listName
+ * @param {object} item - must contain Id property.  other properies match columns
  */
-function getUserById(withGroups, userId) {
+function updateItem(listName, item) {
     var defer = $.Deferred();
 
-    var restCall = (withGroups === true) ? "?$expand=Groups" : "";
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/GetByTitle('" + listName + "')/Items(" + item.Id + ")",
+        type: "POST",
+        data: JSON.stringify(item),
+        headers: {
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata",
+            "IF-MATCH": "*",
+            "X-HTTP-Method": "MERGE"
+        }
+    }).done(function () {
+        defer.resolve();
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+
+//-----------------------------------------------------------------------------------
+// Fields
+//-----------------------------------------------------------------------------------
+/**
+ * adds a field to a list
+ * @param {string} listName
+ * @param {object} fields
+ * required Properties: Title
+ * optional Properties: FieldTypeKind [2]
+ *                      StaticName [Title]
+ */
+function addField(listName, field) {
+    var defer = $.Deferred();
+
+    field.__metadata = { "type": "SP.Field" };
+    field.FieldTypeKind = field.FieldTypeKind || 2;  //text field
+    field.StaticName = field.StaticName || field.Title;
 
     $.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/getuserbyid(" + userId + ")" + restCall,
-        type: "GET",
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('" + listName + "')/fields",
+        type: "POST",
         headers: {
-            "accept": "application/json;odata=verbose"
-        }
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose"
+        },
+        data: JSON.stringify(field)
     }).done(function (data) {
+        console.log(data);
         defer.resolve(data.d);
-    }).fail(function (error) {
-        defer.reject(error);
-    });
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    })
 
     return defer.promise();
 }
