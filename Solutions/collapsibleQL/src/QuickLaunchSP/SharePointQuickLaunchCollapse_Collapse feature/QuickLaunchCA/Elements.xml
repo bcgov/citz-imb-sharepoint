@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction ScriptSrc="~SiteCollection/Style Library/colapSideNav/js/colapSideNav.js"
+	Location="ScriptLink" Sequence="121">
+	</CustomAction>
+</Elements>

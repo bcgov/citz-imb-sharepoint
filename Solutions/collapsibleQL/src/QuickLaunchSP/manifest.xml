@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/"
+SolutionId="be3ccc87-94b8-4517-8a85-e85ac909a603"
+SharePointProductVersion="15.0">
+	<FeatureManifests>
+		<FeatureManifest Location="SharePointQuickLaunchCollapse_Collapse feature\Feature.xml" />
+	</FeatureManifests>
+</Solution>

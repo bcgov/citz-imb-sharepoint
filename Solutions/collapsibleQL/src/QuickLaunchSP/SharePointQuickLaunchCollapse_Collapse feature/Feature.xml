@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="8bdf3ca3-7a04-4a2e-9647-8d53f188d9be" ImageUrl="GenericFeature.gif?collapse.png" Scope="Web" Title="CITZ IMB Collapsible Quick Launch" Description="Allow for QuickLaunch sub menus to collapse and expand">
+	<ElementManifests>
+		<ElementManifest Location="QuickLaunchCA\Elements.xml" />
+		<ElementManifest Location="Style Library\Elements.xml" />
+		<ElementFile Location="Style Library\colapSideNav\js\colapSideNav.js" />
+		<ElementFile Location="Style Library\colapSideNav\images\collapse.png" />		
+	</ElementManifests>
+</Feature>
