@@ -10,10 +10,10 @@ Transforms Default Quick launch into an accordian style quick launch.
 
  <li>Menu Item 1
   <ul>
-    Sub-Menu item a
-    Sub-Menu item b
-    Sub-Menu item c
-    Sub-Menu item d
+    <li>Sub-Menu item a</li>
+    <li>Sub-Menu item b</li>
+    <li>Sub-Menu item c</li>
+    <li>Sub-Menu item d</li>
  </ul>
  </li>
    
