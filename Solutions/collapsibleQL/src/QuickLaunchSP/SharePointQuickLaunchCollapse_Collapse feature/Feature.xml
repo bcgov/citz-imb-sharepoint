@@ -3,7 +3,7 @@
 	<ElementManifests>
 		<ElementManifest Location="QuickLaunchCA\Elements.xml" />
 		<ElementManifest Location="Style Library\Elements.xml" />
-		<ElementFile Location="Style Library\colapSideNav\js\colapSideNav.js" />
+		<ElementFile Location="Style Library\colapSideNav\js\ColapSideNav.js" />
 		<ElementFile Location="Style Library\colapSideNav\images\collapse.png" />		
 	</ElementManifests>
 </Feature>

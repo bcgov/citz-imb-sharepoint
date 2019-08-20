@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<Module Name="StyleLibraryJS" Url="Style Library/colapSideNav/js" RootWebOnly="FALSE" Path="Style Library\colapSideNav\js">
+	<Module Name="StyleLibraryJS" Url="Style Library/ColapSideNav/js" RootWebOnly="FALSE" Path="Style Library\ColapSideNav\js">
 		<File Url="colapSideNav.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
 	</Module>
 	<Module Name="StyleLibraryIMAGES" Url="Style Library/colapSideNav/images" RootWebOnly="FALSE" Path="Style Library\colapSideNav\images">

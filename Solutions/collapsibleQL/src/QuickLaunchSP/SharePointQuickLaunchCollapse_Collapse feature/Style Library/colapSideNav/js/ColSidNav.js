@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
   //Get Quick launch top level links individually
-  $('.ms-core-listMenu-verticalBox ul.root > li > a').each(function() {
+  $('.ms-core-listMenu-verticalBox ul.root > li > a, .ms-core-listMenu-verticalBox ul.root > li > span').each(function() {
     //Define Sub Menu(s)
     subMensObj = $(this).next('ul');
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
     }
   });
   //Get sub Menus as an Object
-  var subMens = $('.ms-core-listMenu-verticalBox ul.root ul');
+  var subMens = $('#sideNavBox ul.root ul');
 
   var selectedIndex = -1;
   //Find all sub menus
@@ -31,7 +31,7 @@ $(document).ready(function() {
   }
   //On click of item with sub menu, expand child sub menu
   $('img.imgAlign').click(function(e) {
-      subMensObj = $(this).closest('a').next('ul')
+      subMensObj = $(this).parents().eq(2).next('ul')
       console.log(subMensObj);
       if (subMensObj.length != 0) {
         e.preventDefault();
