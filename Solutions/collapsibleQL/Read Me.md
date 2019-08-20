@@ -18,11 +18,11 @@ Transforms Default Quick launch into an accordian style quick launch.
 
  #### (collapsed) > Menu Item 1
  
- #### (expanded) > Menu Item 1
-                   #### Sub-Menu item a
-                   #### Sub-Menu item b
-                   #### Sub-Menu item c
-                   #### Sub-Menu item d
+ #### (expanded) ˅ Menu Item 1
+ ####                 Sub-Menu item a
+ ####                 Sub-Menu item b
+ ####                 Sub-Menu item c
+ ####                 Sub-Menu item d
 
    
       
