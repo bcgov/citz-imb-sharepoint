@@ -20,7 +20,7 @@ Transforms Default Quick launch into an accordian style quick launch.
  ### Collapsible Quick Launch
 
  <li>(collapsed) > Menu Item 1</li>
- 
+ <br>
  <li>(expanded) ˅ Menu Item 1
               <ul>
                  <li>Sub-Menu item a</li>
