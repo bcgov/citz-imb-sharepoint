@@ -431,6 +431,62 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
 // Lists
 //-----------------------------------------------------------------------------------
 
+function getList(listName) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl +
+            "/_api/web/lists/GetByTitle('" + listName + "')",
+        type: "GET",
+        headers: {
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata"
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
+/**
+ * creates a list or library
+ * @param {object} listInfo
+ * required properties: Title
+ * optional properties: AllowContentTypes: [false]
+ *                      BaseTemplate: [101]
+ *                      ContentTypesEnabled: [false]
+ *                      Description: []
+ */
+function createList(listInfo) {
+    var defer = $.Deferred();
+
+    listInfo.__metadata = { "type": "SP.List" };
+    listInfo.AllowContentTypes = listInfo.AllowContentTypes || false;
+    listInfo.BaseTemplate = listInfo.BaseTemplate || 101;
+    listInfo.ContentTypesEnabled = listInfo.ContentTypesEnabled || false;
+    listInfo.Description = listInfo.Description || "";
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists",
+        type: "POST",
+        headers: {
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose"
+        },
+        data: JSON.stringify(listInfo)
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
 //-----------------------------------------------------------------------------------
 // Items
 //-----------------------------------------------------------------------------------
@@ -557,4 +613,71 @@ function removeItemFromList(listName, itemId) {
     }).fail(function (error) {
         window.console && console.log(err);
     });
+}
+
+/**
+ * updates a list item
+ * @param {string} listName
+ * @param {object} item - must contain Id property.  other properies match columns
+ */
+function updateItem(listName, item) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/GetByTitle('" + listName + "')/Items(" + item.Id + ")",
+        type: "POST",
+        data: JSON.stringify(item),
+        headers: {
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata",
+            "IF-MATCH": "*",
+            "X-HTTP-Method": "MERGE"
+        }
+    }).done(function () {
+        defer.resolve();
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
+
+//-----------------------------------------------------------------------------------
+// Fields
+//-----------------------------------------------------------------------------------
+/**
+ * adds a field to a list
+ * @param {string} listName
+ * @param {object} fields
+ * required Properties: Title
+ * optional Properties: FieldTypeKind [2]
+ *                      StaticName [Title]
+ */
+function addField(listName, field) {
+    var defer = $.Deferred();
+
+    field.__metadata = { "type": "SP.Field" };
+    field.FieldTypeKind = field.FieldTypeKind || 2;  //text field
+    field.StaticName = field.StaticName || field.Title;
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('" + listName + "')/fields",
+        type: "POST",
+        headers: {
+            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+            "accept": "application/json;odata=verbose",
+            "content-type": "application/json;odata=verbose"
+        },
+        data: JSON.stringify(field)
+    }).done(function (data) {
+        console.log(data);
+        defer.resolve(data.d);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    })
+
+    return defer.promise();
 }

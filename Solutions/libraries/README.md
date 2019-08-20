@@ -43,6 +43,10 @@ Includes:
 ### SITES
 
 ### LISTS
+#### getList(*listName*)
+> Returns a promise of a list
+#### createList(*listInfo*)
+> Creates a list
 
 ### ITEMS
 #### getItems(*listName*)
@@ -55,3 +59,9 @@ Includes:
 > Adds an item to a list
 #### removeItemFromList(*listName, itemId*)
 > Deletes an item from a list
+#### updateItem(*listName, item*)
+> Update a list item
+
+### FIELDS
+#### addField(*listName, field*)
+> Adds a field to a list
