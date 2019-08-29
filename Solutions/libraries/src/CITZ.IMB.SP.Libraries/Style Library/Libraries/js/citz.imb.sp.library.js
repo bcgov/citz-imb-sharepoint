@@ -572,22 +572,35 @@ function lookupItemId(listName, itemFilter) {
 function addItemToList(listName, item) {
     var defer = $.Deferred();
 
-    item.__metadata = { 'type': 'SP.Data.' + listName + 'ListItem' };
-
-    $.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items",
-        type: "POST",
-        headers: {
-            'X-RequestDigest': $("#__REQUESTDIGEST").val(),
-            'Accept': 'application/json;odata=verbose',
-            'Content-Type': 'application/json;odata=verbose'
-        },
-        data: JSON.stringify(item)
-    }).done(function (data) {
-        defer.resolve(data);
-    }).fail(function (err) {
-        window.console && console.log(err);
-        defer.reject(err);
+    $.when(
+        $.ajax({
+            url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/listItemEntityTypeFullName",
+            type: "GET",
+            async: false,
+            headers: {
+                'Accept': 'application/json;odata=verbose'
+            }
+        }).done(function (data) {
+            item.__metadata = { 'type': data.d.ListItemEntityTypeFullName };
+        }).fail(function (err) {
+            window.console && console.log(err);
+        })
+    ).done(function () {
+        $.ajax({
+            url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getByTitle('" + listName + "')/items",
+            type: "POST",
+            headers: {
+                'X-RequestDigest': $("#__REQUESTDIGEST").val(),
+                'Accept': 'application/json;odata=verbose',
+                'Content-Type': 'application/json;odata=verbose'
+            },
+            data: JSON.stringify(item)
+        }).done(function (data) {
+            defer.resolve(data);
+        }).fail(function (err) {
+            window.console && console.log(err);
+            defer.reject(err);
+        });
     });
 
     return defer.promise();
