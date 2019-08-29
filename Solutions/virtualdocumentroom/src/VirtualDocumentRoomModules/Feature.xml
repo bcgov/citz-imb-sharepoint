@@ -1,4 +1,4 @@
-﻿<Feature Id="{c8267ad7-8f8b-45f0-85a6-5f9a7713e614}" Title="Modules feature of exported web template &quot;VICO Template&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+﻿<Feature Id="{bb3485b7-7a7e-4660-aea8-758034808808}" Title="Modules feature of exported web template &quot;VICO Template&quot;" Version="1.0.0.0" Scope="Web" Hidden="TRUE" RequireResources="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
 	<ElementManifests>
 		<ElementManifest Location="Elements.xml" />
 		<ElementFile Location="resources\resources.en-US.resx" />

@@ -5,9 +5,11 @@
 		</NavBar>
 		<NavBar Name="Home" Url="/sites/DEV/vt" ID="1031" />
 		<NavBar Name="Recent" Url="" ID="1033">
+			<NavBarPage Name="Users" Url="Lists/Users/AllItems.aspx" />
+			<NavBarPage Name="Documents" Url="Documents/Forms/AllItems.aspx" />
+			<NavBarPage Name="Questions" Url="Lists/Questions/AllItems.aspx" />
 			<NavBarPage Name="ActivityLog" Url="Lists/ActivityLog/AllItems.aspx" />
 			<NavBarPage Name="Proponents" Url="Lists/Proponents/AllItems.aspx" />
-			<NavBarPage Name="Config" Url="Lists/Config/AllItems.aspx" />
 		</NavBar>
 		<NavBar Name="Site Contents" Url="_layouts/15/viewlsts.aspx" ID="1034" />
 	</NavBars>
@@ -162,7 +164,7 @@
 				<Feature ID="{e995e28b-9ba8-4668-9933-cf5c146d7a9f}" Name="FeatureDefinition/14/e995e28b-9ba8-4668-9933-cf5c146d7a9f" />
 				<!--TaxonomyFieldAdded Feature-->
 				<Feature ID="{73ef14b1-13a9-416b-a9b5-ececa2b0604c}" Name="FeatureDefinition/15/73ef14b1-13a9-416b-a9b5-ececa2b0604c" />
-				<!--CITZ.IMB.SP.JSLibraries Feature-->
+				<!--CITZ.IMB.SP.Libraries Feature-->
 				<Feature ID="{fb757072-b517-4ef0-8189-ed0b68bfd30a}" Name="FeatureDefinition/15/fb757072-b517-4ef0-8189-ed0b68bfd30a" />
 				<!--SharePointBreadcrumb_Breadcrumb feature Feature-->
 				<Feature ID="{cb20ec33-e134-4a4a-bcfc-ee3acc404dff}" Name="FeatureDefinition/15/cb20ec33-e134-4a4a-bcfc-ee3acc404dff" />
@@ -236,31 +238,31 @@
 				<!--XmlFormLibrary Feature-->
 				<Feature ID="{00bfea71-1e1d-4562-b56a-f05371bb0115}" Name="FeatureDefinition/15/00bfea71-1e1d-4562-b56a-f05371bb0115" SourceVersion="0.0.0.0" />
 				<!--List Feature-->
-				<Feature ID="{d6e12623-ac03-4fd4-a534-18313509d73b}" Name="List Feature">
+				<Feature ID="{0645de25-9421-4c66-a580-b62617796afc}" Name="List Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Module Feature-->
-				<Feature ID="{c8267ad7-8f8b-45f0-85a6-5f9a7713e614}" Name="Module Feature">
+				<Feature ID="{bb3485b7-7a7e-4660-aea8-758034808808}" Name="Module Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Web EventReceivers Feature-->
-				<Feature ID="{310860ef-13c5-427f-954b-2a99899148cb}" Name="Web EventReceivers Feature">
+				<Feature ID="{71b0c602-c144-431a-8e49-a5c889c7f718}" Name="Web EventReceivers Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--CustomAction Feature-->
-				<Feature ID="{a7bef278-f7bf-4d67-bf53-f651205d3817}" Name="CustomAction Feature">
+				<Feature ID="{40fddff7-ba11-4eeb-a6f5-b5b5a1823521}" Name="CustomAction Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
 				</Feature>
 				<!--Property Bag Feature-->
-				<Feature ID="{18542fec-db47-40c1-9b3a-8a843c5b9306}" Name="Property Bag Feature">
+				<Feature ID="{f23269fb-95f2-437b-a80a-37f448685b79}" Name="Property Bag Feature">
 					<Properties>
 						<Property Key="GeneratedBySaveAsTemplate" Value="1" />
 					</Properties>
