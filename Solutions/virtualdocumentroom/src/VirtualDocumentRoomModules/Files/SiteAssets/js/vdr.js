@@ -1,3 +1,10 @@
+/*
+TODO: Refactor Site Management to use datatables
+TODO: Remove user from user list when removing from security group
+TODO: Add mechanism to allow VICO staff to enter questions and answers
+
+*/
+
 var config = {}
 var ownerGroupID;
 var memberGroupID;
@@ -983,17 +990,6 @@ function removeUser(groupId, userId) {
         displayWebGroups();
     });
 }
-
-
-
-
-
-// function addQuestionToList(question) {
-//     console.log("-- adding question");
-
-//     alert("addQuestionToList: " + question);
-//     writeActivity("add a question", question, true);
-// }
 
 function askAQuestion() {
     console.log("-- asking question");
