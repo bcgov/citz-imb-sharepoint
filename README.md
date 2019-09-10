@@ -8,6 +8,7 @@
 - [Contact Us](./Solutions/contactus) - Collection Feature
 - [Libraries](./Solutions/libraries) - Collection Feature
 - [Filterable Lists](./Solutions/filterablelists) - Collection Feature
+- [Collapsible Quick Launch](./Solutions/collapsibleQL) - Site Feature
 
 ## Usage
 ### Collection features
