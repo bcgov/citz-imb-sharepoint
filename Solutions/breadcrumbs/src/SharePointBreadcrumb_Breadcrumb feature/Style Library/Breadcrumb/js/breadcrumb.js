@@ -3,168 +3,191 @@
     Version 1.0
 */
 
-
 var bc_Properties = {
     //some libraries are not shown in the breadcrumb trail
     ExcludedLists: ["Site Pages", "Pages"]
 };
 
-function bc_getSiteInfo(sitesArray) {
-    //using promises so that the function will wait until it has the information needed
-    var defer = jQuery.Deferred();
+function buildCrumbHtml(title, description, url) {
+    return "<span class='csp_breadcrumb'><a href='" + url +
+        "' title='" + description + "'>" + title + "</a></span>";
+}
 
-    //get the first site from the array
-    var current = sitesArray.shift();
+function getPageCrumb() {
+    var defer = $.Deferred();
 
-    if (sitesArray.length === 0) {
-        //no more sites after this one
-        //we can use page context to get the information
-        defer.resolve("<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.webAbsoluteUrl + "' title=''>" + _spPageContextInfo.webTitle + "</a></span>");
+
+    //#ctl00_PlaceHolderMain_wikiPageNameDisplay
+    //#ms-pageDescription
+    var sPath = window.location.pathname;
+    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+
+    //#ctl00_PlaceHolderPageTitleInTitleArea_LabelGroupName
+
+    if (sPath.indexOf("_layouts") > -1) {
+        switch (sPage.toLowerCase()) {
+            case "people.aspx":
+                defer.resolve(
+                    buildCrumbHtml($("title").text(), $("#ms-pageDescription").text(), "#") +
+                    buildCrumbHtml($("#ctl00_PlaceHolderPageTitleInTitleArea_LabelGroupName").text(), $("#ms-pageDescriptionDiv").text(), "#")
+                );
+            default:
+                defer.resolve(buildCrumbHtml($("title").text(), $("#ms-pageDescription").text(), "#"));
+        }
+
     } else {
-        //we need to request the information about the site we are working on
-        SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
-            var currentSite = _spPageContextInfo.webAbsoluteUrl.substring(0, _spPageContextInfo.webAbsoluteUrl.search(current) + current.length)
-            var ctx = new SP.ClientContext(currentSite);
-            var oSite = ctx.get_web();
+        defer.resolve(buildCrumbHtml($("title").text(), $("#ms-pageDescription").text(), "#"));
+    }
 
-            ctx.load(oSite, "Title", "Description");
+    return defer.promise();
+}
 
-            ctx.executeQueryAsync(
-                function (result) {
-                    //success
-                    //request the next site recursively asynchronously
-                    var nextSite = bc_getSiteInfo(sitesArray);
+function getFolderCrumb() {
+    var defer = $.Deferred();
+    var html = "";
 
-                    $.when(nextSite).then(function (data) {
-                        defer.resolve("<span class='csp_breadcrumb'><a href='" + currentSite + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>" + data);
-                    });
-                },
-                function (err) {
-                    //fail
-                    window.console && console.log("Request Failed: ", err);
+    var u = decodeURIComponent(window.location.href);
+    if (u.search("RootFolder") > -1) {
+        var v = u.split("?")[1].split("&");
+        var path;
+
+        for (i = 0; i < v.length; i++) {
+            if (v[i].startsWith("RootFolder")) {
+                path = v[i].split("=")[1].replace(_spPageContextInfo.webServerRelativeUrl, "");
+                break;
+            }
+        }
+
+        var url = _spPageContextInfo.webAbsoluteUrl;
+        var folders = path.split("/");
+
+        folders.shift();  //remove the first blank
+        url = url + "/" + folders.shift(); //and the list/library name; add it to the url
+        folders.pop(); //and the last one as it is part of the page name
+
+        for (i = 0; i < folders.length; i++) {
+            url = url + "/" + folders[i];  //append the folder to the url
+            html += buildCrumbHtml(folders[i], "", url);
+        }
+    }
+
+    defer.resolve(html);
+
+    return defer.promise();
+}
+
+function getListCrumb() {
+    var defer = $.Deferred();
+
+    if (_spPageContextInfo.pageListId === undefined) {
+        defer.resolve("");
+    } else {
+        $.when(
+            getListByGuid(_spPageContextInfo.pageListId)
+        ).done(function (listData) {
+            var url = _spPageContextInfo.webAbsoluteUrl + "/" + listData.EntityTypeName;
+            if (bc_Properties.ExcludedLists.indexOf(listData.Title) > -1) {
+                if (window.location.pathname.indexOf("listedit.aspx") > -1) {
+                    //show the listcrumb if we are editing the list
+                    defer.resolve(buildCrumbHtml(listData.Title, listData.Description, url));
+                } else {
+                    defer.resolve("");
                 }
-            );
+            } else {
+                defer.resolve(buildCrumbHtml(listData.Title, listData.Description, url));
+            }
         });
     }
 
     return defer.promise();
 }
-function bc_makeSiteBreadrumb() {
-    var defer = jQuery.Deferred();
 
-    //get root site info
-    SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
-        var mbcHtml;
-        var ctx = new SP.ClientContext(_spPageContextInfo.siteAbsoluteUrl);
-        var oSite = ctx.get_web();
+function getSiteCrumb() {
+    var defer = $.Deferred();
 
-        ctx.load(oSite, "Title", "Description");
+    //get the collection relative url
+    var sitePath = _spPageContextInfo.siteServerRelativeUrl;
 
-        ctx.executeQueryAsync(
-            function (result) {
-                //sucess
-                mbcHtml = "<span class='csp_breadcrumb'><a href='" + _spPageContextInfo.siteAbsoluteUrl + "' title='" + oSite.get_description() + "'>" + oSite.get_title() + "</a></span>";
+    //get the site relative url
+    var webPath = _spPageContextInfo.webServerRelativeUrl;
 
-                if (_spPageContextInfo.siteServerRelativeUrl !== _spPageContextInfo.webServerRelativeUrl) {
-                    var s = _spPageContextInfo.webServerRelativeUrl.replace(_spPageContextInfo.siteServerRelativeUrl, "");
-                    var a = s.split("/");
-                    a.shift();
-                    $.when(bc_getSiteInfo(a)).then(function (data) {
-                        defer.resolve(mbcHtml + data);
-                    });
-                } else {
-                    defer.resolve(mbcHtml);
-                }
-            },
-            function (err) {
-                //fail
-                defer.reject(err);
+    //remove the collection relative url from the site relative url
+    //so that we are left with the subsites in path format
+    var path = webPath.replace(sitePath, "");
+
+    //split the subsites into an array
+    var sites = path.split("/");
+    //remove the first array as it is always the root site, which we don't need
+    sites.shift();
+
+    //get the absolute collection url
+    var siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+
+    //create a new array to hold the site urls
+    var html = "";
+
+    for (i = 0; i < sites.length; i++) {
+        siteUrl = siteUrl + "/" + sites[i];
+
+        $.ajax({
+            url: siteUrl +
+                "/_api/web",
+            type: "GET",
+            async: false,
+            headers: {
+                "Accept": "application/json;odata=nometadata",
+                "Content-Type": "application/json;odata=nometadata"
             }
-        );
+        }).done(function (data) {
+            html += buildCrumbHtml(data.Title, data.Description, data.Url)
+        }).fail(function (err) {
+            console.log(err);
+            defer.reject(err);
+        });
+
+    }
+    defer.resolve(html);
+
+    return defer.promise();
+}
+
+function getRootCrumb() {
+    var defer = $.Deferred();
+
+    $.when(getWebInfo(_spPageContextInfo.siteAbsoluteUrl)).done(function (siteData) {
+        defer.resolve(buildCrumbHtml(siteData.Title, siteData.Description, siteData.Url));
     });
 
     return defer.promise();
 }
 
+function bc_makeBreadrumbs() {
+    //get root site info
+    var rootCrumb = getRootCrumb();
+    //get site(s) info
+    var siteCrumb = getSiteCrumb();
+    //get list info
+    var listCrumb = getListCrumb();
+    //get folder(s) info
+    var folderCrumb = getFolderCrumb();
+    //get page info
+    var pageCrumb = getPageCrumb();
 
-function bc_getListInfo() {
-    var defer = jQuery.Deferred();
-    if (typeof _spPageContextInfo.pageListId === "undefined") {
-        //not part of a list or library
-        defer.resolve("");
-    } else {
-
-
-        SP.SOD.executeFunc("SP.js", "SP.ClientContext", function () {
-            var lHtml;
-            var ctx = new SP.ClientContext.get_current();
-            var oList = ctx.get_web().get_lists().getById(_spPageContextInfo.pageListId);
-            var oListRootFolder = oList.get_rootFolder();
-
-            ctx.load(oList);
-            ctx.load(oListRootFolder);
-
-            ctx.executeQueryAsync(
-                function (result) {
-                    //success
-                    if (bc_Properties.ExcludedLists.indexOf(oList.get_title()) > -1) {
-                        lHtml = "";
-                    } else {
-                        lHtml = "<span class='csp_breadcrumb'><a href='https://" + window.location.hostname + oListRootFolder.get_serverRelativeUrl() + "' title='" + oList.get_description() + "'>" + oList.get_title() + "</a></span>";
-                    }
-                    defer.resolve(lHtml);
-                },
-                function (err) {
-                    //fail
-                    defer.reject(err);
-                }
-            );
-        });
-    }
-
-    return defer.promise();
-}
-function getFolderInfo() {
-    var fHtml = "";
-    var u = decodeURIComponent(window.location.href);
-    if (u.search("RootFolder") > -1) {
-        if (u.search("_layouts") > -1) {
-            //not a list or a library
-            return "";
-        } else {
-
-            var v = u.split("?")[1].split("&");
-            var path;
-            var listpath = window.location.protocol + "//" + window.location.hostname + _spPageContextInfo.webServerRelativeUrl;
-            for (i = 0; i < v.length; i++) {
-                if (v[i].startsWith("RootFolder")) {
-                    path = v[i].split("=")[1].replace(_spPageContextInfo.webServerRelativeUrl, "");
-                    break;
-                }
-            }
-            if (path.startsWith("/Lists")) {
-                listpath += "/Lists";
-                path = path.substring(6);
-            }
-            var folders = path.split("/");
-            folders.shift();  //remove the first blank
-            listpath = listpath + "/" + folders.shift();  // value and the list name
-
-            for (j = 0; j < folders.length; j++) {
-                listpath = listpath + "/" + folders[j];
-                fHtml += "<span class='csp_breadcrumb'><a href='" + listpath + "'>" + folders[j] + "</a></span>";
-            }
-        }
-    }
-
-    return fHtml;
-}
-function getPageInfo() {
-    return "<span class='csp_breadcrumb'>" + _spPageContextInfo.serverRequestPath.substr(_spPageContextInfo.serverRequestPath.lastIndexOf('/') + 1).split(".")[0] + "</span>";
+    $.when(
+        rootCrumb,
+        siteCrumb,
+        listCrumb,
+        folderCrumb,
+        pageCrumb
+    ).done(function (rootHtml, siteHtml, listHtml, folderHtml, pageHtml) {
+        $("#titleAreaRow > .ms-breadcrumb-box").append("<div id='csp_breadcrumbContainer'>" + rootHtml + siteHtml + listHtml + folderHtml + pageHtml + "</div>");
+    })
 }
 
 $().ready(function () {
+    //hide the page title in the page
     $("#pageTitle").addClass("ms-hidden");
+
     //put the css reference on the page
     var cssUrl = "https://" + window.location.hostname + _spPageContextInfo.siteServerRelativeUrl + "/Style%20Library/Breadcrumb/css/breadcrumb.css";
     var head = document.getElementsByTagName("head")[0];
@@ -175,16 +198,5 @@ $().ready(function () {
     head.appendChild(style);
 
     //make the breadcrumb trail
-    //get the site(s)
-    var bcSites = bc_makeSiteBreadrumb();
-    var bcList = bc_getListInfo();
-
-    $.when(bcSites, bcList).then(function (bcSiteData, bcListData) {
-        var bcFolders = getFolderInfo();
-        var bcPage = getPageInfo(_spPageContextInfo.pageItemId);
-
-        var bcHtml = "<div id='csp_breadcrumbContainer'>" + bcSiteData + bcListData + bcFolders + bcPage + "</div>";
-
-        $("#titleAreaRow > .ms-breadcrumb-box").append(bcHtml);
-    });
+    bc_makeBreadrumbs();
 });
