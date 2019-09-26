@@ -36,17 +36,6 @@ $().ready(function () {
 //-----------------------------------------------------------------------------------
 // Groups
 //-----------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-//======================================================================================
-
-
 /**
  * Returns a promise of a JSON object containing SharePoint Groups having permissions on the current web
  *
@@ -435,12 +424,235 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
 //-----------------------------------------------------------------------------------
 // Sites
 //-----------------------------------------------------------------------------------
+var SPWeb = (function () {
+    var instance = Object.create(this);
+    var _private = {
+        _getValues: function (values) {
+            values = (values === undefined) ? {} : values;
+
+            Object.keys(values).forEach(function (key) {
+                instance[key] = values[key];
+            });
+
+            instance.url = (instance.url === undefined) ? _spPageContextInfo.webAbsoluteUrl : instance.url;
+            instance.async = (instance.async === undefined) ? true : instance.async;
+
+            return instance;
+
+        },
+        _get: function (values) {
+            var defer = $.Deferred();
+            _private._getValues(values);
+
+            $.ajax({
+                url: instance.url + "/_api/web",
+                method: "GET",
+                async: instance.async,
+                headers: {
+                    "accept": "application/json;odata=nometadata",
+                    "content-type": "application/json;odata=nometadata"
+                }
+            }).done(function (results) {
+                instance.results = results;
+                defer.resolve(instance);
+            }).fail(function (err) {
+                instance.error = err;
+                defer.reject(instance);
+            });
+
+            return defer.promise();
+        }
+    };
+
+    return {
+        data: instance,
+        get: _private._get
+    }
+})
+
+//==================DEPRECATED=======================================================
+function getWebInfo(url) {
+    var defer = $.Deferred();
+
+    url = (url === undefined) ? _spPageContextInfo.webAbsoluteUrl : url;
+
+    $.ajax({
+        url: url +
+            "/_api/web",
+        type: "GET",
+        headers: {
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata"
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (err) {
+        window.console && console.log(err);
+        defer.reject(err);
+    });
+
+    return defer.promise();
+}
 
 
 
 //-----------------------------------------------------------------------------------
 // Lists
 //-----------------------------------------------------------------------------------
+
+var SPList = (function () {
+    var instance = Object.create(this);
+    var _private = {
+        _getValues: function (values) {
+            values = (values === undefined) ? {} : values;
+
+            Object.keys(values).forEach(function (key) {
+                instance[key] = values[key];
+            });
+
+            instance.url = (instance.url === undefined) ? _spPageContextInfo.webAbsoluteUrl : instance.url;
+            instance.async = (instance.async === undefined) ? true : instance.async;
+
+            return instance;
+
+        },
+        _get: function (values) {
+            var defer = $.Deferred();
+            _private._getValues(values);
+
+            if (instance.guid === undefined) {
+                if (instance.title === undefined) {
+                    instance.error = "Requires title or guid";
+                    defer.reject(instance);
+                } else {
+                    $.ajax({
+                        url: instance.url + "/_api/web/Lists/getbytitle('" + instance.title + "')",
+                        method: "GET",
+                        async: instance.async,
+                        headers: {
+                            "accept": "application/json;odata=nometadata",
+                            "content-type": "application/json;odata=nometadata"
+                        }
+                    }).done(function (results) {
+                        instance.results = results;
+                        defer.resolve(instance);
+                    }).fail(function (err) {
+                        instance.error = err;
+                        defer.reject(instance);
+                    });
+                }
+            } else {
+                $.ajax({
+                    url: instance.url + "/_api/web/Lists('" + instance.guid + "')",
+                    method: "GET",
+                    async: instance.async,
+                    headers: {
+                        "accept": "application/json;odata=nometadata",
+                        "content-type": "application/json;odata=nometadata"
+                    }
+                }).done(function (results) {
+                    instance.results = results;
+                    defer.resolve(instance);
+                }).fail(function (err) {
+                    instance.error = err;
+                    defer.reject(instance);
+                });
+            }
+
+            return defer.promise();
+        },
+        _create: function (values) {
+            var defer = $.Deferred();
+            _private._getValues(values);
+
+
+
+            if (instance.title === undefined) {
+                instance.error = "a Title is required";
+                defer.reject(instance);
+            } else {
+                var listInfo = {};
+
+                listInfo.Title = instance.title.replace(/[^A-Za-z0-9\_\-]/gi, "");
+                listInfo.AllowContentTypes = (instance.AllowContentTypes === undefined) ? false : instance.allowContentTypes;
+                listInfo.BaseTemplate = (instance.BaseTemplate === undefined) ? 101 : instance.baseTemplate;
+                listInfo.ContentTypesEnabled = (instance.ContentTypesEnabled === undefined) ? false : instance.contentTypesEnabled;
+                listInfo.Description = (instance.Description === undefined) ? "" : instance.description;
+
+                $.ajax({
+                    url: instance.url + "/_api/web/Lists",
+                    method: "POST",
+                    async: instance.async,
+                    headers: {
+                        "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+                        "accept": "application/json;odata=nometadata",
+                        "content-type": "application/json;odata=nometadata"
+                    },
+                    data: JSON.stringify(listInfo)
+                }).done(function (results) {
+                    console.log("Ajax results", results)
+                    instance.results = results;
+                    defer.resolve(instance);
+                }).fail(function (err) {
+                    instance.error = err;
+                    defer.reject(instance);
+                })
+
+            }
+
+            return defer.promise();
+        },
+        _getItems: function () {
+            var defer = $.Deferred();
+
+            $.ajax({
+                url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists('" + instance.results.Id + "')/items",
+                type: "GET",
+                headers: {
+                    'Accept': 'application/json;odata=verbose'
+                }
+            }).done(function (data) {
+                instance.items = data.d.results;
+                defer.resolve(instance);
+            }).fail(function (err) {
+                window.console && console.log(err);
+                instance.error = err;
+                defer.reject(instance);
+            });
+
+            return defer.promise();
+        }
+    };
+
+    return {
+        data: instance,
+        get: _private._get,
+        getItems: _private._getItems,
+        create: _private._create
+    }
+})
+
+//==================================DEPRACATED=======================================
+function getListByGuid(guid) {
+    var defer = $.Deferred();
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl +
+            "/_api/web/lists('" + guid + "')",
+        type: "GET",
+        headers: {
+            "Accept": "application/json;odata=nometadata",
+            "Content-Type": "application/json;odata=nometadata"
+        }
+    }).done(function (data) {
+        defer.resolve(data);
+    }).fail(function (error) {
+        window.console && console.log(error);
+        defer.reject(error);
+    });
+
+    return defer.promise();
+}
 
 function getList(listName) {
     var defer = $.Deferred();
@@ -623,7 +835,6 @@ function addItemToList(listName, item) {
  * @param {integer} itemId
  */
 function removeItemFromList(listName, itemId) {
-    console.log("removeItemFromList", arguments);
     $.ajax({
         url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('" + listName + "')/items(" + itemId + ")",
         method: "DELETE",
