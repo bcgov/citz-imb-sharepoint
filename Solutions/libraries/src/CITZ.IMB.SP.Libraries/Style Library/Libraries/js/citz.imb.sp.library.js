@@ -421,6 +421,25 @@ function grantGroupPermissionToList(listId, groupId, permissionLevel) {
     return defer.promise();
 }
 
+/**
+ * Check Permissions to current location
+ */
+
+//Show all option for permissison levels in binary format
+function currentUsersLocationPerm(/*permBinary*/){       /*<*//////////////
+for (var permLevelName in SP.PermissionKind.prototype) {                 //
+    if (SP.PermissionKind.hasOwnProperty(permLevelName)) {               //
+        var permLevel = SP.PermissionKind.parse(permLevelName);          //
+           console.info(permLevelName,permLevel);                        //
+        }                                                                //
+    }                                                                    //
+                                                                         //
+//Check current users permissions to current location                    //
+                                           ////////////////////////////////
+                                          /*\/*/
+SP.PageContextInfo.get_webPermMasks().has(permBinary); //<== put the permission binary value in the ".has" brackets
+    
+}
 //-----------------------------------------------------------------------------------
 // Sites
 //-----------------------------------------------------------------------------------
