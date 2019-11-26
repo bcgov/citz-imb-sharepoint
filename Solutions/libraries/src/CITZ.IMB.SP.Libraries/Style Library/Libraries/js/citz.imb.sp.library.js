@@ -604,21 +604,36 @@ var SPList = (function () {
         },
         _getItems: function () {
             var defer = $.Deferred();
+            var url = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists('" + instance.results.Id + "')/items?$top=1000"
+            var response = response || [];
 
-            $.ajax({
-                url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists('" + instance.results.Id + "')/items",
-                type: "GET",
-                headers: {
-                    'Accept': 'application/json;odata=verbose'
-                }
-            }).done(function (data) {
-                instance.items = data.d.results;
-                defer.resolve(instance);
-            }).fail(function (err) {
-                window.console && console.log(err);
-                instance.error = err;
-                defer.reject(instance);
-            });
+            GetListItems();
+
+            function GetListItems() {
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    async: false,
+                    headers: {
+                        'Accept': 'application/json;odata=verbose'
+                    },
+                    success: function (data) {
+                        response = response.concat(data.d.results);
+                        if (data.d.__next) {
+                            url = data.d.__next;
+                            GetListItems();
+                        } else {
+                            instance.items = response
+                            defer.resolve(instance);
+                        }
+                    },
+                    error: function (err) {
+                        window.console && console.log(err);
+                        instance.error = err;
+                        defer.reject(instance);
+                    }
+                })
+            }
 
             return defer.promise();
         }
