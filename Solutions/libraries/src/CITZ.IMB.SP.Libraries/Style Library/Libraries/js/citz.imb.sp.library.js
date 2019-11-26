@@ -604,7 +604,7 @@ var SPList = (function () {
         },
         _getItems: function () {
             var defer = $.Deferred();
-            var url = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists('" + instance.results.Id + "')/items?$top=1000"
+            var url = instance.url + "/_api/web/lists('" + instance.results.Id + "')/items?$top=1000"
             var response = response || [];
 
             GetListItems();
@@ -636,15 +636,38 @@ var SPList = (function () {
             }
 
             return defer.promise();
+        },
+        _getContentTypes: function () {
+            var defer = $.Deferred();
+
+            $.ajax({
+                url: instance.url + "/_api/web/lists('" + instance.results.Id + "')/ContentTypes",
+                type: "GET",
+                headers: {
+                    'Accept': 'application/json;odata=verbose'
+                }
+            }).done(function (data) {
+                instance.contentTypes = data.d.results;
+                defer.resolve(instance);
+            }).fail(function (err) {
+                window.console && console.log(err);
+                instance.error = err;
+                defer.reject(instance);
+            })
+
+            return defer.promise();
         }
-    };
+    }
+
 
     return {
         data: instance,
         get: _private._get,
         getItems: _private._getItems,
-        create: _private._create
+        create: _private._create,
+        getContentTypes: _private._getContentTypes
     }
+
 })
 
 //==================================DEPRACATED=======================================
