@@ -604,9 +604,9 @@ var SPList = (function () {
         },
         _getItems: function () {
             var defer = $.Deferred();
-            var url = instance.url + "/_api/web/lists('" + instance.results.Id + "')/items?$top=1000"
+            var url = instance.url + "/_api/web/lists('" + instance.results.Id + "')/items?$orderby=Title asc&$top=1000"
             var response = response || [];
-
+            
             GetListItems();
 
             function GetListItems() {
