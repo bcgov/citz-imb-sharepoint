@@ -4,26 +4,17 @@ const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 
 gulp.task('build-script', function () {
-    const src = [
-        './src/script/*.js',
-        './src/components/*.js'
-    ];
-
-    return gulp.src(src)
+    return gulp.src('./build/static/js/*.js')
         //.pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['@babel/preset-env', '@babel/preset-react']
-        }))
+        //.pipe(babel({
+        //    presets: ['@babel/preset-env', '@babel/preset-react']
+        //}))
         .pipe(concat('vdr.js'))
         .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('build-css', function () {
-    const src = [
-        './src/css/*.css'
-    ];
-
-    return gulp.src(src)
+    return gulp.src('./build/static/css/*.css')
         .pipe(concat('vdr.css'))
         .pipe(gulp.dest('./dist/css'))
 });

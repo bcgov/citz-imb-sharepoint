@@ -33,10 +33,16 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "core-js": "^3.4.7",
+    "datatables.net": "^1.10.20",
+    "datatables.net-buttons": "^1.6.1",
+    "datatables.net-dt": "^1.10.20",
+    "datatables.net-jqui": "^1.10.20",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sourcemaps": "^2.6.5",
-    "react-app-polyfill": "^1.0.5"
+    "jquery": "^3.4.1",
+    "react-app-polyfill": "^1.0.5",
+    "react-tabs": "^3.0.0"
   }
 }
