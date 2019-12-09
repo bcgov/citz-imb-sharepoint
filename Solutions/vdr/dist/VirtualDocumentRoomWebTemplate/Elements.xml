@@ -1,0 +1,3 @@
+﻿<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<WebTemplate AdjustHijriDays="0" AlternateCssUrl="" AlternateHeader="" BaseTemplateID="1" BaseTemplateName="STS" BaseConfigurationID="0" CalendarType="1" Collation="25" ContainsDefaultLists="TRUE" CustomizedCssFiles="" CustomJSUrl="" ExcludeFromOfflineClient="FALSE" Locale="1033" Name="VirtualDocumentRoom" ParserEnabled="TRUE" PortalName="" PortalUrl="" PresenceEnabled="TRUE" ProductVersion="16" QuickLaunchEnabled="FALSE" HideSiteContentsLink="TRUE" EnableMinimalDownload="FALSE" Subweb="TRUE" SyndicationEnabled="FALSE" Time24="FALSE" TimeZone="13" Title="Virtual Document Room" TreeViewEnabled="FALSE" UIVersionConfigurationEnabled="FALSE" />
+</Elements>

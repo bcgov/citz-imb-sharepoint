@@ -14,7 +14,7 @@ class DataTable extends Component {
     }
 
     componentWillUnmount() {
-        this.$el.DataTable.destroy(true)
+        this.$el.DataTable({ 'destroy': true });
     }
 
     render() {

@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PublicQuestions from './PublicQuestions'
+import PrivateQuestions from './PrivateQuestions'
 
-export default function QuestionTabContent() {
-    return (
-        <div>
-            <h2>Questions</h2>
-        </div>
-    )
+export class QuestionTabContent extends Component {
+    render() {
+        return (
+            <div>
+                <h2>Site Management</h2>
+                <div className='row'>
+                    <div className='column'>
+                        <PublicQuestions />
+                    </div>
+
+                    <div className='column'>
+                        <PrivateQuestions />
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
+
+export default QuestionTabContent
