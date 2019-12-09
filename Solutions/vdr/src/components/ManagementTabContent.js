@@ -2,7 +2,7 @@ import React from 'react'
 import Proponents from './Proponents'
 import Groups from './Groups'
 
-export default function ManagementTabContent() {
+function ManagementTabContent() {
     return (
         <div>
             <h2>Site Management</h2>
@@ -18,3 +18,5 @@ export default function ManagementTabContent() {
         </div>
     )
 }
+
+export default ManagementTabContent

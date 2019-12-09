@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function HomeTabContent() {
+function HomeTabContent() {
     return (
         <div>
             <h2>Home</h2>
@@ -9,3 +9,5 @@ export default function HomeTabContent() {
         </div>
     )
 }
+
+export default HomeTabContent

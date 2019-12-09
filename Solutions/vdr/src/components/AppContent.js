@@ -27,7 +27,7 @@ class AppContent extends Component {
             <TabPanel>
                 <QuestionTabContent />
             </TabPanel>
-            {this.state.authenticated ? <TabPanel><ManagementTabContent/></TabPanel> : ''}
+            {this.state.authenticated ? <TabPanel><ManagementTabContent /></TabPanel> : ''}
         </Tabs >
 
         return jsx

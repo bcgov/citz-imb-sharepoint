@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import DataTable from '../components/DataTable.js'
 import $ from 'jquery'
 
-export class PrivateQuestions extends Component {
+class PrivateQuestions extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            data: [
-            ],
+            data: [],
             buttons: [
                 {
                     text: 'Ask a Question',
@@ -17,7 +16,7 @@ export class PrivateQuestions extends Component {
                     }
                 }
             ],
-            columns:  [
+            columns: [
                 {
                     title: "My Questions",
                     data: "Question"
@@ -26,30 +25,39 @@ export class PrivateQuestions extends Component {
             dom: 'tBp'
         }
     }
-    componentDidMount(){
-        //TODO: proper deactivation functionalitiy 
-        $(".proponentDeactivate").click(function(){
-            const table = $(this).closest('table').DataTable()
-
-            console.log(table.row().data())
-            alert('I am the handler')
+    
+    componentWillMount() {
+        //get public question list data
+        let _this = this;
+        let QuestionList = '' //TODO: define this properly
+        
+        $.ajax({
+            url: `../_api/web/lists/getByTitle('${QuestionList}')/items`,
+            type: "GET",
+            async: false,
+            headers: {
+                'Accept': 'application/json;odata=verbose'
+            }
+        }).done(function (result) {
+            _this.state.data = result.d.results
+        }).fail(function (err) {
+            window.console && console.log(err)
         })
     }
 
     render() {
         return (
             <div>
-                <DataTable 
-                data={this.state.data}
-                buttons={this.state.buttons}
-                columns={this.state.columns}
-                dom={this.state.dom}
+                <DataTable
+                    data={this.state.data}
+                    buttons={this.state.buttons}
+                    columns={this.state.columns}
+                    dom={this.state.dom}
                 ></DataTable>
             </div>
 
         )
     }
 }
-
 
 export default PrivateQuestions

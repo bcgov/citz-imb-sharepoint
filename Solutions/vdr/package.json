@@ -32,6 +32,8 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
+    "@material-ui/core": "^4.7.2",
+    "@material-ui/icons": "^4.5.1",
     "core-js": "^3.4.7",
     "datatables.net": "^1.10.20",
     "datatables.net-buttons": "^1.6.1",
