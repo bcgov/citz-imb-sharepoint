@@ -1,3 +1,0 @@
-﻿<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<CustomAction Id="{cdc2c177-8f5a-4783-aa8e-b3135c62c3ad}" Location="ScriptLink" ScriptSrc="~Site/SiteAssets/js/vdr.js" Sequence="1000" />
-</Elements>
