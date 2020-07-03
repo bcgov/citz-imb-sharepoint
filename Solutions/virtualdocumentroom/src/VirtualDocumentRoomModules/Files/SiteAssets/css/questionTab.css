@@ -1,0 +1,27 @@
+#tab-2 #vdr_questions {
+    min-width: 1060px;
+}
+
+#vdr_questions::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#vdr_public_questions_data {
+    min-width: 520px;
+    width: 48%;
+    display: inline-block;
+    /* height: 100px; */
+    /* float: left; */
+    /* background-color: yellow; */
+}
+
+#vdr_private_questions_data {
+    min-width: 520px;
+    width: 48%;
+    min-height: 100px;
+    float: right;
+    display: inline-block;
+    /*background-color: beige;*/
+}

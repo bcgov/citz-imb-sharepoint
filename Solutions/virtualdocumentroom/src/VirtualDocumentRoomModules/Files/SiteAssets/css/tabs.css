@@ -1,0 +1,7 @@
+#vdr_container .tabcontent {
+    display: none;
+}
+
+#vdr_container .tabcontent.active {
+    display: block;
+}

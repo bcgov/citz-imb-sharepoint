@@ -1,0 +1,159 @@
+.ui-dialog .ui-dialog-titlebar-close {
+    /* reset as oslo masterpage sets buttons to min-width of 78 */
+    min-width: auto;
+}
+
+#vdr_container .tabcontent {
+    display: none;
+}
+
+#vdr_container .tabcontent.active {
+    display: block;
+}
+
+#tab-3>div {
+    min-height: 100px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/*******************************/
+
+#tab-2 #vdr_questions {
+    min-width: 1060px;
+}
+
+#vdr_questions::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#vdr_public_questions_data {
+    min-width: 520px;
+    width: 48%;
+    display: inline-block;
+    /* height: 100px; */
+    /* float: left; */
+    /* background-color: yellow; */
+}
+
+#vdr_private_questions_data {
+    min-width: 520px;
+    width: 48%;
+    min-height: 100px;
+    float: right;
+    display: inline-block;
+    /*background-color: beige;*/
+}
+
+/*******************************/
+
+#tab-3 #vdr_management {
+    min-width: 1060px;
+}
+
+#vdr_management::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#vdr_group_data {
+    min-width: 520px;
+    width: 48%;
+    float: left;
+}
+
+#vdr_proponent {
+    min-width: 520px;
+    width: 48%;
+    float: right;
+}
+
+#vdr_proponent {
+    border: 1px solid #c5c5c5;
+    background-color: #fefefe;
+    padding: 2px;
+    margin: 2px;
+}
+
+#vdr_proponent .vdr_proponent_header {
+    font-weight: 800;
+    padding: .4em .1em;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+#vdr_proponent .vdr_proponent_name {
+    padding: .4em 1em;
+    line-height: normal;
+    margin-right: .1em;
+    display: inline-block;
+    width: 200px;
+}
+
+#vdr_proponent .vdr_proponent_header .vdr_proponent_name {}
+
+#vdr_proponent .vdr_proponent_uid {
+    padding: .4em 1em;
+    line-height: normal;
+    margin-right: .1em;
+    width: 90px;
+    display: inline-block;
+}
+
+#vdr_proponent .vdr_button {
+    width: 121px;
+}
+
+#vdr_proponent .vdr_proponent_header .vdr_proponent_uid {}
+
+#vdr_proponent .vdr_proponent_data {}
+
+#vdr_proponent .vdr_proponent_row {
+    padding: .4em .1em;
+}
+
+#vdr_proponent .vdr_inactive {
+    opacity: 0.35;
+}
+
+#vdr_proponent .vdr_proponent_header::after, #vdr_proponent .vdr_proponent_row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#vdr_group_data #vdr_user_rows {
+    border: 1px solid #c5c5c5;
+    background-color: #fefefe;
+    padding: 2px;
+    margin: 2px;
+}
+
+#vdr_group_data .vdr_user_row_header {
+    font-weight: 800;
+    padding: .4em .1em;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+#vdr_group_data .vdr_user_row {
+    padding: .4em .1em;
+}
+
+#vdr_group_data .vdr_user_title {
+    padding: .4em .1em;
+    line-height: normal;
+    margin-right: .1em;
+    display: inline-block;
+    width: 315px;
+}
+
+#vdr_group_data .vdr_button {
+    width: 121px;
+}
+
+#vdr_dialog {
+    overflow: visible;
+}

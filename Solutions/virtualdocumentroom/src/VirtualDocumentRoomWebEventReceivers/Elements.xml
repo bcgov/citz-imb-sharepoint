@@ -1,0 +1,17 @@
+﻿<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Receivers Scope="Web">
+		<Receiver>
+			<Name />
+			<Synchronization>Asynchronous</Synchronization>
+			<Type>ListAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Url />
+			<Assembly>Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.SharePoint.Applications.HierarchyTasksList.SPHierarchyTaskListEventReceiver</Class>
+			<Data />
+			<Filter />
+			<SourceId>0xEF600831C5137F42954B2A99899148CB</SourceId>
+			<SourceType>2</SourceType>
+		</Receiver>
+	</Receivers>
+</Elements>
