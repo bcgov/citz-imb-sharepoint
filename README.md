@@ -1,5 +1,6 @@
-[![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)]
+[![Lifecycle:Archive](https://img.shields.io/badge/Lifecycle-Archive-007EC6)]
 
+# This project is now Archived as the target version of SharePoint was 2016, which is now sunsetted
 ## Features
 
 ### Apps
